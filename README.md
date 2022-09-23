@@ -30,3 +30,17 @@ Pagina's
     </ul>
   </li>
 </ul>
+
+<ul> Front end team
+  <li>Marnik</li>
+  <li>Nick</li>
+  <li>Siebe</li>
+  <li>Bryan</li>
+</ul>
+
+<ul> Back end team
+  <li>Jordi</li>
+  <li>Michiel</li>
+  <li>Syan</li>
+  <li>Sens</li>
+</ul>
