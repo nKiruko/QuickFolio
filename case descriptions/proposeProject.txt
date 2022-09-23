@@ -1,0 +1,17 @@
+Functionality:
+As a company, I can propose a project.
+
+Preconditions:
+Actor must be a company.
+
+Normal flow:
+The system shows the proposition form.
+Actor fills in the form.
+System sends a confirmation mail to the company actor and the actor.
+
+
+Alternatives:
+None.
+
+Additional remarks:
+The company may need to be authenticated.

@@ -1,0 +1,8 @@
+Functionality: As a student DI, I can upload a new event to the website
+Preconditions: The event has been validated (?) event code in markdown
+Normal flow: The actor clicks on the "upload button". 
+1) redirected to an upload page OR 2) pop-up window for uploading
+Here, the actor can upload the new event
+Once submitted, the markdown code gets compiled to html.
+Alternatives: Event upload failed, event upload file size too large: 
+Additional remarks: None.

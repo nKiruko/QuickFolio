@@ -1,0 +1,16 @@
+Functionality:
+As a visitor, I can view featured projects.
+
+Preconditions:
+None.
+
+Normal flow:
+The system shows all projects.
+The actor filters by tag.
+The system shows all projects by the selected tag.
+
+Alternatives:
+None.
+
+Additional remarks:
+None.

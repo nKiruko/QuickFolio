@@ -1,0 +1,17 @@
+Functionality:
+As a student DI, I can upload a project to the website
+
+Preconditions:
+The actor must be authenticated.
+Project code in markdown
+
+Normal flow:
+The actor clicks on the "upload button".
+The system redirects to the upload page.
+The actor fills in the required information.
+
+Alternatives:
+Project upload failed: show thrown error. 
+
+Additional remarks:
+None.
