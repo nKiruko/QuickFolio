@@ -1,0 +1,6 @@
+Functionality: As a DI student, I can view proposed projects.
+Preconditions: You must be logged in as a DI student.
+Normal flow: The system displays all proposed projects.
+Alternatives: 
+Additional remarks: Once a project is approved, a DI student can remove the project from the list.
+
