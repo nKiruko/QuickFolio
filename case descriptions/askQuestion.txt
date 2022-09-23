@@ -1,0 +1,15 @@
+Functionality:
+As a visitor, I can ask a question.
+
+Preconditions:
+None.
+
+Normal flow:
+The actor submits the question form on the website.
+The systems send the message to the mailbox.
+
+Alternatives:
+Incomplete form: the system asks to fill in the required fields.
+
+Additional remarks:
+none.

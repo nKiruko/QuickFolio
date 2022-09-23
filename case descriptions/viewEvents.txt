@@ -1,0 +1,16 @@
+Functionality:
+As a visitor, I can view all events
+
+Preconditions:
+None.
+
+Normal flow:
+The system shows all events.
+The actor can filter the events.
+The system retrieves the requested filtered events.
+
+Alternatives:
+None.
+
+Additional remarks:
+None.
