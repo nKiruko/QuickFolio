@@ -33,13 +33,15 @@ Pagina's
 
 
 <h2> Team verdeling </h2>
-<ul> Front end team
+<p>Front end team</p>
+<ul>
   <li>Marnik</li>
   <li>Nick</li>
   <li>Siebe</li>
   <li>Bryan</li>
 </ul>
-<ul> Back end team
+<p>Back end team</p>
+<ul>
   <li>Jordi</li>
   <li>Michiel</li>
   <li>Syan</li>
