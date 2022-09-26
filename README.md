@@ -39,11 +39,12 @@ Pagina's
   <li>Nick</li>
   <li>Siebe</li>
   <li>Bryan</li>
+  <li>Michiel</li>
+  <li>Hube</li>
 </ul>
 <p>Back end team</p>
 <ul>
   <li>Jordi</li>
-  <li>Michiel</li>
   <li>Syan</li>
   <li>Sens</li>
 </ul>
