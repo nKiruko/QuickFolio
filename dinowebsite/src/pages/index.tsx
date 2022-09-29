@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from 'next/image'
+import homeImage from '../../public/images/DinoBeige.png'
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
         <div className="max-w-md w-full space-y-8 p-10 rounded-lg shadow-md shadow-dinowhite/50 bg-dinogreen">
           <div>
             <Image
-              src="/../public/images/DinoBiege.png"
+              src={homeImage}
               alt="Logo dino"
               width={600}
               height={225}
