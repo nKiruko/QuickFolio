@@ -28,7 +28,7 @@ const NavBar = () => {
                     </div>
                     <div className="hidden lg:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
                         <NavItem name="Home" href="/" />
-                        <NavItem name="DI" href="/" />
+                        <NavItem name="DI" href="/whatIsDI" />
                         <NavItem name="Projects" href="/projects" />
                         <NavItem name="Contact" href="/contact" />
                         <Link href="/" passHref>
@@ -44,8 +44,8 @@ const NavBar = () => {
             </div>
             <div className={`mobile-menu ${mobileNav ? "" : "hidden"}`}>
                 <NavItem name="Home" href="/" mobile={true} />
-                <NavItem name="DI" href="/" mobile={true} />
-                <NavItem name="Projects" href="/" mobile={true} />
+                <NavItem name="DI" href="/whatIsDI" mobile={true} />
+                <NavItem name="Projects" href="/projects" mobile={true} />
                 <NavItem name="Contact" href="/contact" mobile={true} />
                 <NavItem name="Login" href="/" mobile={true} />
             </div>
