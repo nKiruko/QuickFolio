@@ -7,12 +7,12 @@ const NavBar = () => {
     }
     return(
         <nav className="bg-gray-100">
-            <div className="max-w-screen mx-auto px-3">
+            <div className="max-w-screen mx-auto px-32">
                 <div className="flex justify-between">
                     <div className="flex items-center space-x-1">
                         <a className="py-5 pl-16" href="#">Digital Innovation</a>
                     </div>
-                    <div className="hidden md:flex items-center space-x-1">
+                    <div className="hidden md:flex items-center space-x-1 font-heading text-2xl">
                         <a className="py-5 px-3" href="#">Home</a>
                         <a className="py-5 px-3" href="#">DI</a>
                         <a className="py-5 px-3" href="#">Projects</a>
