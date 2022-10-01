@@ -25,14 +25,14 @@ const Home: NextPage = () => {
           </Link>
           </div>
 
-          <div className="mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
-            <div className="bg-tmblue h-20 md:h-52 xl:h-96 rotate-9 scale-125 shadow-glow">
+          <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
+            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 rotate-9 scale-125 shadow-glow">
             </div>
           </div>
 
           <div className="bg-dinoblack text-dinocream">
             <div className="mx-20">
-              <h1 className="font-heading text-4xl sm:text-5xl pt-32 pb-5">Upcoming events</h1>
+              <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">Upcoming events</h1>
 
 
               <Event image="/../public/images/ThomasMore.png" title="Title" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="h-96 lg:h-[28rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
+          <div className="h-40 md:h-80 lg:h-[26rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
           <div className="bg-dinocream text-dinoblack">
             <div className="mx-20">

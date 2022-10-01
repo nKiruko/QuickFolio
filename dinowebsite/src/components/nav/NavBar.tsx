@@ -12,7 +12,7 @@ const NavBar = () => {
     
     return(
         <nav className="bg-dinocream">
-            <div className="max-w-screen mx-auto px-16 lg:px-28">
+            <div className="max-w-screen mx-auto pl-10 sm:px-16 lg:px-28">
                 <div className="flex justify-between">
                     <div className="flex items-center space-x-1">
                         <Link href="/">
