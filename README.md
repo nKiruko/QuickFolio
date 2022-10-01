@@ -25,7 +25,7 @@ Pagina's
   <li>Upload a project
     <ul>
       <li>Title</li>
-      <li>?Description</li>
+      <li>Description</li>
       <li>Photo / video / Youtube link / poster / git link</li>
     </ul>
   </li>
@@ -41,10 +41,10 @@ Pagina's
   <li>Bryan</li>
   <li>Michiel</li>
   <li>Hube</li>
+  <li>Sens</li>
 </ul>
 <p>Back end team</p>
 <ul>
   <li>Jordi</li>
   <li>Syan</li>
-  <li>Sens</li>
 </ul>
