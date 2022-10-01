@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 const NavBar = () => {
+    const [mobileNav, setMobileNav] = useState(false)
+    function toggleMobile() {
+        setMobileNav(!mobileNav)
+    }
     return(
         <nav className="bg-gray-100">
             <div className="max-w-screen mx-auto px-3">
@@ -14,13 +20,13 @@ const NavBar = () => {
                         <a href="#" className="rounded-full border-2 border-black px-5">Login</a>
                     </div>
                     <div className="md:hidden flex items-center px-3">
-                        <button className="mobile-menu-button" onClick={() => {document.querySelector('.mobile-menu').classList.toggle('hidden')}}>
+                        <button className="mobile-menu-button" onClick={toggleMobile}>
                             <span>Menu</span>
                         </button>
                     </div>
                 </div>
             </div>
-            <div className="mobile-menu hidden">
+            <div className={`mobile-menu ${mobileNav ? "" : "hidden"}`}>
                 <a className="block py-2 text-sm hover:bg-gray-200 text-center" href="#">Home</a>
                 <a className="block py-2 text-sm hover:bg-gray-200 text-center" href="#">DI</a>
                 <a className="block py-2 text-sm hover:bg-gray-200 text-center" href="#">Projects</a>
