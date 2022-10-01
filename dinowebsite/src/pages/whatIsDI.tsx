@@ -7,12 +7,11 @@ const whatIsDI: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite</title>
+        <title>Dinowebsite | What is DI</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar/>
 
       <main className="bg-dinocream overflow-hidden">
         <div className="h-full pt-14 ml-10">

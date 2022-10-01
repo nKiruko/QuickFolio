@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 type MyProps = {
-    name: string;
-    href: string;
-    mobile?: boolean;
+    name: string,
+    href: string,
+    mobile?: boolean,
 }
 
 const NavItem = (props: MyProps) => {
