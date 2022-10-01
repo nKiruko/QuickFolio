@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import NavBar from "../components/nav/NavBar";
-import Image from 'next/image'
 import Event from "../components/Event";
 import FeaturedProject from "../components/FeaturedProjects"
 
@@ -14,7 +12,6 @@ const Home: NextPage = () => {
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar/>
 
       <main className=" overflow-hidden">
         <div className="bg-dinocream">

@@ -29,7 +29,7 @@ const NavBar = () => {
                     <div className="hidden md:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
                         <NavItem name="Home" href="/" />
                         <NavItem name="DI" href="/" />
-                        <NavItem name="Projects" href="/" />
+                        <NavItem name="Projects" href="/projects" />
                         <NavItem name="Contact" href="/contact" />
                         <Link href="/" passHref>
                             <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange">Login</a>
