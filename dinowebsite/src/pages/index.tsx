@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Event from "../components/Event";
+import FeaturedProject from "../components/FeaturedProjects"
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="h-screen bg-dinoblack text-dinocream">
+          <div className="bg-dinoblack text-dinocream">
             <div className="mx-20">
               <h1 className="font-heading text-5xl pt-32 pb-5">Upcoming events</h1>
 
@@ -49,9 +50,17 @@ const Home: NextPage = () => {
 
           <div className="h-[28rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
-          <div className="h-screen bg-dinocream text-dinoblack">
-            <div className="mx-20">
+          <div className="bg-dinocream text-dinoblack">
+            <div className="mx-20 py-10">
               <h1 className="font-heading text-5xl pt-5 pb-5">Featured projects</h1>
+              <div className="flex flex-col md:flex-row gap-6">
+                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
+                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
+                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
+              </div>
             </div>
           </div>
 
