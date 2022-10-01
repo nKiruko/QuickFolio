@@ -12,11 +12,11 @@ const NavBar = () => {
     
     return(
         <nav className="bg-dinocream">
-            <div className="max-w-screen mx-auto px-32">
+            <div className="max-w-screen mx-auto px-16 lg:px-28">
                 <div className="flex justify-between">
                     <div className="flex items-center space-x-1">
                         <Link href="/">
-                            <a className="ml-24 py-6 px-11 bg-dinoblack shadow-glow">
+                            <a className="lg:ml-24 py-6 px-11 bg-dinoblack shadow-glow">
                                 <Image
                                 src="/../public/images/DinoOrange.png"
                                 alt="Dino Logo"
@@ -26,7 +26,7 @@ const NavBar = () => {
                             </a>   
                         </Link>
                     </div>
-                    <div className="hidden md:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
+                    <div className="hidden lg:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
                         <NavItem name="Home" href="/" />
                         <NavItem name="DI" href="/" />
                         <NavItem name="Projects" href="/projects" />
@@ -35,9 +35,9 @@ const NavBar = () => {
                             <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange">Login</a>
                         </Link>
                     </div>
-                    <div className="md:hidden flex items-center px-3">
-                        <button className="mobile-menu-button" onClick={toggleMobile}>
-                            <span>Menu</span>
+                    <div className="lg:hidden flex items-center px-3">
+                        <button className="mobile-menu-button " onClick={toggleMobile}>
+                            <span className="font-heading text-2xl text-dinoblack">Menu</span>
                         </button>
                     </div>
                 </div>

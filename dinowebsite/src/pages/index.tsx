@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import Event from "../components/Event";
-import FeaturedProject from "../components/FeaturedProjects"
+import Project from "../components/Project";
+
 
 const Home: NextPage = () => {
   return (
@@ -15,12 +17,12 @@ const Home: NextPage = () => {
 
       <main className=" overflow-hidden">
         <div className="bg-dinocream">
-          <div className="w-2/6 ml-60">
-            <h1 className="font-heading text-4xl pt-52 pb-5 text-dinoblack">Build shit, break shit, but ultimately,
+          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
+            <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">Build shit, break shit, but ultimately,
               learn from the experiences!</h1>
-            <a href="#"
-              className="font-heading text-xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange">Learn
-              More</a>
+            <Link href="/">
+              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange">Learn More</a>
+          </Link>
           </div>
 
           <div className="mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
@@ -30,7 +32,7 @@ const Home: NextPage = () => {
 
           <div className="bg-dinoblack text-dinocream">
             <div className="mx-20">
-              <h1 className="font-heading text-5xl pt-32 pb-5">Upcoming events</h1>
+              <h1 className="font-heading text-4xl sm:text-5xl pt-32 pb-5">Upcoming events</h1>
 
 
               <Event image="/../public/images/ThomasMore.png" title="Title" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
@@ -48,18 +50,25 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="h-[28rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
+          <div className="h-96 lg:h-[28rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
           <div className="bg-dinocream text-dinoblack">
-            <div className="mx-20 py-10">
-              <h1 className="font-heading text-5xl pt-5 pb-5">Featured projects</h1>
+            <div className="mx-20">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:pt-5 pb-5">Featured projects</h1>
+
               <div className="flex flex-col md:flex-row gap-6">
-                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
                                       animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
-                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
                                       animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
-                <FeaturedProject image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
+                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
                                       animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
+
+              </div>
+              <div className="w-full py-20 text-center">
+                <Link href="/projects">
+                  <a className="font-heading text-xl sm:text-2xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange">All projects</a>
+                </Link>
               </div>
             </div>
           </div>
