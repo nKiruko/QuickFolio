@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import NavItem from "./NavItem";
+import Image from 'next/image'
 
 const NavBar = () => {
     const [mobileNav, setMobileNav] = useState(false)
@@ -10,21 +11,28 @@ const NavBar = () => {
     }
     
     return(
-        <nav className="bg-gray-100">
-            <div className="max-w-screen mx-auto px-3">
+        <nav className="bg-dinocream">
+            <div className="max-w-screen mx-auto px-32">
                 <div className="flex justify-between">
                     <div className="flex items-center space-x-1">
                         <Link href="/">
-                            <a className="py-5 pl-16">Digital Innovation</a>   
+                            <a className="ml-24 py-6 px-11 bg-dinoblack shadow-glow">
+                                <Image
+                                src="/../public/images/DinoOrange.png"
+                                alt="Dino Logo"
+                                width={155}
+                                height={57}
+                                />
+                            </a>   
                         </Link>
                     </div>
-                    <div className="hidden md:flex items-center space-x-1">
+                    <div className="hidden md:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
                         <NavItem name="Home" href="/" />
                         <NavItem name="DI" href="/" />
                         <NavItem name="Projects" href="/" />
                         <NavItem name="Contact" href="/contact" />
                         <Link href="/" passHref>
-                            <a className="rounded-full border-2 border-black px-5">Login</a>
+                            <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange">Login</a>
                         </Link>
                     </div>
                     <div className="md:hidden flex items-center px-3">
