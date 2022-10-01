@@ -23,7 +23,7 @@ module.exports = {
         'heading': ['Amaranth', defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        'test': '0px 0px 11px 5px rgba(25,25,25,0.5)',
+        'glow': '0px 0px 11px 5px rgba(25,25,25,0.5)',
       },
     },
   },
