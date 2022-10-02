@@ -12,6 +12,7 @@ export type ProjectData = {
   date?: number,
 	position?: boolean,
   text: string,
+  content: string,
 }
 
 
@@ -39,7 +40,8 @@ export const getProjectData = async (name: String) : Promise<ProjectData> => {
 
   return <ProjectData> {
     ...matterConversed.data,
-    text: htmlContent.toString(),
+    text : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!",
+    content: htmlContent.toString(),
   }
 };
 
