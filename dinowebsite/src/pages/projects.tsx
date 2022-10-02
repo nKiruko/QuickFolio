@@ -32,9 +32,9 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               <h1 className="font-heading text-5xl pt-52 pb-5">Recent projects</h1>
 
               <div className="flex flex-col md:flex-row gap-6">
-                <Project image={allProjectsData[0].image} title={allProjectsData[0].title} text={allProjectsData[0].text}/>
-                <Project image={allProjectsData[1].image} title={allProjectsData[1].title} text={allProjectsData[1].text}/>
-                <Project image={allProjectsData[2].image} title={allProjectsData[2].title} text={allProjectsData[2].text}/>
+                {allProjectsData.map((project, i) => (
+                  <Project key={i} image={project.image} title={project.title} text={project.text}/>
+                ))}
               </div>
             </div>
           </div>
