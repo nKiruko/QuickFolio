@@ -1,6 +1,6 @@
 ---
 title: project2
-image: /images/project2.png
+image: /images/projects/project2.png
 date: 1622498400
 ---
 # Project 2
