@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Event from "../components/Event";
+import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { getAllProjectDataSorted,ProjectData } from "../modules/projects";
 
@@ -83,7 +84,11 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               </div>
             </div>
           </div>
+        </div>
 
+
+        <div>
+          <Footer/>
         </div>
       </main>
       </div>
