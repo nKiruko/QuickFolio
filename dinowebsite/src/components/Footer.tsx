@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
 
                 <div className='grow h-14 text-center sm:hidden md:block'>
-                    <Image src="/../public/images/logoWithText.png" alt="Dino Logo" width={300} height={300}/>
+                    <Image src="/images/logoWithText.png" alt="Dino Logo" width={200} height={200}/>
                 </div>
 
                 <div className='flex-none w-52'>

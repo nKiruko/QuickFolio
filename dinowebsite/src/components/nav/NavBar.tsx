@@ -18,9 +18,9 @@ const NavBar = () => {
                 <div className="flex justify-between">
                     <div className="flex items-center space-x-1">
                         <Link href="/">
-                            <a className="lg:ml-auto py-6 px-11 bg-dinoblack shadow-glow">
+                            <a className="lg:ml-24 py-6 px-11 bg-dinoblack shadow-glow">
                                 <Image
-                                src="/../public/images/logoWithText.png"
+                                src="/images/logoWithText.png"
                                 alt="Dino Logo"
                                 width={100}
                                 height={100}
