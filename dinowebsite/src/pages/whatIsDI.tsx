@@ -7,7 +7,7 @@ const whatIsDI: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite | What is DI</title>
+        <title>Dinowebsite - What is DI</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />

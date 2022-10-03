@@ -19,7 +19,7 @@ export default function Project(props: Myprops){
             <div className="font-heading text-3xl sm:text-4xl mt-5 basis-1/2">
                 {props.title}
             </div>
-            <div className="font-sans text-sm sm:text-md basis-1/2">
+            <div className="font-sans xl:w-11/12 text-sm sm:text-md basis-1/2 text-justify">
                 {props.text}
             </div>
         </div>
