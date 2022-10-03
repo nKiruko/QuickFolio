@@ -10,14 +10,16 @@ type Myprops = {
 
 export default function Project(props: Myprops){
 	return(
-		<div className="mt-16 flex flex-col">
-            <div>
-                <Image src={props.image} alt={props.title} className="rounded-[25px]" width={500} height={300} />
+		<div className="mt-16">
+            <div className="basis-1/2">
+                <Image src={props.image} alt={props.title} className="rounded-[25px]"
+                width={700} 
+                height={500} />
             </div>
-            <div className="font-heading text-3xl sm:text-4xl mt-5">
+            <div className="font-heading text-3xl sm:text-4xl mt-5 basis-1/2">
                 {props.title}
             </div>
-            <div className="font-sans text-sm sm:text-md text-justify">
+            <div className="font-sans text-sm sm:text-md basis-1/2">
                 {props.text}
             </div>
         </div>
