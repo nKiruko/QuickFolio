@@ -21,34 +21,40 @@ const whatIsDI: NextPage = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           </p>
         </div>
-          <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-80 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
+          <div className="mt-28 md:mt-40 lg:mt-52 xl:mt-60 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
             <div className="bg-tmorange h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 scale-125 shadow-glow">
             </div>
           </div>
         <div className="bg-dinoblack text-dinocream">
           <div className="">
-            <h1 className="font-heading text-5xl pt-72 pb-20 text-center">Gallery</h1>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <Image src={"/images/placeholder.jpg"} width={400} height={200} /> 
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
+            <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">Gallery</h1>
+
+            <div className="grid-container grid grid-cols-12 gap-7 xl:gap-10 lg:gap-8">
+              <div className="col-span-12 md:col-span-5 lg:col-span-3 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-7 lg:col-span-4 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-7 lg:col-span-5 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+
+              <div className="col-span-12 md:col-span-5 lg:col-span-5 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+
+              <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+              <div className="col-span-12 md:col-span-12 lg:col-span-5 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 pt-10">
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} /> 
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 pt-10 ">
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} /> 
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
-                <Image src={"/images/placeholder.jpg"} width={500} height={200} />
-            </div>
+
           </div>
         </div>
         
-        <div className="mt-96">poezeke</div>
+        <div className="mt-96">Siebe was hier</div>
       </main>
     </div>
   );
