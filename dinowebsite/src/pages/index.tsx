@@ -58,6 +58,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                       
               <Event image="/images/ThomasMore.png" title="Title" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
                       Corrupti voluptatum cum nam, minus a adipisci voluptates porro optio harum excepturi quae ad dicta placeat eum suscipit, fugiat culpa? Aliquam ut laborum ipsa ullam similique dolor voluptates voluptatum sit?
+
                       Neque a, provident ab ut libero, doloremque dicta aliquam quos veniam tenetur quas id ipsa reiciendis ratione fugit beatae dolor, et perferendis hic deserunt error animi harum. Aliquid, nostrum porro?
                       Amet possimus laborum magnam quibusdam doloribus odit, esse adipisci assumenda officiis rem harum, voluptas eaque alias libero iusto dicta molestiae? Molestiae laboriosam culpa ipsum, explicabo soluta eius quaerat quasi harum.
                       Ab, praesentium illum. Delectus consequatur asperiores eligendi atque, nam voluptas quae neque voluptatibus ut quam dolore earum corporis, quo vero dolor deleniti inventore aperiam? Maxime nihil illo tempore soluta quam." />
@@ -71,7 +72,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             <div className="mx-20">
               <h1 className="font-heading text-4xl sm:text-5xl lg:pt-5 pb-5">Featured projects</h1>
 
-              <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex flex-col lg:flex-row gap-6">
                 <Project image={allProjectsData[0].image} title={allProjectsData[0].title} text={allProjectsData[0].text}/>
                 <Project image={allProjectsData[1].image} title={allProjectsData[1].title} text={allProjectsData[1].text}/>
                 <Project image={allProjectsData[2].image} title={allProjectsData[2].title} text={allProjectsData[2].text}/>
