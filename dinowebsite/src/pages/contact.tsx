@@ -85,7 +85,7 @@ const Contact: NextPage = () => {
                     rel="noreferrer"
                     className="underline text-tmorange"
                   >
-                    Kleinehoefstraat 4, 2440 Geel
+                    Kleinhoefstraat 4, 2440 Geel
                   </a>
                 </div>
                 <div>
