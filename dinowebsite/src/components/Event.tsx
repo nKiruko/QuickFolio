@@ -12,7 +12,7 @@ type MyProps = {
 
 export default function Event(props: MyProps) {   
    return (         
-      <div className="mt-16 flex flex-col lg:flex-row md:text-center">
+      <div className="mt-16 flex flex-col lg:flex-row">
          <div  className={`lg:basis-auto ${props.left ? "lg:order-first" : "lg:order-last"}`}>
             <Image className="rounded-[25px]"
                src={props.image}
