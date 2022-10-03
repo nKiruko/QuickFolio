@@ -14,17 +14,17 @@ const whatIsDI: NextPage = () => {
       </Head>
 
       <main className="bg-dinocream overflow-hidden">
-        <div className="h-full pt-14 ml-10">
-          <h1 className="font-heading font-bold text-4xl">About digital innovation</h1>
-          <h2 className="font-heading pt-9 pb-3 font-bold text-2xl">What is DI ?</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
+        <div className="mx-20">
+          <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">About digital innovation</h1>
+          <h2 className="font-heading pt-9 pb-3 text-2xl">What is DI ?</h2>
+          <p className="font-sans text-md sm:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui deleniti deserunt eum quas nesciunt explicabo tempore, vero officia incidunt est voluptatem, autem quibusdam quasi quos cum quo id ipsum in?
           </p>
         </div>
-        <div className="mt-72 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
-            <div className="bg-tmorange h-20 md:h-52 xl:h-96 -rotate-9 scale-125 shadow-glow">
+          <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-80 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
+            <div className="bg-tmorange h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 scale-125 shadow-glow">
             </div>
           </div>
         <div className="bg-dinoblack text-dinocream">
