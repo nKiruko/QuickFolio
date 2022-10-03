@@ -24,7 +24,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite | Home</title>
+        <title>Dinowebsite - Home</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
@@ -48,7 +48,6 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
           <div className="bg-dinoblack text-dinocream">
             <div className="mx-20">
               <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">Upcoming events</h1>
-
 
               <Event image="/images/ThomasMore.png" title="Title" text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
                       Corrupti voluptatum cum nam, minus a adipisci voluptates porro optio harum excepturi quae ad dicta placeat eum suscipit, fugiat culpa? Aliquam ut laborum ipsa ullam similique dolor voluptates voluptatum sit?
