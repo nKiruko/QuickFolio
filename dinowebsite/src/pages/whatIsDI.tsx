@@ -7,7 +7,7 @@ const whatIsDI: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite | What is DI</title>
+        <title>Dinowebsite - What is DI</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
@@ -35,6 +35,7 @@ const whatIsDI: NextPage = () => {
           </div>
         <div className="bg-dinoblack text-dinocream">
           <div className="">
+
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">Gallery</h1>
 
             <div className="grid-container grid grid-cols-12 gap-7 xl:gap-10 lg:gap-8">
@@ -49,6 +50,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
               <div className="col-span-12 md:col-span-12 lg:col-span-5 relative xl:h-56 lg:h-48 h-48"><Image src={"/images/ThomasMore.png"} className="object-cover" layout="fill" /> </div>
+
             </div>
 
           </div>
