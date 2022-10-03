@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">Build shit, break shit, but ultimately,
               learn from the experiences!</h1>
             <Link href="/">
-              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange">Learn More</a>
+              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange">Learn More</a>
           </Link>
           </div>
 
