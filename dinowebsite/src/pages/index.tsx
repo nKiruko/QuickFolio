@@ -1,11 +1,26 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Event from "../components/Event";
 import Project from "../components/Project";
+import { getAllProjectDataSorted,ProjectData } from "../modules/projects";
+
+interface AllProjectEntries {
+  allProjectsData : ProjectData[];
+}
+
+export const getStaticProps : GetStaticProps = async (context) => {
+  const allProjectsData = await getAllProjectDataSorted();
+
+  return {
+    props: {
+      allProjectsData,
+    }
+  }
+};
 
 
-const Home: NextPage = () => {
+const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
@@ -57,13 +72,9 @@ const Home: NextPage = () => {
               <h1 className="font-heading text-4xl sm:text-5xl lg:pt-5 pb-5">Featured projects</h1>
 
               <div className="flex flex-col md:flex-row gap-6">
-                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
-                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
-                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
-                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
-                <Project image="/../public/images/ThomasMore.png" title="Title" text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, 
-                                      animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"/>
-
+                <Project image={allProjectsData[0].image} title={allProjectsData[0].title} text={allProjectsData[0].text}/>
+                <Project image={allProjectsData[1].image} title={allProjectsData[1].title} text={allProjectsData[1].text}/>
+                <Project image={allProjectsData[2].image} title={allProjectsData[2].title} text={allProjectsData[2].text}/>
               </div>
               <div className="w-full py-20 text-center">
                 <Link href="/projects">
