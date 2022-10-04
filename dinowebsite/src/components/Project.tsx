@@ -10,7 +10,7 @@ type Myprops = {
 
 export default function Project(props: Myprops){
 	return(
-		<div className="mt-16 flex flex-col">
+		<div className="mt-16 flex flex-col hover:bg-red-500 hover:rounded-3xl hover:cursor-pointer">
             <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] w-auto">
                 <Image src={props.image} 
                 alt={props.title} 
