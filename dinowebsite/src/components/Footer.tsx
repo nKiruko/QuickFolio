@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='grow h-14 text-center sm:hidden md:block'>
-                        <Image src="/images/logoTextTransparant.png" alt="Dino Logo" width={200} height={200}/>
+                        <Image src="/images/LogoTextTransparant.png" alt="Dino Logo" width={200} height={200}/>
                     </div>
                     <div className='flex-none w-52'>
                         <div className='flex flex-col justify-between space-y-2 items-center'>
