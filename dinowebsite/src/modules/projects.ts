@@ -28,7 +28,7 @@ export const getAllProjects = () => {
   });
 }
 
-export const getProjectData = async (name: String) : Promise<ProjectData> => {
+export const getProjectData = async (name: String  | string[]) : Promise<ProjectData> => {
   const fileContents = fs.readFileSync(path.join(projectsDir, `${name}.md`), "utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
