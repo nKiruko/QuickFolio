@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import NavBar from "../components/nav/NavBar";
 import { Icon } from "@iconify/react";
 import { useRef } from "react";
 import Coach from "../components/contact/Coach";
+
 
 const Contact: NextPage = () => {
   const inputFileRef = useRef(null);
@@ -128,10 +128,7 @@ const Contact: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="mb-[7.5rem]">
-          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
-          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
-        </div>
+
       </main>
     </div>
   );
