@@ -55,8 +55,6 @@ const whatIsDI: NextPage = () => {
 
           </div>
         </div>
-        
-        <div className="mt-96">Siebe was hier</div>
       </main>
     </div>
   );
