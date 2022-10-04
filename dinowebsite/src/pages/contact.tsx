@@ -16,18 +16,18 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Contact</title>
+        <title>Dinowebsite | Contact</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-dinocream h-screen">
         <div className="container mx-auto pt-24">
-          <h1 className="text-2xl">
+          <h1 className="text-4xl font-heading">
             Questions or proposals? Fill in the form below!
           </h1>
-          <div className="flex">
-            <form action="" className="my-5 w-4/6">
+          <div className="flex flex-col lg:flex-row">
+            <form action="" className="my-5 w-4/6 self-center">
               <div className="flex gap-5 my-3 w-full">
                 <input
                   type="text"
@@ -69,16 +69,16 @@ const Contact: NextPage = () => {
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue"
+                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue w-full"
               >
                 Send Message
               </button>
             </form>
-            <div className="ml-auto pl-10 border-l-2 border-dinoblack">
-              <h2 className="text-xl text-tmblue mb-3">Contact info</h2>
+            <div className="lg:ml-auto pl-10 lg:border-l-2 border-dinoblack">
+              <h2 className="text-2xl text-tmblue mb-3 font-heading">Contact info</h2>
               <div className="flex flex-col gap-5">
                 <div>
-                  <p>TM Address</p>
+                  <p>TM address</p>
                   <a
                     href="https://goo.gl/maps/1bFNMyqUGEV6orjx9"
                     target="_blank"
@@ -89,7 +89,7 @@ const Contact: NextPage = () => {
                   </a>
                 </div>
                 <div>
-                  <p>TM Email</p>
+                  <p>TM mail</p>
                   <a
                     href="mailto:info.geel@thomasmore.be"
                     className="underline text-tmorange"
@@ -98,7 +98,7 @@ const Contact: NextPage = () => {
                   </a>
                 </div>
                 <div>
-                  <p>TM Website</p>
+                  <p>TM website</p>
                   <a
                     href="https://www.thomasmore.be/"
                     target="_blank"
@@ -109,7 +109,7 @@ const Contact: NextPage = () => {
                   </a>
                 </div>
                 <div>
-                  <p>TM Phone number</p>
+                  <p>TM phone number</p>
                   <a href="tel:+3214562310" className="underline text-tmorange">
                     +32 14 56 23 10
                   </a>
@@ -118,13 +118,14 @@ const Contact: NextPage = () => {
             </div>
           </div>
 
-          <div className="mt-24">
-            <h2 className="text-2xl">Coaches</h2>
-            <div className="grid grid-cols-2">
-              <Coach image="/../public/images/dinobeige.png" name="Jochen" text="test" />
-              <Coach image="/../public/images/dinobeige.png" name="Jochen" text="test" />
-              <Coach image="/../public/images/dinobeige.png" name="Jochen" text="test" />
-              <Coach image="/../public/images/dinobeige.png" name="Jochen" text="test" />
+          <div className="my-24">
+            <h2 className="font-heading text-4xl mb-10">Coaches</h2>
+            <div className="flex justify-around">
+              <Coach image="/images/jochen.png" name="Jochen" text="test" />
+              <Coach image="/images/jochen.png" name="Jochen" text="test" />
+            </div>
+            <div className="flex justify-center mt-20">
+              <Coach image="/images/jochen.png" name="Jochen" text="test" />
             </div>
           </div>
         </div>
