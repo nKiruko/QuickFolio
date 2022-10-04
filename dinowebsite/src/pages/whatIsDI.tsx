@@ -10,7 +10,7 @@ const whatIsDI: NextPage = () => {
       <Head>
         <title>Dinowebsite - What is DI</title>
         <meta name="description" content="Dinowebsite" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
       <main className="bg-dinocream">

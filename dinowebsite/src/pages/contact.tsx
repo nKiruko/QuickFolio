@@ -17,7 +17,7 @@ const Contact: NextPage = () => {
       <Head>
         <title>Dinowebsite - Contact</title>
         <meta name="description" content="Dinowebsite" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="bg-dinocream">
         <div className="mx-20">
