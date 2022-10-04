@@ -2,7 +2,6 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Event from "../components/Event";
-import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 
@@ -30,8 +29,8 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" overflow-hidden">
-        <div className="bg-dinocream">
+      <main className="overflow-hidden h-full relative -z-10">
+        <div className="bg-dinocream pb-28">
           <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
               Build shit, break shit, but ultimately, learn from the
@@ -45,7 +44,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
           </div>
 
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
-            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 rotate-9 scale-125 shadow-glow"></div>
+            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
           </div>
 
           <div className="bg-dinoblack text-dinocream">
@@ -80,7 +79,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </div>
           </div>
 
-          <div className="h-40 md:h-80 lg:h-[26rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
+          <div className="h-40 md:h-80 lg:h-[26rem] xl:h-[35rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
           <div className="bg-dinocream text-dinoblack">
             <div className="mx-20">
@@ -115,6 +114,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </div>
           </div>
         </div>
+
       </main>
     </div>
   );

@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import NavBar from "../components/nav/NavBar";
 import { Icon } from "@iconify/react";
 import { useRef } from "react";
 import Coach from "../components/contact/Coach";
+
 
 const Contact: NextPage = () => {
   const inputFileRef = useRef(null);
@@ -21,8 +21,8 @@ const Contact: NextPage = () => {
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-dinocream h-screen">
-        <div className="container mx-auto pt-24">
+      <main className="bg-dinocream">
+        <div className="container mx-auto pt-24 pb-16">
           <h1 className="text-4xl font-heading">
             Questions or proposals? Fill in the form below!
           </h1>
@@ -129,6 +129,7 @@ const Contact: NextPage = () => {
             </div>
           </div>
         </div>
+
       </main>
     </div>
   );
