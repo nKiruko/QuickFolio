@@ -44,7 +44,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
           </div>
 
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
-            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 rotate-9 scale-125 shadow-glow"></div>
+            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
           </div>
 
           <div className="bg-dinoblack text-dinocream">
@@ -79,7 +79,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </div>
           </div>
 
-          <div className="h-40 md:h-80 lg:h-[26rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
+          <div className="h-40 md:h-80 lg:h-[26rem] xl:h-[35rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
           <div className="bg-dinocream text-dinoblack">
             <div className="mx-20">
