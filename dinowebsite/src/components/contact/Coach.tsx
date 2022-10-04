@@ -16,9 +16,9 @@ export default function Coach(props: MyProps) {
         height={200}
         className="rounded-lg"
       />
-      <div>
+      <div className="w-1/4">
         <p className="font-sans text-2xl">{props.name}</p>
-        <p>{props.text}</p>
+        <p className="mt-3">{props.text}</p>
       </div>
     </div>
   );

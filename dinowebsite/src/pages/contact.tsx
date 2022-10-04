@@ -4,7 +4,6 @@ import { Icon } from "@iconify/react";
 import { useRef } from "react";
 import Coach from "../components/contact/Coach";
 
-
 const Contact: NextPage = () => {
   const inputFileRef = useRef(null);
   const openFiles = () => {
@@ -14,34 +13,33 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <Head>
-        <title>Dinowebsite | Contact</title>
+        <title>Dinowebsite - Contact</title>
         <meta name="description" content="Dinowebsite" />
-        <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-dinocream ">
-        <div className="container mx-auto pt-24 pb-16">
+      <main className="bg-dinocream">
+        <div className="mx-20">
           <h1 className="text-4xl font-heading">
             Questions or proposals? Fill in the form below!
           </h1>
           <div className="flex flex-col lg:flex-row">
-            <form action="" className="my-5 w-4/6 self-center">
-              <div className="flex gap-5 my-3 w-full">
+            <form action="" className="my-5 lg:w-4/6">
+              <div className="flex flex-col lg:flex-row gap-5 my-3 w-full">
                 <input
                   type="text"
                   name="firstname"
                   placeholder="First name"
                   required
-                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-2/4"
+                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
                 />
                 <input
                   type="text"
                   name="lastname"
                   placeholder="Last name"
                   required
-                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-2/4"
+                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
                 />
               </div>
               <input
@@ -69,13 +67,13 @@ const Contact: NextPage = () => {
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue w-full"
+                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue "
               >
                 Send Message
               </button>
             </form>
-            <div className="lg:ml-auto pl-10 lg:border-l-2 border-dinoblack">
-              <h2 className="text-2xl text-tmblue mb-3 font-heading">Contact info</h2>
+            <div className="lg:ml-24 lg:pl-10 lg:border-l-2 border-dinoblack">
+              <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">Contact info</h2>
               <div className="flex flex-col gap-5">
                 <div>
                   <p>TM address</p>
@@ -120,12 +118,12 @@ const Contact: NextPage = () => {
 
           <div className="my-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
-            <div className="flex justify-around">
-              <Coach image="/images/jochen.png" name="Jochen" text="test" />
-              <Coach image="/images/jochen.png" name="Jochen" text="test" />
+            <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-around">
+              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
+              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
             </div>
             <div className="flex justify-center mt-20">
-              <Coach image="/images/jochen.png" name="Jochen" text="test" />
+              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
             </div>
           </div>
         </div>
