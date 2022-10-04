@@ -5,7 +5,7 @@ import Coffee from "../components/Coffee";
 import Event from "../components/Event";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
-import { EventData, getAllEventDataSorted } from "../modules/events"
+import { EventData, getAllEventDataSorted } from "../modules/events";
 
 interface PageData {
   allProjectsData: ProjectData[];
@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
+const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   return (
     <div>
       <Head>
@@ -48,7 +48,7 @@ const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
             </Link>
           </div>
 
-          <Coffee/>
+          <Coffee />
 
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
             <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
@@ -60,29 +60,27 @@ const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
                 Upcoming events
               </h1>
 
-              <Event
-                image={allEventsData[0].image}
-                title="Title"
-                smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
+              {allEventsData.map((eventData, i) => {
+                if (i < 2) {
+                  return (
+                    <Link href={`/events/${eventData.title}`} key={i}>
+                      <a>
+                        <Event
+                          image={eventData.image}
+                          title="Title"
+                          smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
+                          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
                       Corrupti voluptatum cum nam, minus a adipisci voluptates porro optio harum excepturi quae ad dicta placeat eum suscipit, fugiat culpa? Aliquam ut laborum ipsa ullam similique dolor voluptates voluptatum sit?
                       Neque a, provident ab ut libero, doloremque dicta aliquam quos veniam tenetur quas id ipsa reiciendis ratione fugit beatae dolor, et perferendis hic deserunt error animi harum. Aliquid, nostrum porro?
                       Amet possimus laborum magnam quibusdam doloribus odit, esse adipisci assumenda officiis rem harum, voluptas eaque alias libero iusto dicta molestiae? Molestiae laboriosam culpa ipsum, explicabo soluta eius quaerat quasi harum.
                       Ab, praesentium illum. Delectus consequatur asperiores eligendi atque, nam voluptas quae neque voluptatibus ut quam dolore earum corporis, quo vero dolor deleniti inventore aperiam? Maxime nihil illo tempore soluta quam."
-                left={true}
-              />
-
-              <Event
-                image="/images/ThomasMore.png"
-                title="Title"
-                smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
-                text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
-                      Corrupti voluptatum cum nam, minus a adipisci voluptates porro optio harum excepturi quae ad dicta placeat eum suscipit, fugiat culpa? Aliquam ut laborum ipsa ullam similique dolor voluptates voluptatum sit?
-
-                      Neque a, provident ab ut libero, doloremque dicta aliquam quos veniam tenetur quas id ipsa reiciendis ratione fugit beatae dolor, et perferendis hic deserunt error animi harum. Aliquid, nostrum porro?
-                      Amet possimus laborum magnam quibusdam doloribus odit, esse adipisci assumenda officiis rem harum, voluptas eaque alias libero iusto dicta molestiae? Molestiae laboriosam culpa ipsum, explicabo soluta eius quaerat quasi harum.
-                      Ab, praesentium illum. Delectus consequatur asperiores eligendi atque, nam voluptas quae neque voluptatibus ut quam dolore earum corporis, quo vero dolor deleniti inventore aperiam? Maxime nihil illo tempore soluta quam."
-              />
+                          left={i == 0 ? true : false}
+                        />
+                      </a>
+                    </Link>
+                  );
+                }
+              })}
             </div>
           </div>
 
@@ -95,21 +93,21 @@ const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
               </h1>
 
               <div className="flex flex-col lg:flex-row gap-6">
-                <Project
-                  image={allProjectsData[0].image}
-                  title={allProjectsData[0].title}
-                  text={allProjectsData[0].text}
-                />
-                <Project
-                  image={allProjectsData[1].image}
-                  title={allProjectsData[1].title}
-                  text={allProjectsData[1].text}
-                />
-                <Project
-                  image={allProjectsData[2].image}
-                  title={allProjectsData[2].title}
-                  text={allProjectsData[2].text}
-                />
+                {allProjectsData.map((projectData, i) => {
+                  if (i < 3) {
+                    return (
+                      <Link href={`/projects/${projectData.title}`} key={i}>
+                        <a>
+                          <Project
+                            image={projectData.image}
+                            title={projectData.title}
+                            text={projectData.text}
+                          />
+                        </a>
+                      </Link>
+                    );
+                  }
+                })}
               </div>
               <div className="w-full py-20 text-center">
                 <Link href="/projects">
@@ -121,7 +119,6 @@ const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );
