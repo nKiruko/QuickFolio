@@ -14,14 +14,14 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Head>
         <title>Dinowebsite - Contact</title>
         <meta name="description" content="Dinowebsite" />
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-dinocream">
+      <main className="bg-dinocream ">
         <div className="container mx-auto pt-24 pb-16">
           <h1 className="text-2xl">
             Questions or proposals? Fill in the form below!
