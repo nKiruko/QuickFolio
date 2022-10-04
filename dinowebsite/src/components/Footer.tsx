@@ -4,12 +4,12 @@ import Link from "next/link";
 
 const Footer = () => {
     return(
-        <div className=" bg-[linear-gradient(-9deg,_#f04c25_50%,_#f6f2e7_50%)] overflow-hidden relative inset-y-0 bottom-0 z-10 pt-96 ">
+        <div className="xl:bg-[linear-gradient(-6deg,_#f04c25_50%,_#f6f2e7_50%)]  bg-[linear-gradient(-9deg,_#f04c25_50%,_#f6f2e7_50%)] overflow-hidden relative inset-y-0 bottom-0 z-10 pt-96 ">
 
 
-        <div className="bg-tmgrey mb-32 absolute bottom-0 inset-x-0 h-60 rotate-9 scale-125 shadow-glow -z-10">
+        <div className="bg-tmgrey mb-32 absolute bottom-0 inset-x-0 h-60 rotate-9 xl:rotate-6 scale-125 shadow-glow -z-10">
         </div>
-            <div className="bg-tmorange mb-[9.5rem] absolute bottom-0 inset-x-0 h-60 -rotate-9 scale-125 shadow-glow -z-10">
+            <div className="bg-tmorange mb-[9.5rem] absolute bottom-0 inset-x-0 h-60 -rotate-9 xl:-rotate-[5deg] scale-125 shadow-glow -z-10">
         </div>
 
         <footer className="bg-tmorange text-dinocream m-auto h-auto z-10">
