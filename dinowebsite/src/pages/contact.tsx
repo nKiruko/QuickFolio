@@ -116,7 +116,7 @@ const Contact: NextPage = () => {
             </div>
           </div>
 
-          <div className="my-24">
+          <div className="py-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-around">
               <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
