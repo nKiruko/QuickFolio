@@ -25,7 +25,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
        <Head>
          <title>Dinowebsite - Projects</title>
          <meta name="description" content="Dinowebsite" />
-         <link rel="icon" href="/favicon.ico" />
+         <link rel="icon" href="images/LogoTextTransparant.png" />
        </Head>
        <main>
          <div className="bg-dinocream text-dinoblack overflow-hidden pb-64">

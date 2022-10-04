@@ -30,7 +30,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
       <Head>
         <title>Dinowebsite - Home</title>
         <meta name="description" content="Dinowebsite" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
       <main>
