@@ -33,7 +33,7 @@ const Project: NextPage<ProjectDataProps> = ({projectData}) => {
             <Head>
                 <title>Dinowebsite | { projectData.title }</title>
                 <meta name="description" content="Dinowebsite" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="images/LogoTextTransparant.png" />
             </Head>
             <main className="overflow-hidden">
                 <div className="bg-dinocream pb-24">
