@@ -11,8 +11,12 @@ type Myprops = {
 export default function Project(props: Myprops){
 	return(
 		<div className="mt-16 flex flex-col">
-            <div>
-                <Image src={props.image} alt={props.title} className="rounded-[25px]" width={500} height={300} />
+            <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] w-auto">
+                <Image src={props.image} 
+                alt={props.title} 
+                className="rounded-[25px] object-cover"
+                layout="fill"
+                />
             </div>
             <div className="font-heading text-3xl sm:text-4xl mt-5">
                 {props.title}
