@@ -1,7 +1,7 @@
 import NavBar from "../components/nav/NavBar";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
-import Footerlines from "./Footerlines";
+
 
 export default function Layout({ children }: any) {
   const router = useRouter();
