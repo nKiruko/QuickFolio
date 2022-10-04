@@ -4,9 +4,9 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const projectsDir = path.join(process.cwd(), "projects");
+const eventsDir = path.join(process.cwd(), "events");
 
-export type ProjectData = {
+export type EventData = {
   image: string,
 	title: string,
   date?: number,
@@ -16,20 +16,20 @@ export type ProjectData = {
 }
 
 
-export const getAllProjects = () => {
-  const projectNames = fs.readdirSync(projectsDir);
+export const getAllEvents = () => {
+  const eventNames = fs.readdirSync(eventsDir);
 
-  return projectNames.map((projectName) => {
+  return eventNames.map((eventName) => {
     return {
       params : {
-        project: projectName.replace(/\.md$/, ""),
+        event: eventName.replace(/\.md$/, ""),
       }
     }
   });
 }
 
-export const getProjectData = async (name: String  | string[]) : Promise<ProjectData> => {
-  const fileContents = fs.readFileSync(path.join(projectsDir, `${name}.md`), "utf8");
+export const getEventData = async (name: string | string[]) : Promise<EventData> => {
+  const fileContents = fs.readFileSync(path.join(eventsDir, `${name}.md`), "utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
 
@@ -38,27 +38,25 @@ export const getProjectData = async (name: String  | string[]) : Promise<Project
     .process(matterConversed.content);
 
 
-  return <ProjectData> {
+  return <EventData> {
     ...matterConversed.data,
     text : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!",
     content: htmlContent.toString(),
   }
 };
 
-export const getAllProjectsData = async () : Promise<Array<ProjectData>> => {
-  const projectNames = fs.readdirSync(projectsDir);
-  let allProjectsData = projectNames.map(async (projectName) : Promise<ProjectData> => { 
-    return <ProjectData> (await getProjectData(projectName.replace(/\.md$/, "")));
+export const getAllEventsData = async () : Promise<Array<EventData>> => {
+  const eventNames = fs.readdirSync(eventsDir);
+  let allEventsData = eventNames.map(async (eventName) : Promise<EventData> => { 
+    return <EventData> (await getEventData(eventName.replace(/\.md$/, "")));
   });
   
-  return await Promise.all(allProjectsData);
+  return await Promise.all(allEventsData);
 }
 
-export const getAllProjectDataSorted = async () : Promise<Array<ProjectData>> => {
-  return (await getAllProjectsData()).sort((a, b) => {
+export const getAllEventDataSorted = async () : Promise<Array<EventData>> => {
+  return (await getAllEventsData()).sort((a, b) => {
     if((a.date || (new Date()).getTime()) < (b.date || (new Date()).getTime())) return 1;
     else return -1;
   });
 }
-
-

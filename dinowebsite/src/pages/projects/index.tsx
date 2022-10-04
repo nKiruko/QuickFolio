@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Project from "../components/Project";
-import ProjectFeature from "../components/ProjectFeature";
-import { getAllProjectDataSorted,ProjectData } from "../modules/projects";
+import Project from "../../components/Project";
+import ProjectFeature from "../../components/ProjectFeature";
+import { getAllProjectDataSorted,ProjectData } from "../../modules/projects";
 
 interface AllProjectEntries {
   allProjectsData : ProjectData[];

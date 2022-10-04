@@ -1,25 +1,30 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Coffee from "../components/Coffee";
 import Event from "../components/Event";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
+import { EventData, getAllEventDataSorted } from "../modules/events"
 
-interface AllProjectEntries {
+interface PageData {
   allProjectsData: ProjectData[];
+  allEventsData: EventData[];
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const allProjectsData = await getAllProjectDataSorted();
+  const allEventsData = await getAllEventDataSorted();
 
   return {
     props: {
       allProjectsData,
+      allEventsData,
     },
   };
 };
 
-const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
+const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
   return (
     <div>
       <Head>
@@ -29,7 +34,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="overflow-hidden h-full relative -z-10">
+      <main>
         <div className="bg-dinocream pb-28">
           <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
@@ -43,6 +48,8 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </Link>
           </div>
 
+          <Coffee/>
+
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
             <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
           </div>
@@ -54,7 +61,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               </h1>
 
               <Event
-                image="/images/ThomasMore.png"
+                image={allEventsData[0].image}
                 title="Title"
                 smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
                 text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.

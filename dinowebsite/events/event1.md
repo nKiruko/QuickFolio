@@ -1,9 +1,9 @@
 ---
-title: project1
-image: https://images.pexels.com/photos/12547195/pexels-photo-12547195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+title: event1
+image: /images/projects/project1.png
 date: 1609455600
 ---
-# Project 1
+# Event 1
 Friday, 01 January 2021 00:00:00.000 +01:00
 
 ## Meo magis aviti vulneris denique vertice pro
