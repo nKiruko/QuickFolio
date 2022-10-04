@@ -10,8 +10,10 @@ interface EventDataProps {
 }
 
 export const getStaticProps : GetStaticProps = async (context) => {
-    if(!context?.params?.event) throw new Error("Param missing");
+    console.log(context?.params?.event);
+    if(!context?.params?.event || context?.params?.event == undefined) throw new Error("Param missing");
     const eventData = await getEventData(context.params.event);
+    console.log(eventData);
     return {
       props: {
         eventData
@@ -23,7 +25,7 @@ export const getStaticPaths = async () => {
     const paths = getAllEvents();
     return {
         paths,
-        fallback : true
+        fallback : false
     }
 }
 
