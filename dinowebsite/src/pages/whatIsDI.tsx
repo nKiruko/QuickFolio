@@ -13,7 +13,7 @@ const whatIsDI: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-dinocream overflow-hidden">
+      <main className="bg-dinocream">
         <div className="mx-20">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">About digital innovation</h1>
           <h2 className="font-heading pt-9 pb-3 text-2xl">What is DI ?</h2>
@@ -33,7 +33,7 @@ const whatIsDI: NextPage = () => {
             <div className="bg-tmorange h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 scale-125 shadow-glow">
             </div>
           </div>
-        <div className="bg-dinoblack text-dinocream">
+        <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
 
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">Gallery</h1>
@@ -55,6 +55,11 @@ const whatIsDI: NextPage = () => {
 
           </div>
         </div>
+        <div className="mb-[7.5rem]">
+          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
+          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
+        </div>
+        
       </main>
     </div>
   );

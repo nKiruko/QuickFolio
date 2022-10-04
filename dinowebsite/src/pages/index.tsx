@@ -30,8 +30,8 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" overflow-hidden">
-        <div className="bg-dinocream">
+      <main className="overflow-hidden h-full relative -z-10">
+        <div className="bg-dinocream pb-28">
           <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
               Build shit, break shit, but ultimately, learn from the
@@ -114,6 +114,10 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mb-[7.5rem]">
+          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
+          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
         </div>
       </main>
     </div>
