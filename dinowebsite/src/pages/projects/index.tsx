@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import Project from "../../components/Project";
 import ProjectFeature from "../../components/ProjectFeature";
 import { getAllProjectDataSorted,ProjectData } from "../../modules/projects";
@@ -26,7 +27,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
          <meta name="description" content="Dinowebsite" />
          <link rel="icon" href="/favicon.ico" />
        </Head>
-       <main className="overflow-hidden h-full relative -z-10">
+       <main>
          <div className="bg-dinocream text-dinoblack overflow-hidden pb-64">
            <div className="mx-20">
             <div className="flex flex-col lg:flex-row justify-between pt-24 sm:pt-32 pb-5 ">
@@ -36,24 +37,33 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </div>
 
              <div className="flex flex-col md:flex-row md:gap-8 lg:gap-20 xl:gap-52">
-               {allProjectsData.map((projectData, i) => {
-               if (i
-               < 2) { return ( <ProjectFeature key={i} image={projectData.image} title={projectData.title}
-                 text={projectData.text} />
-               );
-               };
-               })}
+              {allProjectsData.map((projectData, i) => {
+              if (i < 2) { 
+                return ( 
+                  <Link href={`/projects/${projectData.title}`} key={i}>
+                    <a>
+                      <ProjectFeature key={i} image={projectData.image} title={projectData.title} text={projectData.text} />
+                    </a>
+                </Link>
+                );
+              };
+              })}
              </div>
            </div>
            <div className="mx-20">
              <div className="mt-32 flex flex-col md:flex-row gap-6">
-               {allProjectsData.map((project, i) => (
-               <Project key={i} image={project.image} title={project.title} text={project.text} />
-               ))}
+               {allProjectsData.map((project, i) => {
+                return(
+                <Link href={`/projects/${project.title}`} key={i}>
+                  <a>
+                    <Project key={i} image={project.image} title={project.title} text={project.text} />
+                  </a>
+                </Link>
+                );
+              })}
              </div>
            </div>
          </div>
-
        </main>
        </div>
   );
