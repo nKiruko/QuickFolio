@@ -20,13 +20,14 @@ export default function Event(props: MyProps) {
 
    return (         
       <div className="mt-16 flex flex-col lg:flex-row">
+         <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] lg:w-1/2">
          <div  className={`lg:basis-auto ${props.left ? "lg:order-first" : "lg:order-last"}`}>
-            <Image className="rounded-[25px]"
-               src={props.image}
-               alt={props.title}
-               width={500}
-               height={300}
-            />
+               <Image src={props.image} 
+                alt={props.title} 
+                className="rounded-[25px] object-cover"
+                layout="fill"
+                />
+         </div>
          </div>
          <div className={`lg:basis-3/4 md:w-5/6  mt-5 ${props.left ? "lg:order-last lg:pl-10" : "lg:order-first lg:pr-10"}`}>
             <h1 className="text-left font-heading text-3xl sm:text-4xl pb-5 ">{props.title}</h1>
