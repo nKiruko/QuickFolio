@@ -27,8 +27,8 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
          <meta name="robots" content="noindex" />
          <link rel="icon" href="/favicon.ico" />
        </Head>
-       <main>
-         <div className="bg-dinocream text-dinoblack overflow-hidden">
+       <main className="overflow-hidden h-full relative -z-10">
+         <div className="bg-dinocream text-dinoblack overflow-hidden pb-64">
            <div className="mx-20">
             <div className="flex flex-col lg:flex-row justify-between pt-24 sm:pt-32 pb-5 ">
                 <h1 className="font-heading text-4xl sm:text-5xl">Recent projects</h1>
@@ -54,6 +54,10 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
              </div>
            </div>
          </div>
+         <div className="mb-[7.5rem]">
+          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
+          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
+        </div>
        </main>
        </div>
   );
