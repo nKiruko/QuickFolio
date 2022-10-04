@@ -19,7 +19,7 @@ export default function Event(props: MyProps) {
    }
 
    return (         
-      <div className="mt-16 flex flex-col lg:flex-row">
+      <div className="mt-16 flex flex-col lg:flex-row hover:border hover:border-dinocream hover:rounded-3xl hover:cursor-pointer">
          <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] lg:w-1/2">
          <div  className={`lg:basis-auto ${props.left ? "lg:order-first" : "lg:order-last"}`}>
                <Image src={props.image} 
