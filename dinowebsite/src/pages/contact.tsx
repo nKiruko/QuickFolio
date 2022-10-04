@@ -21,8 +21,8 @@ const Contact: NextPage = () => {
         <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-dinocream h-screen">
-        <div className="container mx-auto pt-24">
+      <main className="bg-dinocream">
+        <div className="container mx-auto pt-24 pb-16">
           <h1 className="text-2xl">
             Questions or proposals? Fill in the form below!
           </h1>
@@ -127,6 +127,10 @@ const Contact: NextPage = () => {
               <Coach image="/../public/images/dinobeige.png" name="Jochen" text="test" />
             </div>
           </div>
+        </div>
+        <div className="mb-[7.5rem]">
+          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
+          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
         </div>
       </main>
     </div>
