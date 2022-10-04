@@ -4,22 +4,26 @@ import Link from "next/link";
 import Event from "../components/Event";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
+import { EventData, getAllEventDataSorted } from "../modules/events"
 
-interface AllProjectEntries {
+interface PageData {
   allProjectsData: ProjectData[];
+  allEventsData: EventData[];
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const allProjectsData = await getAllProjectDataSorted();
+  const allEventsData = await getAllEventDataSorted();
 
   return {
     props: {
       allProjectsData,
+      allEventsData,
     },
   };
 };
 
-const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
+const Home: NextPage<PageData> = ({ allProjectsData , allEventsData }) => {
   return (
     <div>
       <Head>
@@ -54,7 +58,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               </h1>
 
               <Event
-                image="/images/ThomasMore.png"
+                image={allEventsData[0].image}
                 title="Title"
                 smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
                 text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
