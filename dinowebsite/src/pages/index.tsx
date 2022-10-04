@@ -2,7 +2,6 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Event from "../components/Event";
-import Footer from "../components/Footer";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 
@@ -115,10 +114,7 @@ const Home: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             </div>
           </div>
         </div>
-        <div className="mb-[7.5rem]">
-          <div className="bg-tmgrey mb-72 absolute inset-x-0 h-60 rotate-9 scale-125 shadow-glow "></div>
-          <div className="bg-tmorange mb-[9.5rem] absolute inset-x-0 h-60 -rotate-9 scale-125 shadow-glow "></div>
-        </div>
+
       </main>
     </div>
   );

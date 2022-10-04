@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return(
+        
         <div className='absolute w-full overflow-hidden z-10 '>
             <div className="  relative inset-y-0 bottom-0 z-10 ">
             {/* <div className="bg-tmgrey mb-32 absolute bottom-0 inset-x-0 h-60 rotate-9 scale-125 shadow-glow -z-10">
