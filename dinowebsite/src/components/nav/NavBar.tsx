@@ -20,7 +20,7 @@ const NavBar = () => {
                         <Link href="/">
                             <a className="lg:ml-24 py-6 px-11 bg-dinoblack shadow-glow">
                                 <Image
-                                src="/images/logoTextTransparant.png"
+                                src="/images/LogoTextTransparant.png"
                                 alt="Dino Logo"
                                 width={100}
                                 height={100}
