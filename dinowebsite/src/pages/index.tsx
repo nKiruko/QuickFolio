@@ -30,7 +30,6 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
       <Head>
         <title>Dinowebsite - Home</title>
         <meta name="description" content="Dinowebsite" />
-        <meta name="robots" content="noindex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -41,7 +40,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               Build shit, break shit, but ultimately, learn from the
               experiences!
             </h1>
-            <Link href="/">
+            <Link href="/whatIsDI">
               <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange">
                 Learn More
               </a>
