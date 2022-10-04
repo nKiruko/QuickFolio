@@ -35,7 +35,6 @@ const Event: NextPage<EventDataProps> = ({eventData}) => {
             <Head>
                 <title>Dinowebsite | { eventData.title }</title>
                 <meta name="description" content="Dinowebsite" />
-                <meta name="robots" content="noindex" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="overflow-hidden">
