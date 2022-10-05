@@ -42,7 +42,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                 return ( 
                   <Link href={`/projects/${projectData.title}`} key={i}>
                     <a>
-                      <ProjectFeature key={i} image={projectData.image} title={projectData.title} text={projectData.text} />
+                      <ProjectFeature key={i} image={projectData.image} title={projectData.title} summary={projectData.summary} />
                     </a>
                 </Link>
                 );
@@ -56,7 +56,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                 return(
                 <Link href={`/projects/${project.title}`} key={i}>
                   <a>
-                    <Project key={i} image={project.image} title={project.title} text={project.text} />
+                    <Project projectData={project} />
                   </a>
                 </Link>
                 );

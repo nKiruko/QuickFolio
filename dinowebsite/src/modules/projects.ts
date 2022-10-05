@@ -11,8 +11,8 @@ export type ProjectData = {
 	title: string,
   date?: number,
 	position?: boolean,
-  text: string,
-  content: string,
+  summary: string,
+  content?: string,
 }
 
 
@@ -32,15 +32,12 @@ export const getProjectData = async (name: String  | string[]) : Promise<Project
   const fileContents = fs.readFileSync(path.join(projectsDir, `${name}.md`), "utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
-
   const htmlContent = await remark()
     .use(html)
     .process(matterConversed.content);
 
-
   return <ProjectData> {
     ...matterConversed.data,
-    text : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!",
     content: htmlContent.toString(),
   }
 };

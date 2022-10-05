@@ -2,6 +2,7 @@
 title: event2
 image: /images/projects/project2.png
 date: 1609455600
+summary : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"
 ---
 # Event 2
 Friday, 01 January 2021 00:00:00.000 +01:00

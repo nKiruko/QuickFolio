@@ -58,20 +58,13 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 Upcoming events
               </h1>
 
-              {allEventsData.map((eventData, i) => {
+              {allEventsData.map((event, i) => {
                 if (i < 2) {
                   return (
-                    <Link href={`/events/${eventData.title}`} key={i}>
+                    <Link href={`/events/${event.title}`} key={i}>
                       <a>
                         <Event
-                          image={eventData.image}
-                          title="Title"
-                          smalltext="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro."
-                          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis inventore iste earum hic consequatur ullam, iusto, accusamus quae assumenda, aliquam impedit dolore nam? Assumenda ad similique dolores ex, rem porro.
-                      Corrupti voluptatum cum nam, minus a adipisci voluptates porro optio harum excepturi quae ad dicta placeat eum suscipit, fugiat culpa? Aliquam ut laborum ipsa ullam similique dolor voluptates voluptatum sit?
-                      Neque a, provident ab ut libero, doloremque dicta aliquam quos veniam tenetur quas id ipsa reiciendis ratione fugit beatae dolor, et perferendis hic deserunt error animi harum. Aliquid, nostrum porro?
-                      Amet possimus laborum magnam quibusdam doloribus odit, esse adipisci assumenda officiis rem harum, voluptas eaque alias libero iusto dicta molestiae? Molestiae laboriosam culpa ipsum, explicabo soluta eius quaerat quasi harum.
-                      Ab, praesentium illum. Delectus consequatur asperiores eligendi atque, nam voluptas quae neque voluptatibus ut quam dolore earum corporis, quo vero dolor deleniti inventore aperiam? Maxime nihil illo tempore soluta quam."
+                          eventData={event}
                           left={i == 0 ? true : false}
                         />
                       </a>
@@ -91,16 +84,12 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               </h1>
 
               <div className="flex flex-col lg:flex-row gap-6">
-                {allProjectsData.map((projectData, i) => {
+                {allProjectsData.map((project, i) => {
                   if (i < 3) {
                     return (
-                      <Link href={`/projects/${projectData.title}`} key={i}>
+                      <Link href={`/projects/${project.title}`} key={i}>
                         <a>
-                          <Project
-                            image={projectData.image}
-                            title={projectData.title}
-                            text={projectData.text}
-                          />
+                          <Project projectData={project} />
                         </a>
                       </Link>
                     );
