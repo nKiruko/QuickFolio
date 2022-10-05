@@ -73,7 +73,9 @@ const Contact: NextPage = () => {
               </button>
             </form>
             <div className="lg:ml-24 lg:pl-10 lg:border-l-2 border-dinoblack">
-              <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">Contact info</h2>
+              <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">
+                Contact info
+              </h2>
               <div className="flex flex-col gap-5">
                 <div>
                   <p>TM address</p>
@@ -119,15 +121,26 @@ const Contact: NextPage = () => {
           <div className="py-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-around">
-              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
-              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
+              <Coach
+                image="/images/jochen.png"
+                name="Jochen"
+                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+              />
+              <Coach
+                image="/images/jochen.png"
+                name="Jochen"
+                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+              />
             </div>
             <div className="flex justify-center mt-20">
-              <Coach image="/images/jochen.png" name="Jochen" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus." />
+              <Coach
+                image="/images/jochen.png"
+                name="Jochen"
+                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+              />
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );

@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 type MyProps = {
-    image: string,
-    name: string,
-    text: string,
-}
+  image: string;
+  name: string;
+  text: string;
+};
 
 export default function Coach(props: MyProps) {
   return (
