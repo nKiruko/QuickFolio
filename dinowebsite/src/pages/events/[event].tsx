@@ -5,7 +5,7 @@ import Image from "next/image";
 import fs from "fs";
 import { EventData, getAllEvents, getEventData } from "../../modules/events";
 
-interface EventDataProps {
+export interface EventDataProps {
     eventData: EventData;
 }
 
@@ -50,7 +50,7 @@ const Event: NextPage<EventDataProps> = ({ eventData }) => {
                         <div>
                             <h1 className="font-heading sm:text-4xl my-4 mx-20">{eventData.title}</h1>
                         </div>
-                        <p className="mx-20 pb-32">{eventData.text}</p>
+                        <p className="mx-20 pb-32">{eventData.summary}</p>
                     </div>
                 </div>
             </main>
