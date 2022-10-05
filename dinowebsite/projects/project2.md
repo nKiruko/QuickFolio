@@ -2,6 +2,7 @@
 title: project2
 image: /images/projects/project2.png
 date: 1622498400
+summary : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
 ---
 # Project 2
 Tuesday, 01 June 2021 00:00:00.000 +02:00
