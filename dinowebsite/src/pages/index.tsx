@@ -66,6 +66,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                       <a>
                         <Event
                           eventData={event}
+                          left={i == 0 ? true : false}
                         />
                       </a>
                     </Link>

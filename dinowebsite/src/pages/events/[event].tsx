@@ -7,6 +7,7 @@ import { EventData, getAllEvents, getEventData } from "../../modules/events";
 
 export interface EventDataProps {
     eventData: EventData;
+    left?: boolean;
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
