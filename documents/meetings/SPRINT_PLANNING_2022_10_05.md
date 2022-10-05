@@ -1,3 +1,16 @@
 # Sprint Planning 5 oktober 2022
 
-T.B.D.
+Sprint: 3  
+Meeting time: xx minuten  
+
+## Meeting points
+
+- xyz
+
+## Verloop
+
+- xyz
+
+## Feedback
+
+- xyz
