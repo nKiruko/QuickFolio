@@ -5,6 +5,7 @@ import Image from "next/image";
 import Coffee from "../components/Coffee";
 
 const whatIsDI: NextPage = () => {
+
   return (
     <div>
       <Head>
@@ -14,6 +15,7 @@ const whatIsDI: NextPage = () => {
       </Head>
 
       <main className="bg-dinocream">
+      
         <div className="mx-20">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">
             About digital innovation
@@ -43,6 +45,7 @@ const whatIsDI: NextPage = () => {
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
             <Coffee />
+            
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">
               Gallery
             </h1>

@@ -11,6 +11,19 @@ const Coffee = () => {
       let data = await response.json();
       console.log(typeof data.amountOfCoffees);
       setData(data);
+      
+
+      let interval = 500;
+      let startValue = 0;
+      let endValue = data.amountOfCoffees;
+      let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function () {
+        startValue += 1;
+        console.log(startValue);
+        document.getElementById('totalCoffee')!.innerText = startValue.toString()
+        if (startValue == endValue) clearInterval(counter);
+      }, duration);
+
     }
     getCoffeeAmount();
   }, []);
@@ -82,7 +95,7 @@ const Coffee = () => {
         </div>
       </div>
       <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-        <span
+        <span id="totalCoffee"
           x-data="animatedCounter(data.amountOfCoffees, 200)"
           x-init="updatecounter"
           x-text="Math.round(current)"
