@@ -26,7 +26,7 @@ const Contact: NextPage = () => {
           </h1>
           <div className="flex flex-col lg:flex-row">
             <form action="" className="my-5 lg:w-4/6">
-              <div className="flex flex-col lg:flex-row gap-5 my-3 w-full">
+              <div className="flex flex-col lg:flex-row gap-3 my-3 w-full">
                 <input
                   type="text"
                   name="firstname"
@@ -120,7 +120,7 @@ const Contact: NextPage = () => {
 
           <div className="py-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
-            <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row lg:justify-around">
+            <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row">
               <Coach
                 image="/images/jochen.png"
                 name="Jochen"
@@ -132,7 +132,7 @@ const Contact: NextPage = () => {
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
             </div>
-            <div className="flex justify-center mt-20">
+            <div className="flex gap-10 lg:gap-0 lg:flex-row lg:justify-around mb-10 mt-10 w-auto">
               <Coach
                 image="/images/jochen.png"
                 name="Jochen"
