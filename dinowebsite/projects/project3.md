@@ -2,6 +2,7 @@
 title: project3
 image: /images/projects/project3.png
 date: 1640991600
+summary : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
 ---
 # Project 3
 Saturday, 01 January 2022 00:00:00.000 +01:00

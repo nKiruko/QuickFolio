@@ -11,7 +11,7 @@ export type EventData = {
 	title: string,
   date?: number,
 	position?: boolean,
-  text: string,
+  summary: string,
   content: string,
 }
 
@@ -40,7 +40,6 @@ export const getEventData = async (name: string | string[]) : Promise<EventData>
 
   return <EventData> {
     ...matterConversed.data,
-    text : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!",
     content: htmlContent.toString(),
   }
 };
