@@ -92,16 +92,12 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               </h1>
 
               <div className="flex flex-col lg:flex-row gap-6">
-                {allProjectsData.map((projectData, i) => {
+                {allProjectsData.map((project, i) => {
                   if (i < 3) {
                     return (
-                      <Link href={`/projects/${projectData.title}`} key={i}>
+                      <Link href={`/projects/${project.title}`} key={i}>
                         <a>
-                          <Project
-                            image={projectData.image}
-                            title={projectData.title}
-                            text={projectData.text}
-                          />
+                          <Project projectData={project} />
                         </a>
                       </Link>
                     );

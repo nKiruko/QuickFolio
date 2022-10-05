@@ -1,14 +1,7 @@
 import Image from "next/image";
+import { ProjectData } from "../modules/projects";
 
-type Myprops = {
-	// dingen die je meerdere keren gebruikt
-    image: string,
-	title: string,
-	text: string,
-	positie?: boolean //optionele parameter
-}
-
-export default function Project(props: Myprops){
+export default function Project(props: ProjectData){
 	return(
 		<div className="mt-16 hover:cursor-pointer">
             <div className="basis-1/2 relative h-52 sm:h-80 lg:h-96 xl:h-[40rem] w-auto">
@@ -23,7 +16,7 @@ export default function Project(props: Myprops){
                     {props.title}
                 </div>
                 <div className="font-sans xl:w-11/12 mt-5 text-sm sm:text-md basis-1/2 text-justify">
-                    {props.text}
+                    {props.summary}
                 </div>
             </div>
         </div>

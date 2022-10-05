@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { ProjectData, getProjectData, getAllProjects } from "../../modules/projects";
 
-interface ProjectDataProps {
+export interface ProjectDataProps {
     projectData : ProjectData;
 }
 
@@ -44,7 +44,7 @@ const Project: NextPage<ProjectDataProps> = ({projectData}) => {
                             <h1 className="font-heading sm:text-4xl my-4 mx-20">{ projectData.title }</h1>
                         </div>
                         <div>
-                            <p className="mx-20">{ projectData.text }</p>
+                            <p className="mx-20">{ projectData.summary }</p>
                         </div>
                     </div>
                 </div>
