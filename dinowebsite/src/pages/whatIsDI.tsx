@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Image from "next/image";
+import Coffee from "../components/Coffee";
 
 
 const whatIsDI: NextPage = () => {
@@ -35,7 +36,7 @@ const whatIsDI: NextPage = () => {
           </div>
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
-
+          <Coffee/>
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">Gallery</h1>
 
             <div className="grid-container grid grid-cols-12 gap-7 xl:gap-10 lg:gap-8">
