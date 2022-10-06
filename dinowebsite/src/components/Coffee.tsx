@@ -73,7 +73,11 @@ const Coffee = () => {
         </div>
       </div>
       <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-        <span id="totalCoffee">
+        <span id="totalCoffee"
+            x-data="animatedCounter(data.amountOfCoffees, 200)"
+            x-init="updatecounter"
+            x-text="Math.round(current)"
+        >
           {data.amountOfCoffees}
         </span>{" "}
         Coffees drank this year.
