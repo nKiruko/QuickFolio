@@ -40,19 +40,13 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                 className=" valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey  px-2 py-1  mt-5 lg:mt-0 sm:w-1/2 lg:w-2/5 xl:w-1/4 2xl:mr-16"
               />
             </div>
-
-            <div className="flex flex-col md:flex-row md:gap-8 lg:gap-20 xl:gap-52">
-              {allProjectsData.map((projectData, i) => {
-                if (i < 2) {
+            <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-8 lg:gap-20 xl:gap-52">
+              {allProjectsData.map((project, i) => {
+                if (project.featured) {
                   return (
-                    <Link href={`/projects/${projectData.title}`} key={i}>
+                    <Link href={`/projects/${project.title}`} key={i}>
                       <a>
-                        <ProjectFeature
-                          key={i}
-                          image={projectData.image}
-                          title={projectData.title}
-                          summary={projectData.summary}
-                        />
+                      <Project projectData={project} />
                       </a>
                     </Link>
                   );
@@ -60,9 +54,10 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               })}
             </div>
           </div>
-          <div className="mx-20">
-            <div className="mt-32 flex flex-col md:flex-row gap-6">
+          <div className="mx-20 ">
+            <div className="mt-32 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
               {allProjectsData.map((project, i) => {
+                if (!project.featured) {
                 return (
                   <Link href={`/projects/${project.title}`} key={i}>
                     <a>
@@ -70,6 +65,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                     </a>
                   </Link>
                 );
+              }
               })}
             </div>
           </div>

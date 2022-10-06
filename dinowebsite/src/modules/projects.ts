@@ -13,6 +13,7 @@ export type ProjectData = {
   position?: boolean;
   summary: string;
   content?: string;
+  featured: boolean;
 };
 
 export const getAllProjects = () => {

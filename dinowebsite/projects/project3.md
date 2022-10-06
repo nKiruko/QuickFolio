@@ -3,6 +3,7 @@ title: project3
 image: /images/projects/project3.png
 date: 1640991600
 summary: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
+featured: true
 ---
 
 # Project 3
