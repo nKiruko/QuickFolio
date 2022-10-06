@@ -56,7 +56,7 @@ const whatIsDI: NextPage = () => {
                   />
                   <div className="pl-24 pt-56">
                     <Image
-                      src="/images/Projectwheel.png"
+                      src="/images/ProjectWheel.png"
                       alt="People"
                       className="object-contain animate-spin-slow z-10"
                       width={80}
