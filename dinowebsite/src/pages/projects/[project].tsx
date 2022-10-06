@@ -11,10 +11,8 @@ export interface ProjectDataProps {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log(context?.params?.event);
   if (!context?.params?.project) throw new Error("Param missing");
   const projectData = await getProjectData(context.params.project);
-  console.log(projectData);
   return {
     props: {
       projectData,

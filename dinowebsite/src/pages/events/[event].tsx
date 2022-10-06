@@ -11,11 +11,9 @@ export interface EventDataProps {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log(context?.params?.event);
   if (!context?.params?.event || context?.params?.event == undefined)
     throw new Error("Param missing");
   const eventData = await getEventData(context.params.event);
-  console.log(eventData);
   return {
     props: {
       eventData,
