@@ -1,24 +1,10 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Coffee from "../components/Coffee";
-import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
+import ProjectCount from "../components/ProjectCount";
 
-interface PageData {
-  allProjectsData: ProjectData[];
-}
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const allProjectsData = await getAllProjectDataSorted();
-
-  return {
-    props: {
-      allProjectsData,
-    },
-  };
-};
-
-const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
+const whatIsDI: NextPage = () => {
   return (
     <div>
       <Head>
@@ -26,9 +12,7 @@ const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
         <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-
       <main className="bg-dinocream">
-      
         <div className="mx-20 3xl:pb-24">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
             About Digital Innovation
@@ -58,29 +42,7 @@ const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-            <div className="pt-36 text-center">
-              <div className="relative">
-                <div className="h-96">
-                  <Image
-                    src="/images/Project.png"
-                    alt="Project"
-                    className="object-contain "
-                    layout="fill"
-                  />
-                  <div className="pl-24 pt-56">
-                    <Image
-                      src="/images/ProjectWheel.png"
-                      alt="Projectwheel"
-                      className="object-contain animate-spin-slow z-10"
-                      width={80}
-                      height={80}
-                    />
-                  </div>
-                </div>
-                </div>
-              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-                {allProjectsData.length} Projects</h1>
-            </div>
+            <ProjectCount/>
             <Coffee />
             <div className="pt-36 text-center">
               <div className="relative">
