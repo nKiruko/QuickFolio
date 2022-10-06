@@ -46,6 +46,10 @@ module.exports = {
         "opacity-wave2": "wave 2s ease-in-out infinite",
         "opacity-wave3": "wave 3s ease-in-out infinite",
       },
+      screens: {
+        '3xl': '2565px',
+        // => @media (min-width: 1536px) { ... }
+      }
     },
   },
   plugins: [],

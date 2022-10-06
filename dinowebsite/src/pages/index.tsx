@@ -35,7 +35,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
 
       <main>
         <div className="bg-dinocream pb-28">
-          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
+          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60 3xl:pb-24">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
               Build shit, break shit, but ultimately, learn from the
               experiences!

@@ -16,8 +16,8 @@ const whatIsDI: NextPage = () => {
 
       <main className="bg-dinocream">
       
-        <div className="mx-20">
-          <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">
+        <div className="mx-20 3xl:pb-24">
+          <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
             About digital innovation
           </h1>
           <h2 className="font-heading pt-9 pb-3 text-2xl">What is DI ?</h2>
