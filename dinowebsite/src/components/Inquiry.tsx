@@ -16,11 +16,11 @@ const Inquiry = () => {
 
             <div className="bg-dinogrey overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
                 <div className="p-4 ">
-                <p>
-                    This is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
-                    This is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
-                    jf is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
-                </p>
+                    <p>
+                        This is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
+                        This is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
+                        This is some filler content to see how this works, it's just a whole lot of useless text, This is some filler content to see how this works, it's just a whole lot of useless text
+                    </p>
                 </div>
             </div>
         </div>
