@@ -44,8 +44,47 @@ const whatIsDI: NextPage = () => {
         </div>
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
+            <div className="pt-36 text-center">
+              <div className="relative">
+                <div className="h-96">
+                  <Image
+                    src="/images/Project.png"
+                    alt="People"
+                    className="object-contain "
+                    layout="fill"
+                  />
+                  <div className="pl-24 pt-56">
+                    <Image
+                      src="/images/Projectwheel.png"
+                      alt="People"
+                      className="object-contain animate-spin-slow z-10"
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                </div>
+                </div>
+              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
+                56 Projects</h1>
+            </div>
             <Coffee />
-            
+            <div className="pt-36 text-center">
+              <div className="relative">
+                <div className="h-96">
+                  <Image
+                    src="/images/People.png"
+                    alt="People"
+                    className="object-contain z-10"
+                    layout="fill"
+                  />
+                </div>
+                </div>
+              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
+                Digital Innovation consists of 16 students</h1>
+            </div>
+            </div>
+
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">
               Gallery
             </h1>
