@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Icon } from "@iconify/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Coach from "../components/contact/Coach";
 
 const Contact: NextPage = () => {
@@ -11,7 +11,11 @@ const Contact: NextPage = () => {
       (inputFileRef.current as never as HTMLInputElement).click();
     }
   };
+  const [option, setOption] = useState(0)
 
+  const updateValue = (e: any) => {
+    setOption(e.target.checked)
+  }
   return (
     <div>
       <Head>
@@ -47,13 +51,30 @@ const Contact: NextPage = () => {
                 name="email"
                 placeholder="Email"
                 required
-                className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1"
-              />
+                className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 mb-3"
+              />        
+              <div className="flex">
+                <span className="mr-3">Question</span>
+                <label htmlFor="default-toggle" className="inline-flex relative items-center cursor-pointer">
+                  <input type="checkbox" id="default-toggle" className="sr-only peer" onChange={updateValue}></input>
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span className="ml-3">Proposal</span>
+                </label>
+              </div>
+              <div className={`${option ? "block" : "hidden"}`}>
+                <input
+                    type="text"
+                    name="companyname"
+                    placeholder="Company name"
+                    required
+                    className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
+                  />
+              </div>
               <textarea
                 name="message"
                 placeholder="Message.."
                 required
-                className="valid:border-green-500 invalid:border-red-500 outline-tmorange w-full rounded bg-dinogrey px-2 py-1 my-3"
+                className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 my-3"
               />
               <div
                 className="flex gap-3 items-center mb-3 cursor-pointer"
