@@ -9,7 +9,6 @@ const Coffee = () => {
         "https://tm-coffeecounter.jonasclaesbe.workers.dev/api/coffee-count"
       );
       let data = await response.json();
-      console.log(typeof data.amountOfCoffees);
       setData(data);
       
 
@@ -19,7 +18,6 @@ const Coffee = () => {
       let duration = Math.floor(interval / endValue);
       let counter = setInterval(function () {
         startValue += 1;
-        console.log(startValue);
         document.getElementById('totalCoffee')!.innerText = startValue.toString()
         if (startValue == endValue) clearInterval(counter);
       }, duration);

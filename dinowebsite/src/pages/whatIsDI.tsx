@@ -1,16 +1,29 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-
 import Image from "next/image";
 import Coffee from "../components/Coffee";
+import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 
-const whatIsDI: NextPage = () => {
+interface PageData {
+  allProjectsData: ProjectData[];
+}
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const allProjectsData = await getAllProjectDataSorted();
+
+  return {
+    props: {
+      allProjectsData,
+    },
+  };
+};
+
+const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - What is DI</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - What is DI</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
@@ -66,7 +79,7 @@ const whatIsDI: NextPage = () => {
                 </div>
                 </div>
               <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-                56 Projects</h1>
+                {allProjectsData.length} Projects</h1>
             </div>
             <Coffee />
             <div className="pt-36 text-center">
@@ -93,6 +106,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -100,6 +114,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -107,6 +122,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -115,6 +131,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -122,6 +139,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -129,6 +147,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -137,6 +156,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -144,6 +164,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -151,6 +172,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-12 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}

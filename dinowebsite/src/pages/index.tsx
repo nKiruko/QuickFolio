@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Coffee from "../components/Coffee";
 import Event from "../components/Event";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
@@ -28,8 +27,8 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Home</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - Home</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 

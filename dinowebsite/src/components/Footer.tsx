@@ -1,20 +1,15 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="absolute w-full overflow-hidden z-10 ">
       <div className="  relative inset-y-0 bottom-0 z-10 ">
-        {/* <div className="bg-tmgrey mb-32 absolute bottom-0 inset-x-0 h-60 rotate-9 scale-125 shadow-glow -z-10">
-            </div>
-                <div className="bg-tmorange mb-[9.5rem] absolute bottom-0 inset-x-0 h-60 -rotate-9 scale-125 shadow-glow -z-10">
-            </div> */}
         <footer className="bg-tmorange text-dinocream m-auto h-auto z-10">
           <div className="flex justify-between p-5 z-40">
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2">
-                <h1 className="text-5xl font-heading">Contact info</h1>
+                <h1 className="text-5xl font-heading">Contact</h1>
                 <p>Digital Innovation</p>
                 <p>IT Factory</p>
                 <p>Thomas More - Campus Geel</p>

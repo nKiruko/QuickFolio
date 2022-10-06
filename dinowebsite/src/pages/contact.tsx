@@ -15,8 +15,8 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Contact</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - Contact</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="bg-dinocream">
@@ -74,7 +74,7 @@ const Contact: NextPage = () => {
             </form>
             <div className="lg:ml-24 lg:pl-10 lg:border-l-2 border-dinoblack">
               <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">
-                Contact info
+                Contact
               </h2>
               <div className="flex flex-col gap-5">
                 <div>

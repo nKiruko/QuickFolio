@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { features } from "process";
 import { FunctionComponent } from "react";
-import { ProjectData } from "../modules/projects";
 import { ProjectDataProps } from "../pages/projects/[project]";
 
 const Project: FunctionComponent<ProjectDataProps> = ({ projectData }) => {

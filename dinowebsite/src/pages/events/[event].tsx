@@ -1,8 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Layout from "../../components/Layout";
-import Image from "next/image";
-import fs from "fs";
 import { EventData, getAllEvents, getEventData } from "../../modules/events";
 
 export interface EventDataProps {
@@ -11,11 +8,9 @@ export interface EventDataProps {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log(context?.params?.event);
   if (!context?.params?.event || context?.params?.event == undefined)
     throw new Error("Param missing");
   const eventData = await getEventData(context.params.event);
-  console.log(eventData);
   return {
     props: {
       eventData,
@@ -35,8 +30,8 @@ const Event: NextPage<EventDataProps> = ({ eventData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - {eventData.title}</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - {eventData.title}</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="overflow-hidden">
