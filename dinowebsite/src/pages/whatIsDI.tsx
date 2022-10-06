@@ -58,9 +58,21 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               <div className="relative">
                 <div className="h-96">
                   <Image
-                    src="/images/People.png"
+                    src="/images/People3.png"
                     alt="People"
-                    className="object-contain z-10"
+                    className="object-contain animate-[bounce3_1s_ease-in-out_infinite] z-0"
+                    layout="fill"
+                  />
+                  <Image
+                    src="/images/People2.png"
+                    alt="People"
+                    className="object-contain animate-[bounce2_1s_ease-in-out_infinite] z-0"
+                    layout="fill"
+                  />
+                  <Image
+                    src="/images/People1.png"
+                    alt="People"
+                    className="object-contain animate-bounce z-10"
                     layout="fill"
                   />
                 </div>

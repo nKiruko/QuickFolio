@@ -38,6 +38,18 @@ module.exports = {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
         },
+        bounce: {
+          "0%, 100%": {transform: "translateY(-5%)"},
+          "50%": {transform: "translateY(0)"}
+        },
+        bounce2: {
+          "0%, 100%": {transform: "translateY(-2%)"},
+          "50%": {transform: "translateY(0)"}
+        },
+        bounce3: {
+          "0%, 100%": {transform: "translateY(-4%)"},
+          "50%": {transform: "translateY(0)"}
+        },
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
