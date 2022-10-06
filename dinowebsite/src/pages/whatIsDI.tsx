@@ -1,10 +1,20 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Coffee from "../components/Coffee";
-import ProjectCount from "../components/ProjectCount";
+import ProjectCount, { ProjectCounterProps } from "../components/ProjectCount";
+import { getAllProjectDataSorted } from "../modules/projects";
 
-const whatIsDI: NextPage = () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const projectAmountNumber = (await getAllProjectDataSorted()).length;
+  return {
+    props: {
+      projectAmountNumber,
+    },
+  };
+};
+
+const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
   return (
     <div>
       <Head>
@@ -42,7 +52,7 @@ const whatIsDI: NextPage = () => {
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-            <ProjectCount/>
+            <ProjectCount projectAmountNumber={projectAmountNumber} />
             <Coffee />
             <div className="pt-36 text-center">
               <div className="relative">
