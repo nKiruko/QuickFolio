@@ -6,7 +6,7 @@ import { ProjectDataProps } from "../pages/projects/[project]";
 const Project: FunctionComponent<ProjectDataProps> = ({ projectData }) => {
   const router = useRouter()
   return (
-    <div className="mt-16 hover:cursor-pointer ">
+    <div className="mt-16 hover:cursor-pointer">
       <div className={`relative h-52 sm:h-80 lg:h-96 ${projectData.featured ? router.pathname !== "/" ? "xl:h-[40rem] 3xl:h-[55rem]" : "xl:h-[28rem] 3xl:h-[40rem]" : "xl:h-[28rem] 3xl:h-[40rem]" }`}>
         <Image
           src={projectData.image}
