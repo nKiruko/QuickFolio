@@ -79,9 +79,9 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 Featured projects
               </h1>
 
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                 {allProjectsData.map((project, i) => {
-                  if (i < 3) {
+                  if (project.featured) {
                     return (
                       <Link href={`/projects/${project.title}`} key={i}>
                         <a>
