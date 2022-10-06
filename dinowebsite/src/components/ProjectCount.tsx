@@ -14,7 +14,7 @@ const ProjectCount: FunctionComponent<ProjectCounterProps> = ({ projectAmountNum
 
       let interval = 500;
       let startValue = 0;
-      let endValue = projectAmountNumber ?? 1;
+      let endValue = projectAmountNumber;
       let duration = Math.floor(interval / endValue);
       let counter = setInterval(function () {
         startValue += 1;
