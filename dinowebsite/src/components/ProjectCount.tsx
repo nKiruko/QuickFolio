@@ -1,24 +1,13 @@
 import { GetStaticProps } from "next";
 import Image from "next/image";
 import { FunctionComponent, useEffect, useState } from "react";
-import { getAllProjectDataSorted } from "../modules/projects";
 
 
-
-export interface ProjectDataProps {
-  projectAmountNumber?: number;
+export interface ProjectCounterProps {
+  projectAmountNumber: number;
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const projectAmountNumber = (await getAllProjectDataSorted()).length;
-  return {
-    props: {
-      projectAmountNumber,
-    },
-  };
-};
-
-const ProjectCount: FunctionComponent<ProjectDataProps> = ({ projectAmountNumber }) => {
+const ProjectCount: FunctionComponent<ProjectCounterProps> = ({ projectAmountNumber }) => {
   const [amountOfProjects, setProjectAmountNumber] = useState<number>(0);
   useEffect(() => {
     async function getProjectAmount() {
