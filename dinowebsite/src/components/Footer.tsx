@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex justify-between p-5 z-40">
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2">
-                <h1 className="text-5xl font-heading">Contacts</h1>
+                <h1 className="text-5xl font-heading">Contact info</h1>
                 <p>Digital Innovation</p>
                 <p>IT Factory</p>
                 <p>Thomas More - Campus Geel</p>

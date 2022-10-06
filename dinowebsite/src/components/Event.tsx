@@ -10,7 +10,7 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
 
   return (
     <div className="mt-16 flex flex-col lg:flex-row  hover:cursor-pointer ">
-      <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[40rem] 3xl:h-[45rem] lg:w-1/2">
+      <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[32rem] 3xl:h-[40rem] lg:w-1/2">
         <div
           className={`lg:basis-auto ${
             left ? "lg:order-first" : "lg:order-last"
