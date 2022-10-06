@@ -9,7 +9,7 @@ const whatIsDI: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - What is DI</title>
+        <title>Digital Innovation - What is DI</title>
         <meta name="description" content="Dinowebsite" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>

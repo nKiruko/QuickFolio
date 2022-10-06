@@ -15,7 +15,7 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Contact</title>
+        <title>Digital Innovation - Contact</title>
         <meta name="description" content="Dinowebsite" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>

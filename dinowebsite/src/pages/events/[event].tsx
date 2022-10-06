@@ -33,7 +33,7 @@ const Event: NextPage<EventDataProps> = ({ eventData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - {eventData.title}</title>
+        <title>Digital Innovation - {eventData.title}</title>
         <meta name="description" content="Dinowebsite" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>

@@ -6,7 +6,7 @@ const inquiryPortal: NextPage = () => {
     return(
         <div>
             <Head>
-                <title>Dinowebsite - inquiry portal</title>
+                <title>Digital Innovation - inquiry portal</title>
                 <meta name="description" content="Dinowebsite" />
                 <link rel="icon" href="images/LogoTextTransparant.png" />
             </Head>

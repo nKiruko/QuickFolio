@@ -22,7 +22,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Projects</title>
+        <title>Digital Innovation - Projects</title>
         <meta name="description" content="Dinowebsite" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>

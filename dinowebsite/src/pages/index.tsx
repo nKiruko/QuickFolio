@@ -28,7 +28,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Home</title>
+        <title>Digital Innovation - Home</title>
         <meta name="description" content="Dinowebsite" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
