@@ -9,7 +9,6 @@ const Coffee = () => {
         "https://tm-coffeecounter.jonasclaesbe.workers.dev/api/coffee-count"
       );
       let data = await response.json();
-      console.log(typeof data.amountOfCoffees);
       setData(data);
       
 
@@ -19,7 +18,6 @@ const Coffee = () => {
       let duration = Math.floor(interval / endValue);
       let counter = setInterval(function () {
         startValue += 1;
-        console.log(startValue);
         document.getElementById('totalCoffee')!.innerText = startValue.toString()
         if (startValue == endValue) clearInterval(counter);
       }, duration);
@@ -70,35 +68,13 @@ const Coffee = () => {
               layout="fill"
             />
           </div>
-          {/* <div className="">
-                        <Image src="/images/CoffeeLayer4.png"
-                        alt="Coffee"
-                        className="object-contain animate-opacity-wave4 z-0"
-                        layout='fill'
-                        />
-                        <Image src="/images/CoffeeLayer3.png"
-                        alt="Coffee"
-                        className="object-contain animate-opacity-wave3 z-0"
-                        layout='fill'
-                        />
-                        <Image src="/images/CoffeeLayer2.png"
-                        alt="Coffee"
-                        className="object-contain animate-opacity-wave2 z-0"
-                        layout='fill'
-                        />
-                        <Image src="/images/CoffeeLayer1.png"
-                        alt="Coffee"
-                        className="object-contain animate-opacity-wave z-0"
-                        layout='fill'
-                        />
-                    </div> */}
         </div>
       </div>
       <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
         <span id="totalCoffee"
-          x-data="animatedCounter(data.amountOfCoffees, 200)"
-          x-init="updatecounter"
-          x-text="Math.round(current)"
+            x-data="animatedCounter(data.amountOfCoffees, 200)"
+            x-init="updatecounter"
+            x-text="Math.round(current)"
         >
           {data.amountOfCoffees}
         </span>{" "}

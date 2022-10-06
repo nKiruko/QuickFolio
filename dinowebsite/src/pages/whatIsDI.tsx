@@ -1,24 +1,37 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-
 import Image from "next/image";
 import Coffee from "../components/Coffee";
+import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 
-const whatIsDI: NextPage = () => {
+interface PageData {
+  allProjectsData: ProjectData[];
+}
 
+export const getStaticProps: GetStaticProps = async (context) => {
+  const allProjectsData = await getAllProjectDataSorted();
+
+  return {
+    props: {
+      allProjectsData,
+    },
+  };
+};
+
+const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - What is DI</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - What is DI</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
       <main className="bg-dinocream">
       
-        <div className="mx-20">
-          <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">
-            About digital innovation
+        <div className="mx-20 3xl:pb-24">
+          <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
+            About Digital Innovation
           </h1>
           <h2 className="font-heading pt-9 pb-3 text-2xl">What is DI ?</h2>
           <p className="font-sans text-md sm:text-lg">
@@ -44,8 +57,47 @@ const whatIsDI: NextPage = () => {
         </div>
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
+            <div className="pt-36 text-center">
+              <div className="relative">
+                <div className="h-96">
+                  <Image
+                    src="/images/Project.png"
+                    alt="Project"
+                    className="object-contain "
+                    layout="fill"
+                  />
+                  <div className="pl-24 pt-56">
+                    <Image
+                      src="/images/ProjectWheel.png"
+                      alt="Projectwheel"
+                      className="object-contain animate-spin-slow z-10"
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                </div>
+                </div>
+              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
+                {allProjectsData.length} Projects</h1>
+            </div>
             <Coffee />
-            
+            <div className="pt-36 text-center">
+              <div className="relative">
+                <div className="h-96">
+                  <Image
+                    src="/images/People.png"
+                    alt="People"
+                    className="object-contain z-10"
+                    layout="fill"
+                  />
+                </div>
+                </div>
+              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
+                Digital Innovation consists of 16 students</h1>
+            </div>
+            </div>
+
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">
               Gallery
             </h1>
@@ -54,6 +106,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -61,6 +114,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -68,6 +122,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -76,6 +131,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -83,6 +139,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -90,6 +147,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -98,6 +156,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -105,6 +164,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}
@@ -112,6 +172,7 @@ const whatIsDI: NextPage = () => {
               <div className="col-span-12 md:col-span-12 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
                   src={"/images/ThomasMore.png"}
+                  alt="Thomas More"
                   className="object-cover"
                   layout="fill"
                 />{" "}

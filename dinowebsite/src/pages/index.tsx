@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Coffee from "../components/Coffee";
 import Event from "../components/Event";
 import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
@@ -28,14 +27,14 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - Home</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - Home</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
       <main>
         <div className="bg-dinocream pb-28">
-          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60">
+          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60 3xl:pb-24">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
               Build shit, break shit, but ultimately, learn from the
               experiences!
@@ -79,9 +78,9 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 Featured projects
               </h1>
 
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                 {allProjectsData.map((project, i) => {
-                  if (i < 3) {
+                  if (project.featured) {
                     return (
                       <Link href={`/projects/${project.title}`} key={i}>
                         <a>
