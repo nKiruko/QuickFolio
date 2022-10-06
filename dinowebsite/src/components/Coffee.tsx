@@ -11,7 +11,7 @@ const Coffee = () => {
       );
       let data = await response.json();
 
-      let interval = 500;
+      let interval = 3000;
       let startValue = 0;
       let endValue = data.amountOfCoffees;
       let duration = Math.floor(interval / endValue);
