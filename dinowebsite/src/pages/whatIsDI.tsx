@@ -50,14 +50,14 @@ const whatIsDI: NextPage = () => {
                 <div className="h-96">
                   <Image
                     src="/images/Project.png"
-                    alt="People"
+                    alt="Project"
                     className="object-contain "
                     layout="fill"
                   />
                   <div className="pl-24 pt-56">
                     <Image
                       src="/images/ProjectWheel.png"
-                      alt="People"
+                      alt="Projectwheel"
                       className="object-contain animate-spin-slow z-10"
                       width={80}
                       height={80}
