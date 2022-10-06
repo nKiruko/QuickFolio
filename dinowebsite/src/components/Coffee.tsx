@@ -17,7 +17,9 @@ const Coffee = () => {
       let duration = Math.floor(interval / endValue);
       let counter = setInterval(function () {
         startValue += 1;
+
         setAmountOfCoffees(startValue);
+
         if (startValue == endValue) clearInterval(counter);
       }, duration);
     }

@@ -11,10 +11,8 @@ export interface ProjectDataProps {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log(context?.params?.event);
   if (!context?.params?.project) throw new Error("Param missing");
   const projectData = await getProjectData(context.params.project);
-  console.log(projectData);
   return {
     props: {
       projectData,
@@ -34,8 +32,8 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
   return (
     <div>
       <Head>
-        <title>Dinowebsite - {projectData.title}</title>
-        <meta name="description" content="Dinowebsite" />
+        <title>Digital Innovation - {projectData.title}</title>
+        <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="overflow-hidden">
