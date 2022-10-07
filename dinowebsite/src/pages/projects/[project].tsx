@@ -32,7 +32,7 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - {projectData.title}</title>
+        <title>{`Digital Innovation - ${projectData.title}`}</title>
         <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
