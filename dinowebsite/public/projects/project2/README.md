@@ -1,14 +1,14 @@
 ---
-title: project1
-image: https://images.pexels.com/photos/12547195/pexels-photo-12547195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-date: 1609455600
+title: project2
+image: /projects/project2/images/project2.png
+date: 1622498400
 summary: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
 featured: false
 ---
 
-# Project 1
+# Project 2
 
-Friday, 01 January 2021 00:00:00.000 +01:00
+Tuesday, 01 June 2021 00:00:00.000 +02:00
 
 ## Meo magis aviti vulneris denique vertice pro
 
