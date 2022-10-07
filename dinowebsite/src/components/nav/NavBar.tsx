@@ -1,18 +1,39 @@
 import Link from "next/link";
-import { useState } from "react";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
+
   const [mobileNav, setMobileNav] = useState(false);
 
   function toggleMobile() {
     setMobileNav(!mobileNav);
   }
 
+  useEffect(() => {
+ 
+
+    function coffeemode() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const coffeemode = urlParams.has('coffeemode')
+      console.log(coffeemode);
+
+      if (coffeemode) {
+        document.getElementById("coffeemodeNav")?.classList.add('dark')
+      }
+      else{
+        document.getElementById("coffeemodeNav")?.classList.remove('dark')
+      }
+
+    }
+    coffeemode()
+  }, []);
+
   return (
-    <nav className="bg-dinocream">
+    <nav id="coffeemodeNav" className="bg-dinocream">
       <div className="max-w-screen mx-auto pl-10 sm:px-16 lg:px-28">
         <div className="flex justify-between">
           <div className="flex items-center space-x-1">
@@ -33,7 +54,7 @@ const NavBar = () => {
             <NavItem name="Projects" href="/projects" />
             <NavItem name="Contact" href="/contact" />
             <Link href="/" passHref>
-              <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange">
+              <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange dark:hover:border-coffeegreen">
                 Login
               </a>
             </Link>

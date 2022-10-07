@@ -32,14 +32,14 @@ const Contact: NextPage = () => {
                   name="firstname"
                   placeholder="First name"
                   required
-                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
                 />
                 <input
                   type="text"
                   name="lastname"
                   placeholder="Last name"
                   required
-                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+                  className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
                 />
               </div>
               <input
@@ -47,13 +47,13 @@ const Contact: NextPage = () => {
                 name="email"
                 placeholder="Email"
                 required
-                className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1"
+                className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream w-full rounded bg-dinogrey px-2 py-1"
               />
               <textarea
                 name="message"
                 placeholder="Message.."
                 required
-                className="valid:border-green-500 invalid:border-red-500 outline-tmorange w-full rounded bg-dinogrey px-2 py-1 my-3"
+                className="valid:border-green-500 invalid:border-red-500 outline-tmorange dark:outline-coffeegreen w-full rounded bg-dinogrey px-2 py-1 my-3"
               />
               <div
                 className="flex gap-3 items-center mb-3 cursor-pointer"
@@ -67,13 +67,13 @@ const Contact: NextPage = () => {
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue "
+                className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeecream"
               >
                 Send Message
               </button>
             </form>
             <div className="lg:ml-24 lg:pl-10 lg:border-l-2 border-dinoblack">
-              <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">
+              <h2 className="text-2xl text-tmblue dark:text-coffeecream mb-5 mt-24 lg:mt-0 font-heading">
                 Contact
               </h2>
               <div className="flex flex-col gap-5">
@@ -83,7 +83,7 @@ const Contact: NextPage = () => {
                     href="https://goo.gl/maps/1bFNMyqUGEV6orjx9"
                     target="_blank"
                     rel="noreferrer"
-                    className="underline text-tmorange"
+                    className="underline text-tmorange dark:text-coffeegreen"
                   >
                     Kleinhoefstraat 4, 2440 Geel
                   </a>
@@ -92,7 +92,7 @@ const Contact: NextPage = () => {
                   <p>TM mail</p>
                   <a
                     href="mailto:info.geel@thomasmore.be"
-                    className="underline text-tmorange"
+                    className="underline text-tmorange dark:text-coffeegreen"
                   >
                     info.geel@thomasmore.be
                   </a>
@@ -103,14 +103,14 @@ const Contact: NextPage = () => {
                     href="https://www.thomasmore.be/"
                     target="_blank"
                     rel="noreferrer"
-                    className="underline text-tmorange"
+                    className="underline text-tmorange dark:text-coffeegreen"
                   >
                     Thomas More
                   </a>
                 </div>
                 <div>
                   <p>TM phone number</p>
-                  <a href="tel:+3214562310" className="underline text-tmorange">
+                  <a href="tel:+3214562310" className="underline text-tmorange dark:text-coffeegreen">
                     +32 14 56 23 10
                   </a>
                 </div>

@@ -14,6 +14,8 @@ module.exports = {
         tmblue: "#009cab",
         tmorange: "#f04c25",
         tmgrey: "#575757",
+        coffeecream: "#d2a575",
+        coffeegreen: "#134f43",
       },
       rotate: {
         9: "9deg",

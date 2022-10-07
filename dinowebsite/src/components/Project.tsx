@@ -15,7 +15,7 @@ const Project: FunctionComponent<ProjectDataProps> = ({ projectData }) => {
           layout="fill"
         />
       </div>
-      <div className="first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange">
+      <div className="first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeegreen">
         <div className="font-heading text-3xl sm:text-4xl mt-5">
           {projectData.title}
         </div>
