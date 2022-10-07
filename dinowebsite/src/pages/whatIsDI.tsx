@@ -2,23 +2,19 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Coffee from "../components/Coffee";
-import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
-
-interface PageData {
-  allProjectsData: ProjectData[];
-}
+import ProjectCount, { ProjectCounterProps } from "../components/ProjectCount";
+import { getAllProjectDataSorted } from "../modules/projects";
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const allProjectsData = await getAllProjectDataSorted();
-
+  const projectAmountNumber = (await getAllProjectDataSorted()).length;
   return {
     props: {
-      allProjectsData,
+      projectAmountNumber,
     },
   };
 };
 
-const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
+const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
   return (
     <div>
       <Head>
@@ -26,9 +22,7 @@ const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
         <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-
       <main className="bg-dinocream">
-      
         <div className="mx-20 3xl:pb-24">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
             About Digital Innovation
@@ -58,35 +52,34 @@ const whatIsDI: NextPage<PageData> = ({ allProjectsData }) => {
         <div className="bg-dinoblack text-dinocream pb-16">
           <div className="">
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
-              <ProjectCount projectAmountNumber={projectAmountNumber} />
-              <Coffee />
-              <div className="pt-36 text-center">
-                <div className="relative">
-                  <div className="h-96">
-                    <Image
-                      src="/images/People3.png"
-                      alt="People"
-                      className="object-contain animate-[bounce3_1s_ease-in-out_infinite] z-0"
-                      layout="fill"
-                    />
-                    <Image
-                      src="/images/People2.png"
-                      alt="People"
-                      className="object-contain animate-[bounce2_1s_ease-in-out_infinite] z-0"
-                      layout="fill"
-                    />
-                    <Image
-                      src="/images/People1.png"
-                      alt="People"
-                      className="object-contain animate-bounce z-10"
-                      layout="fill"
-                    />
-                  </div>
+            <ProjectCount projectAmountNumber={projectAmountNumber} />
+            <Coffee />
+            <div className="pt-36 text-center">
+              <div className="relative">
+                <div className="h-96">
+                  <Image
+                    src="/images/People3.png"
+                    alt="People"
+                    className="object-contain animate-[bounce3_1s_ease-in-out_infinite] z-0"
+                    layout="fill"
+                  />
+                  <Image
+                    src="/images/People2.png"
+                    alt="People"
+                    className="object-contain animate-[bounce2_1s_ease-in-out_infinite] z-0"
+                    layout="fill"
+                  />
+                  <Image
+                    src="/images/People1.png"
+                    alt="People"
+                    className="object-contain animate-bounce z-10"
+                    layout="fill"
+                  />
                 </div>
-                <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-                  Digital Innovation consists of 16 students
-                </h1>
-              </div>
+                </div>
+              <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
+                Digital Innovation consists of 16 students</h1>
+            </div>
             </div>
 
             <h1 className="font-heading text-5xl pt-24 pb-10 md:pt-32 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-64 xl:pb-24 text-center">

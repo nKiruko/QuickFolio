@@ -2,26 +2,26 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Coffee = () => {
-  const [data, setData] = useState<any>([]);
+  const [amountOfCoffees, setAmountOfCoffees] = useState<number>(0);
+
   useEffect(() => {
     async function getCoffeeAmount() {
       let response = await fetch(
         "https://tm-coffeecounter.jonasclaesbe.workers.dev/api/coffee-count"
       );
       let data = await response.json();
-      setData(data);
-      
 
-      let interval = 500;
+      let interval = 3000;
       let startValue = 0;
       let endValue = data.amountOfCoffees;
       let duration = Math.floor(interval / endValue);
       let counter = setInterval(function () {
         startValue += 1;
-        document.getElementById('totalCoffee')!.innerText = startValue.toString()
+
+        setAmountOfCoffees(startValue);
+
         if (startValue == endValue) clearInterval(counter);
       }, duration);
-
     }
     getCoffeeAmount();
   }, []);
@@ -71,14 +71,7 @@ const Coffee = () => {
         </div>
       </div>
       <h1 className="font-heading text-2xl sm:text-3xl pt-5 text-dinocream">
-        <span id="totalCoffee"
-            x-data="animatedCounter(data.amountOfCoffees, 200)"
-            x-init="updatecounter"
-            x-text="Math.round(current)"
-        >
-          {data.amountOfCoffees}
-        </span>{" "}
-        Coffees drank this year.
+        {amountOfCoffees} Coffees drank this year.
       </h1>
     </div>
   );

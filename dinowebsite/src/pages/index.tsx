@@ -78,7 +78,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 Featured projects
               </h1>
 
-              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+              <div className="grid  lg:grid-flow-col lg:auto-cols-fr  md:grid-cols-2 grid-cols-1 lg:gap-52 gap-6">
                 {allProjectsData.map((project, i) => {
                   if (project.featured) {
                     return (
