@@ -46,7 +46,7 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
               </h1>
             </div>
             <div>
-              <p className="mx-20">{projectData.summary}</p>
+              <p className="mx-20" dangerouslySetInnerHTML={{__html: `${projectData.content}`}}></p>
             </div>
           </div>
         </div>
