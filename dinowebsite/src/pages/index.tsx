@@ -26,9 +26,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   let amountOfFeaturedProjects = allProjectsData.filter(x => x.featured).length;
-  console.log(`Projects: ${amountOfFeaturedProjects}`)
-
-
   return (
     <div>
       <Head>
