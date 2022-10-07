@@ -6,6 +6,7 @@ import Project from "../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 import { EventData, getAllEventDataSorted } from "../modules/events";
 
+
 interface PageData {
   allProjectsData: ProjectData[];
   allEventsData: EventData[];
@@ -14,7 +15,6 @@ interface PageData {
 export const getStaticProps: GetStaticProps = async (context) => {
   const allProjectsData = await getAllProjectDataSorted();
   const allEventsData = await getAllEventDataSorted();
-
   return {
     props: {
       allProjectsData,
@@ -23,7 +23,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+
 const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
+  let amountOfFeaturedProjects = allProjectsData.filter(x => x.featured).length;
+  console.log(`Projects: ${amountOfFeaturedProjects}`)
+
+
   return (
     <div>
       <Head>
@@ -78,7 +83,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 Featured projects
               </h1>
 
-              <div className="grid  lg:grid-flow-col lg:auto-cols-fr  md:grid-cols-2 grid-cols-1 lg:gap-52 gap-6">
+              <div className={`grid md:grid-cols-2 grid-cols-1 gap-6 ${amountOfFeaturedProjects <= 2  ? amountOfFeaturedProjects <= 1 ? "md:grid-cols-1" : "lg:grid-flow-col lg:auto-cols-fr lg:gap-20 xl:gap-52" : "lg:grid-cols-3 md:grid-cols-2"} `}>
                 {allProjectsData.map((project, i) => {
                   if (project.featured) {
                     return (
