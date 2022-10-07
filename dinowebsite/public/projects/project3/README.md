@@ -1,14 +1,14 @@
 ---
-title: project2
-image: /images/projects/project2.png
-date: 1622498400
+title: project3
+image: /projects/project3/images/thumbnail.png
+date: 1640991600
 summary: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
 featured: true
 ---
 
-# Project 2
+# Project 3
 
-Tuesday, 01 June 2021 00:00:00.000 +02:00
+Saturday, 01 January 2022 00:00:00.000 +01:00
 
 ## Meo magis aviti vulneris denique vertice pro
 
