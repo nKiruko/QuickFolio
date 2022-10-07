@@ -74,7 +74,7 @@ export default function Form() {
         className="flex gap-3 items-center mb-3 cursor-pointer"
         onClick={() => openFiles()}
       >
-        <input type="file" ref={inputFileRef} className="hidden" />
+        <input type="file" ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
         <div className="p-2 rounded bg-gray-300 text-gray-500">
           <Icon icon="ant-design:plus-outlined" className="text-2xl " />
         </div>
