@@ -40,14 +40,14 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               experiences!
             </h1>
             <Link href="/whatIsDI">
-              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange">
+              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
                 Learn More
               </a>
             </Link>
           </div>
 
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
-            <div className="bg-tmblue h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
+            <div className="bg-tmblue dark:bg-coffeecream h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 scale-125 shadow-glow"></div>
           </div>
 
           <div className="bg-dinoblack text-dinocream">
@@ -93,7 +93,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               </div>
               <div className="w-full py-20 text-center">
                 <Link href="/projects">
-                  <a className="font-heading text-xl sm:text-2xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange">
+                  <a className="font-heading text-xl sm:text-2xl rounded-full border-2 border-dinoblack px-5 py-1  hover:border-tmorange dark:hover:border-coffeegreen">
                     All projects
                   </a>
                 </Link>

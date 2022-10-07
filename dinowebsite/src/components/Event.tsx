@@ -25,7 +25,7 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
         </div>
       </div>
       <div
-        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange ${
+        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeegreen ${
           left ? "lg:order-last lg:pl-10" : "lg:order-first lg:pr-10"
         }`}
       >
@@ -51,7 +51,7 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
       </div>
       <button
         onClick={buttonClick}
-        className="font-heading md:hidden text-lg text-center sm:text-xl rounded-full border-2 border-dinocream px-5 py-1 hover:border-tmorange"
+        className="font-heading md:hidden text-lg text-center sm:text-xl rounded-full border-2 border-dinocream px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen"
       >
         Learn More
       </button>

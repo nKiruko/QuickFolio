@@ -1,11 +1,38 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { useEffect } from "react";
 
 const Footer = () => {
+
+  const coffeeClick = (event: React.MouseEvent<HTMLElement>) => {
+    window.location.href = '?coffeemode';
+  };
+
+  useEffect(() => {
+ 
+
+    function coffeemode() {   
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const coffeemode = urlParams.has('coffeemode')
+      console.log(coffeemode);
+
+      if (coffeemode) {
+        document.getElementById("coffeemodeFooter")?.classList.add('dark')
+      }
+      else{
+        document.getElementById("coffeemodeFooter")?.classList.remove('dark')
+      }
+
+    }
+    coffeemode()
+  }, []);
+
   return (
-    <div className="absolute w-full overflow-hidden z-10 ">
+    <div id="coffeemodeFooter" className="absolute w-full overflow-hidden z-10">
       <div className="  relative inset-y-0 bottom-0 z-10 ">
-        <footer className="bg-tmorange text-dinocream m-auto h-auto z-10">
+        <footer className="bg-tmorange dark:bg-coffeegreen text-dinocream m-auto h-auto z-10">
           <div className="flex justify-between p-5 z-40">
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2">
@@ -16,13 +43,14 @@ const Footer = () => {
                 <p>Kleinhoefstraat 4, 2440 Geel</p>
               </div>
             </div>
-            <div className="grow h-14 text-center sm:hidden md:block">
-              <Image
-                src="/images/LogoTextTransparant.png"
-                alt="Dino Logo"
-                width={200}
-                height={200}
-              />
+            <div className="grow h-14 text-center sm:hidden md:block cursor-pointer">
+                <Image
+                  onClick={coffeeClick}
+                  src="/images/LogoTextTransparant.png"
+                  alt="Dino Logo"
+                  width={200}
+                  height={200}
+                />
             </div>
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2 items-center">
