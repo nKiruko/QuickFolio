@@ -32,7 +32,7 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - {projectData.title}</title>
+        <title>{`Digital Innovation - ${projectData.title}`}</title>
         <meta name="description" content="Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
@@ -45,8 +45,7 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
                 {projectData.title}
               </h1>
             </div>
-            <div>
-              <p className="mx-20">{projectData.summary}</p>
+            <div className="mx-20"  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
             </div>
           </div>
         </div>
