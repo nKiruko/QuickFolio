@@ -60,7 +60,6 @@ export default function Form() {
           type="text"
           name="companyname"
           placeholder="Company name"
-          required
           className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
         />
       </div>
