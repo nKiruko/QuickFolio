@@ -8,7 +8,7 @@ type MyProps = {
 
 export default function Coach(props: MyProps) {
   return (
-    <div className="flex justify-center flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row">
       <Image
         src={props.image}
         alt="dino"
