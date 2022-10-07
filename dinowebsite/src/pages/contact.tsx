@@ -24,7 +24,7 @@ const Contact: NextPage = () => {
 
           <div className="py-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
-            <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row justify-center">
+            <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
               <Coach
                 image="/images/jochen.png"
                 name="Jochen"
@@ -35,8 +35,6 @@ const Contact: NextPage = () => {
                 name="Jochen"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
-            </div>
-            <div className="flex gap-10 lg:gap-0 lg:flex-row lg:justify-around mb-10 mt-10">
               <Coach
                 image="/images/jochen.png"
                 name="Jochen"
