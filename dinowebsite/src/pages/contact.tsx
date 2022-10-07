@@ -27,17 +27,17 @@ const Contact: NextPage = () => {
             <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
               <Coach
                 image="/images/jochen.png"
-                name="Jochen"
+                name="Jochen Mariën"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
                 image="/images/jochen.png"
-                name="Jochen"
+                name="Kathleen Renders"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
                 image="/images/jochen.png"
-                name="Jochen"
+                name="Bram Heyns"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
             </div>
