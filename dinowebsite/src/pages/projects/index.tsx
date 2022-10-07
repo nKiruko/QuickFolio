@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Project from "../../components/Project";;
+import Project from "../../components/Project";
 import { getAllProjectDataSorted, ProjectData } from "../../modules/projects";
 
 interface AllProjectEntries {
@@ -45,7 +45,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                   return (
                     <Link href={`/projects/${project.title}`} key={i}>
                       <a>
-                      <Project projectData={project} />
+                        <Project projectData={project} />
                       </a>
                     </Link>
                   );
@@ -57,14 +57,14 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
             <div className="mt-32 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
               {allProjectsData.map((project, i) => {
                 if (!project.featured) {
-                return (
-                  <Link href={`/projects/${project.title}`} key={i}>
-                    <a>
-                      <Project projectData={project} />
-                    </a>
-                  </Link>
-                );
-              }
+                  return (
+                    <Link href={`/projects/${project.title}`} key={i}>
+                      <a>
+                        <Project projectData={project} />
+                      </a>
+                    </Link>
+                  );
+                }
               })}
             </div>
           </div>
