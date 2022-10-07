@@ -19,12 +19,7 @@ const Contact: NextPage = () => {
           </h1>
           <div className="flex flex-col lg:flex-row">
             <Form />
-            <div className="lg:ml-24 lg:pl-10 lg:border-l-2 border-dinoblack">
-              <h2 className="text-2xl text-tmblue mb-5 mt-24 lg:mt-0 font-heading">
-                Contact
-              </h2>
-              <ContactInfo />
-            </div>
+            <ContactInfo />
           </div>
 
           <div className="py-24">
