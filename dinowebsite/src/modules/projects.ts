@@ -7,6 +7,7 @@ import html from "remark-html";
 const projectsDir = path.join(process.cwd(), "public/projects");
 
 export type ProjectData = {
+  filter: any;
   image: string;
   title: string;
   date?: number;
