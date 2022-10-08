@@ -51,7 +51,7 @@ export default function Form() {
             className="sr-only peer"
             onChange={updateValue}
           ></input>
-          <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          <div className="w-11 h-6 bg-dinogrey peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-500 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-tmblue dark:peer-checked:bg-coffeegreen"></div>
           <span className="ml-3">Proposal</span>
         </label>
       </div>
@@ -81,7 +81,7 @@ export default function Form() {
       </div>
       <button
         type="submit"
-        className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue "
+        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeecream"
       >
         Send Message
       </button>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Inquiry = () => {
     return(
-        <div className="relative w-fill md:w-[1000px] overflow-hidden m-auto pb-10">
+        <div className="relative md:w-5/6 pb-10">
         <input type="checkbox" className="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"/>
         <div className="bg-dinoblack h-12 w-full pl-5 flex items-center">
             <h1 className="text-lg font-heading text-white float-left px-2">
@@ -18,7 +18,7 @@ const Inquiry = () => {
             <Icon className="w-6 h-6" icon="material-symbols:arrow-drop-down-circle-outline"/>
         </div>
 
-        <div className="bg-dinogrey overflow-hidden max-h-0 peer-checked:max-h-full">
+        <div className="bg-dinogrey bg-opacity-50 overflow-hidden max-h-0 peer-checked:max-h-full">
             <div className="p-4">
             <p className="font-semibold md:hidden">
                 Email&#58; johndoe@hotmail.com
