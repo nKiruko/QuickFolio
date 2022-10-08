@@ -23,3 +23,7 @@ export default function Coach(props: MyProps) {
     </div>
   );
 }
+
+
+/* rounded-lg md:rounded-r-none md:rounded-b rounded-b-none 
+rounded-lg md:rounded-l-none md:rounded-t rounded-t-none p-5*/

@@ -64,14 +64,10 @@ const Footer = () => {
             </div>
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2 items-center">
-                <Icon className="w-10 h-10" icon="ci:mail" />
-                <Icon className="w-10 h-10" icon="bi:messenger" />
-                <Icon className="w-10 h-10" icon="akar-icons:facebook-fill" />
-                <Icon className="w-10 h-10" icon="akar-icons:youtube-fill" />
-                <Icon
-                  className="w-10 h-10"
-                  icon="ant-design:twitter-circle-filled"
-                />
+                <a href="https://www.instagram.com/thomasmore.be/"><Icon className="w-10 h-10" icon="akar-icons:instagram-fill"></Icon></a>
+                <a href="https://www.facebook.com/ThomasMoreBE/" target="_blank"><Icon className="w-10 h-10" icon="akar-icons:facebook-fill"/></a>
+                <a href="https://www.youtube.com/channel/UCdFD9HUuFn5995MmoVeo0vg" target="_blank"><Icon className="w-10 h-10" icon="akar-icons:youtube-fill"/></a>
+                <a href="https://twitter.com/thomasmorebe" target="_blank"><Icon className="w-10 h-10" icon="akar-icons:twitter-fill"/></a>
               </div>
             </div>
           </div>
