@@ -83,7 +83,7 @@ export default function Form() {
       </div>
       <button
         type="submit"
-        className="bg-black text-white px-24 py-1 rounded-md border-2 border-tmblue "
+        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeecream"
       >
         Send Message
       </button>
