@@ -2,7 +2,6 @@ import { GetStaticProps } from "next";
 import Image from "next/image";
 import { FunctionComponent, useEffect, useState } from "react";
 
-
 export interface ProjectCounterProps {
   projectAmountNumber: number;
 }

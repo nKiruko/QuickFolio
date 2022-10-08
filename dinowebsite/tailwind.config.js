@@ -59,13 +59,13 @@ module.exports = {
         "opacity-wave": "wave 1s ease-in-out infinite",
         "opacity-wave2": "wave 2s ease-in-out infinite",
         "opacity-wave3": "wave 3s ease-in-out infinite",
-        'spin-slow': 'spin 4s linear infinite',
+        "spin-slow": "spin 4s linear infinite",
       },
       screens: {
         '3xl': '2565px',
         '4xl': '3450px',
         // => @media (min-width: 1536px) { ... }
-      }
+      },
     },
   },
   plugins: [],
