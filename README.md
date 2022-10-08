@@ -32,7 +32,7 @@ Pagina's
 </ul>
 
 
-<h2> Team verdeling </h2>
+<h2> Team </h2>
 <p>Front end team</p>
 <ul>
   <li>Marnik</li>
@@ -48,3 +48,11 @@ Pagina's
   <li>Jordi</li>
   <li>Syan</li>
 </ul>
+
+<h2> How to add a project? </h2>
+<ol>
+  <li>Navigate to the public/projects folder.</li>
+  <li>Then you can copy the template folder and rename it to the name of your project</li>
+  <li>All images can be added in the images folder of your project itself</li>
+  <li>In the markdown file you then change all the required fields at the top, followed by all the other text you may want to add.</li> 
+</ol>
