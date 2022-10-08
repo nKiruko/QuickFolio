@@ -21,7 +21,6 @@ const Contact: NextPage = () => {
             <Form />
             <ContactInfo />
           </div>
-
           <div className="py-24">
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">

@@ -14,6 +14,8 @@ module.exports = {
         tmblue: "#009cab",
         tmorange: "#f04c25",
         tmgrey: "#575757",
+        coffeecream: "#d2a575",
+        coffeegreen: "#134f43",
       },
       rotate: {
         9: "9deg",
@@ -60,7 +62,8 @@ module.exports = {
         "spin-slow": "spin 4s linear infinite",
       },
       screens: {
-        "3xl": "2565px",
+        '3xl': '2565px',
+        '4xl': '3450px',
         // => @media (min-width: 1536px) { ... }
       },
     },

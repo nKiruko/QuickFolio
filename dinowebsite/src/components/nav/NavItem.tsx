@@ -12,8 +12,8 @@ const NavItem = (props: MyProps) => {
       <a
         className={`${
           props.mobile
-            ? "flex flex-col py-4 justify-around text-center text-2xl text-dinocream hover:underline hover:underline-offset-8 hover:decoration-tmorange font-heading bg-dinoblack"
-            : "py-5 px-3 hover:underline hover:underline-offset-8 hover:decoration-tmorange"
+            ? "flex flex-col py-4 justify-around text-center text-2xl text-dinocream hover:underline hover:underline-offset-8 hover:decoration-tmorange dark:hover:decoration-coffeegreen font-heading bg-dinoblack"
+            : "py-5 px-3 hover:underline hover:underline-offset-8 hover:decoration-tmorange dark:hover:decoration-coffeegreen"
         }`}
       >
         {props.name}
