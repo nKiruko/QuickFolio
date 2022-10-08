@@ -63,6 +63,7 @@ module.exports = {
       },
       screens: {
         '3xl': '2565px',
+        '4xl': '3450px',
         // => @media (min-width: 1536px) { ... }
       }
     },

@@ -4,8 +4,18 @@ import { useEffect } from "react";
 
 const Footer = () => {
 
+  let clicked = 0
   const coffeeClick = (event: React.MouseEvent<HTMLElement>) => {
-    window.location.href = '?coffeemode';
+    
+    if (clicked < 3) {
+      console.log(clicked);
+      
+      clicked += 1
+    }
+    else {
+      window.location.href = '?coffeemode';
+    }
+    
   };
 
   useEffect(() => {
@@ -43,7 +53,7 @@ const Footer = () => {
                 <p>Kleinhoefstraat 4, 2440 Geel</p>
               </div>
             </div>
-            <div className="grow h-14 text-center sm:hidden md:block cursor-pointer">
+            <div className="grow h-14 text-center sm:hidden md:block">
                 <Image
                   onClick={coffeeClick}
                   src="/images/LogoTextTransparant.png"
