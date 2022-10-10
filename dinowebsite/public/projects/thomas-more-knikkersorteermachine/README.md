@@ -45,8 +45,9 @@ Hieronder vind je een lijst met mogelijkheden:
 - feed(int amount): Deze functie feed een aantal knikkers
 
 Deze library heb ik dan op PyPi gepubliceerd zodat studenten deze makkelijk kunnen installeren en gebruiken.  
-Je kan de library hier vinden: [ knikkersorteermachine](https://pypi.org/project/knikkersorteermachine/)
+Je kan de library hier vinden: <a href="https://pypi.org/project/knikkersorteermachine/" target="_blank"  rel="noopener noreferrer">knikkersorteermachine</a>
+
 
 ## Links
 
-GitHub repository met alle code: [ Thomas-More-Digital-Innovation/1-015-knikkersorteermachine](https://github.com/Thomas-More-Digital-Innovation/1-015-knikkersorteermachine)
+GitHub repository met alle code: <a href="https://github.com/Thomas-More-Digital-Innovation/1-015-knikkersorteermachine" target="_blank"  rel="noopener noreferrer">Thomas-More-Digital-Innovation/1-015-knikkersorteermachine</a>

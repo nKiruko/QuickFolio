@@ -1,7 +1,7 @@
 ---
 title: template (Title of Project)
-path: your folder name
-image: /projects/yourfolder/(images (or not))/yourimage.png (Path of your image)
+path:  template (your folder name) 
+image: /projects/yourfolder/yourimage.png (Path of your image)
 date: dd-MM-YYYY
 summary: Small Summary of your project
 featured: true 
