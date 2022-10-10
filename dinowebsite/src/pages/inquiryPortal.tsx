@@ -55,7 +55,7 @@ const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
                     </h1>
                     {allInquiryData.map((inquiry, i) => {
                         return (
-                            <Inquiry testData={inquiry} key={i}/>
+                            <Inquiry inquiryData={inquiry} key={i}/>
                         );
                     })}
                 </div>
