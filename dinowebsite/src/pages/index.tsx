@@ -82,17 +82,20 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               </h1>
 
               <div className={`grid md:grid-cols-2 grid-cols-1 gap-6 ${amountOfFeaturedProjects <= 2  ? amountOfFeaturedProjects <= 1 ? "md:grid-cols-1" : "lg:grid-flow-col lg:auto-cols-fr lg:gap-20 xl:gap-52" : "lg:grid-cols-3 md:grid-cols-2"} `}>
-                {allProjectsData.map((project, i) => {
-                  if (project.featured) {
-                    return (
-                      <Link href={`/projects/${project.path}`} key={i}>
-                        <a>
-                          <Project projectData={project} />
-                        </a>
-                      </Link>
-                    );
-                  }
-                })}
+                {allProjectsData.length === 0 ? (
+                  <p className="text-justify text-xl">No projects found</p>
+                ) : (
+                  allProjectsData.map((project, i) => {
+                    if (project.featured) {
+                      return (
+                        <Link href={`/projects/${project.path}`} key={i}>
+                          <a>
+                            <Project projectData={project} />
+                          </a>
+                        </Link>
+                      );
+                    }
+                  }))}
               </div>
               <div className="w-full py-20 text-center">
                 <Link href="/projects">
