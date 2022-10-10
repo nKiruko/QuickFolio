@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Coffee from "../components/Coffee";
-import ProjectCount, { ProjectCounterProps } from "../components/ProjectCount";
+import Coffee from "../components/di/Coffee";
+import ProjectCount, { ProjectCounterProps } from "../components/di/ProjectCount";
 import { getAllProjectDataSorted } from "../modules/projects";
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -44,19 +44,19 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               <div className="relative">
                 <div className="h-96">
                   <Image
-                    src="/images/People3.png"
+                    src="/images/di/People3.png"
                     alt="People"
                     className="object-contain animate-[bounce3_1s_ease-in-out_infinite] z-0"
                     layout="fill"
                   />
                   <Image
-                    src="/images/People2.png"
+                    src="/images/di/People2.png"
                     alt="People"
                     className="object-contain animate-[bounce2_1s_ease-in-out_infinite] z-0"
                     layout="fill"
                   />
                   <Image
-                    src="/images/People1.png"
+                    src="/images/di/People1.png"
                     alt="People"
                     className="object-contain animate-bounce z-10"
                     layout="fill"

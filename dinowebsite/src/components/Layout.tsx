@@ -1,6 +1,6 @@
 import NavBar from "../components/nav/NavBar";
 import { useRouter } from "next/router";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import { useEffect } from "react";
 
 export default function Layout({ children }: any) {

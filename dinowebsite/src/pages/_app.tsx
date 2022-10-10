@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 
 import Layout from "../components/Layout";
-import Footerlines from "../components/Footerlines";
+import Footerlines from "../components/footer/Footerlines";
 import { useRouter } from "next/router";
 
 export default function MyApp({ Component, pageProps }: any) {

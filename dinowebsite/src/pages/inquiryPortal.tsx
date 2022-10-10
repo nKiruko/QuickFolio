@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Icon } from "@iconify/react";
-import Inquiry from "../components/Inquiry";
 import { InquiryData } from "../modules/inquiry";
+import Inquiry from "../components/inquiry/Inquiry";
 
 export interface AllInquiryEntries {
     allInquiryData: InquiryData[];
@@ -44,14 +44,14 @@ const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
     return (
         <div>
             <Head>
-                <title>Digital Innovation - inquiry portal</title>
+                <title>Digital Innovation - Inquiry portal</title>
                 <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
                 <link rel="icon" href="images/LogoTextTransparant.png" />
             </Head>
             <main className="bg-dinocream z-5 px-10 pb-40">
                 <div className="ml-20 lg:ml-60 3xl:pb-24">
                     <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
-                        Question portal
+                        Inquiry portal
                     </h1>
                     {allInquiryData.map((inquiry, i) => {
                         return (

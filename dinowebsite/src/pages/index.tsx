@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Event from "../components/Event";
-import Project from "../components/Project";
+import Event from "../components/index/Event";
+import Project from "../components/project/Project";
 import { getAllProjectDataSorted, ProjectData } from "../modules/projects";
 import { EventData, getAllEventDataSorted } from "../modules/events";
 
@@ -85,7 +85,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 {allProjectsData.map((project, i) => {
                   if (project.featured) {
                     return (
-                      <Link href={`/projects/${project.title}`} key={i}>
+                      <Link href={`/projects/${project.path}`} key={i}>
                         <a>
                           <Project projectData={project} />
                         </a>
