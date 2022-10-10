@@ -6,11 +6,13 @@ summary: Small Summary of your project
 featured: true 
 ---
 
+
 **Example**  '**' Text inbetween makes it Bold
 _Example_    '_' Text inbetween makes it Cursive, Use it Quotes or others
 [Example](Link) Text has a link behind it, Use it for your own links etc
 "#" use for h1
 "##" use for h2
+
 
 
 ## Title
