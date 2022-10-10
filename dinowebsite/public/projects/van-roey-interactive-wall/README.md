@@ -1,6 +1,7 @@
 ---
 title: Interactive Wall
-image: van-roey.jpg
+path: van-roey-interactive-wall
+image: /projects/van-roey-interactive-wall/van-roey.jpg
 date: 31-05-2021
 summary: Interactive Wall for Van Roey
 featured: true

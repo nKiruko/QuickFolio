@@ -1,6 +1,7 @@
 ---
 title: Mental Health App
-image: mental-health-app.jpg
+path: mental-health-app
+image: /projects/mental-health-app/mental-health-app.jpg
 date: 22-06-2022
 summary: Mental Health App for Caroline Van De Venne
 featured: false

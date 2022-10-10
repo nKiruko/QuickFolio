@@ -1,6 +1,7 @@
 ---
 title: Domotica met Arduino en Home Assistant
-image: thomas-more.jpg
+path: jochen-marien-domotica-arduino-homeassistant
+image: /projects/jochen-marien-domotica-arduino-homeassistant/thomas-more.jpg
 date: 11-01-2022
 summary: Domotica met Arduino en Home Assistant for Jochen Mariën
 featured: false

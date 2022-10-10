@@ -1,6 +1,7 @@
 ---
 title: Digital Innovation Cloud Server
-image: thomas-more.jpg
+path: digital-innovation-cloud-server
+image: /projects/digital-innovation-cloud-server/thomas-more.jpg
 date: 11-01-2022
 summary: Digital Innovation Cloud Server for Thomas More
 featured: false

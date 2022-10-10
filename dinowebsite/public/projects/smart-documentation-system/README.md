@@ -1,6 +1,7 @@
 ---
 title: Smart Documentation System
-image: delta-technics.jpg
+path: smart-documentation-system
+image: /projects/smart-documentation-system/delta-technics.jpg
 date: 24-12-2021
 summary: Smart Documentation System for Delta Technics NV
 featured: true
@@ -11,7 +12,7 @@ Het is een platform om documentatie in op te slaan en te beheren. Daarnaast is h
 
 ## Over de opdracht
 
-<a href="https://deltatechnics.be" target="_blank" rel="noreferrer">Delta Technics</a>, gelegen te Heist-op-den-berg, bood het project smart documentation system aan. Ik heb in september dit project gekozen uit de lijst met beschikbare projecten en meteen het eerste contact gelegd. Na een korte conversatie heb ik een vergadering ingepland met Delta Technics om de inhoud van het project te bespreken.
+[Delta Technics](https://deltatechnics.be), gelegen te Heist-op-den-berg, bood het project smart documentation system aan. Ik heb in september dit project gekozen uit de lijst met beschikbare projecten en meteen het eerste contact gelegd. Na een korte conversatie heb ik een vergadering ingepland met Delta Technics om de inhoud van het project te bespreken.
 
 Tijdens deze meeting hebben we besproken wat Delta Technics hun visie is over het smart documentation system. Hier kwam uit dat ze een web app wouden hebben om hun papieren documentatie op te uploaden en te beheren. Ze wouden ook graag werken met een QR-code, die de klant dan kan inscannen en wijzigingen kan doorgeven.
 
@@ -43,4 +44,4 @@ In de laatste 2 weken van onze planning hebben we nauw samengewerkt met de klant
 
 Tijdens het ontwikkelen van het project kregen wij het idee dat dit een toepassing is die op meerdere plaatsen toegepast kan worden. Daarom hebben we aan de klant gevraagd of we de code mochten open-sourcen, waarop we een positief antwoord hebben gekregen.
 
-De GitHub repository kan u hier vinden: <a href="https://github.com/jonasclaes/smart-documentation-system" target="_blank" rel="noreferrer">jonasclaes/smart-documentation-system</a>
+De GitHub repository kan u hier vinden: [ jonasclaes/smart-documentation-system](https://github.com/jonasclaes/smart-documentation-system)

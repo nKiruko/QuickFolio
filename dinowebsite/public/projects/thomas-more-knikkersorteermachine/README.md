@@ -1,6 +1,7 @@
 ---
 title: Knikkersorteermachine
-image: thomas-more-knikkersorteermachine.jpg
+path: thomas-more-knikkersorteermachine
+image: /projects/thomas-more-knikkersorteermachine/thomas-more-knikkersorteermachine.jpg
 date: 24-05-2022
 summary: Knikkersorteermachine for Thomas More
 featured: true
@@ -44,8 +45,8 @@ Hieronder vind je een lijst met mogelijkheden:
 - feed(int amount): Deze functie feed een aantal knikkers
 
 Deze library heb ik dan op PyPi gepubliceerd zodat studenten deze makkelijk kunnen installeren en gebruiken.  
-Je kan de library hier vinden: <a href="https://pypi.org/project/knikkersorteermachine/" target="_blank" rel="noreferrer">knikkersorteermachine</a>
+Je kan de library hier vinden: [ knikkersorteermachine](https://pypi.org/project/knikkersorteermachine/)
 
 ## Links
 
-GitHub repository met alle code: <a href="https://github.com/Thomas-More-Digital-Innovation/1-015-knikkersorteermachine" target="_blank" rel="noreferrer">Thomas-More-Digital-Innovation/1-015-knikkersorteermachine</a>
+GitHub repository met alle code: [ Thomas-More-Digital-Innovation/1-015-knikkersorteermachine](https://github.com/Thomas-More-Digital-Innovation/1-015-knikkersorteermachine)

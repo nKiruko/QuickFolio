@@ -8,6 +8,7 @@ const projectsDir = path.join(process.cwd(), "public/projects");
 
 export type ProjectData = {
   filter: any;
+  path: string;
   image: string;
   title: string;
   date?: number;
