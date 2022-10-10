@@ -25,19 +25,19 @@ const Contact: NextPage = () => {
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
               <Coach
-                image="/images/contact/jochen.png"
+                image="/images/contact/Jochen.jpg"
                 name="Jochen Mariën"
-                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+                text="Head Coach and Expertise in Programmeren, IoT, Windows Server, data science, AI"
               />
               <Coach
-                image="/images/contact/jochen.png"
+                image="/images/contact/Kathleen.jpg"
                 name="Kathleen Renders"
-                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+                text="Expert requirements analysis, BI, business processes, ERP "
               />
               <Coach
-                image="/images/contact/jochen.png"
+                image="/images/contact/Bram.png"
                 name="Bram Heyns"
-                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
+                text="Enthusiastic about AI, security, devops"
               />
             </div>
           </div>
