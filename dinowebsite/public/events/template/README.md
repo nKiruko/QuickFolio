@@ -1,11 +1,12 @@
 ---
-title: event1
-image: /projects/project2/images/project2.png
+title: template
+path: template
+image: /events/template/images/template.png
 date: 1609455600
 summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"
 ---
 
-# Event 1
+# Event 2
 
 Friday, 01 January 2021 00:00:00.000 +01:00
 

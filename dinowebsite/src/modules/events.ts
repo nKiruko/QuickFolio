@@ -4,9 +4,10 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const eventsDir = path.join(process.cwd(), "events");
+const eventsDir = path.join(process.cwd(), "public/events");
 
 export type EventData = {
+  path: string;
   image: string;
   title: string;
   date?: number;
@@ -22,22 +23,16 @@ export const getAllEvents = () => {
   return eventNamesFiltered.map((eventName) => {
     return {
       params: {
-        event: eventName.replace(/\.md$/, ""),
+        event: eventName,
       },
     };
   });
 };
 
-export const getEventData = async (
-  name: string | string[]
-): Promise<EventData> => {
-  const fileContents = fs.readFileSync(
-    path.join(eventsDir, `${name}.md`),
-    "utf8"
-  );
+export const getEventData = async (name: string | string[]): Promise<EventData> => {
+  const fileContents = fs.readFileSync(path.join(eventsDir, `${name}/README.md`),"utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
-
   const htmlContent = await remark().use(html).process(matterConversed.content);
 
   return <EventData>{
