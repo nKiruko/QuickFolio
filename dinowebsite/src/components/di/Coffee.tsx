@@ -31,7 +31,7 @@ const Coffee = () => {
       <div className="relative">
         <div className="h-96 ">
           <Image
-            src="/images/coffee.png"
+            src="/images/di/coffee.png"
             alt="Coffee"
             className="object-contain z-10"
             layout="fill"
@@ -39,7 +39,7 @@ const Coffee = () => {
           <div>
             <div className="animate-opacity-wave3">
               <Image
-                src="/images/CoffeeSmoke3.png"
+                src="/images/di/CoffeeSmoke3.png"
                 alt="Coffee"
                 className="object-contain animate-[wiggle_4s_ease-in-out_infinite] z-0"
                 layout="fill"
@@ -47,7 +47,7 @@ const Coffee = () => {
             </div>
             <div className="animate-opacity-wave2">
               <Image
-                src="/images/CoffeeSmoke2.png"
+                src="/images/di/CoffeeSmoke2.png"
                 alt="Coffee"
                 className="object-contain animate-[wiggle_3s_ease-in-out_infinite] z-0"
                 layout="fill"
@@ -55,14 +55,14 @@ const Coffee = () => {
             </div>
             <div className="animate-opacity-wave">
               <Image
-                src="/images/CoffeeSmoke.png"
+                src="/images/di/CoffeeSmoke.png"
                 alt="Coffee"
                 className="object-contain animate-[wiggle_2s_ease-in-out_infinite] z-0"
                 layout="fill"
               />
             </div>
             <Image
-              src="/images/CoffeeFilled.png"
+              src="/images/di/CoffeeFilled.png"
               alt="Coffee"
               className="object-contain animate-opacity-wave4 z-0"
               layout="fill"

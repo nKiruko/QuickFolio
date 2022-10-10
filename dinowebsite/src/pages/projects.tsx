@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Project from "../../components/Project";
-import { getAllProjectDataSorted, getAllProjects, ProjectData } from "../../modules/projects";
+import Project from "../components/project/Project";
+import { getAllProjectDataSorted, getAllProjects, ProjectData } from "../modules/projects";
 import {useState} from 'react';
 
 interface AllProjectEntries {
@@ -18,8 +18,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
-
-
 
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState('');

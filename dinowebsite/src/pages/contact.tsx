@@ -25,17 +25,17 @@ const Contact: NextPage = () => {
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Jochen Mariën"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Kathleen Renders"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Bram Heyns"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
