@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Icon } from "@iconify/react";
 import { InquiryData } from "../modules/inquiry";
-import Inquiry from "../components/inquiry/Inquiry";
+import Inquiry from "../components/Inquiry";
 
 export interface AllInquiryEntries {
     allInquiryData: InquiryData[];
