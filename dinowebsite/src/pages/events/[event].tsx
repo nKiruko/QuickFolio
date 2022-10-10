@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { EventData, getAllEvents, getEventData } from "../../modules/events";
 
 export interface EventDataProps {
@@ -31,22 +32,30 @@ const Event: NextPage<EventDataProps> = ({ eventData }) => {
     <div>
       <Head>
         <title>Digital Innovation - {eventData.title}</title>
-        <meta name="description" content="Digital Innovation" />
+        <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="overflow-hidden">
-        <div className="bg-dinocream pb-20">
-          <header className="flex items-center justify-center h-[28rem] mb-12 bg-fixed bg-center bg-cover bg-[url('https://images.pexels.com/photos/162500/measurement-millimeter-centimeter-meter-162500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-no-repeat"></header>
-          <div className="py-10 text-dinoblack flex flex-col justify-center">
-            {/* <div className="container flex items-center justify-center h-52 md:h-96 m-auto mb-12 bg-fixed bg-center bg-contain bg-no-repeat bg-[url('/images/ThomasMore.png')]"> */}
-            {/* <Image src={'/images/ThomasMore.png'} className="rounded-[25px]" width={125} height={250}></Image> */}
-            {/* </div> */}
+        <div className="bg-dinocream pb-24 text-dinoblack">
+        <div className="max-w-7xl mx-auto">
             <div>
-              <h1 className="font-heading sm:text-4xl my-4 mx-20">
+            <h1 className="font-heading text-4xl sm:text-6xl pb-16 text-dinoblack max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10">
                 {eventData.title}
               </h1>
-            </div>
-            <p className="mx-20 pb-32">{eventData.summary}</p>
+              <div className="mx-5 sm:mx-10 md:mx-20">
+                <Image
+                  src={eventData.image}
+                  alt={eventData.title}
+                  className="object-cover"
+                  width={1280}
+                  height={700}
+                  />
+              </div>
+          </div>
+          <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10 prose-p:text-justify  prose-headings:font-heading prose lg:prose-md prose-a:text-tmblue">
+              <div dangerouslySetInnerHTML={{__html: `${eventData.content}`}}>
+              </div>
+              </div>
           </div>
         </div>
       </main>
