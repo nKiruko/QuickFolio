@@ -40,8 +40,8 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
       <main className="overflow-hidden">
         <div className="bg-dinocream pb-24 text-dinoblack">
           <div className=" max-w-7xl mx-auto">
-            <div className="">
-            <h1 className="font-heading text-3xl sm:text-4xl pb-16 text-dinoblack max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10">
+            <div>
+            <h1 className="font-heading text-4xl sm:text-6xl pb-16 text-dinoblack max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10">
                 {projectData.title}
               </h1>
               <div className="mx-5 sm:mx-10 md:mx-20">
@@ -54,9 +54,9 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
                   />
               </div>
           </div>
-            <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10">
+            <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10 prose-p:text-justify  prose-headings:font-heading prose lg:prose-md prose-a:text-tmblue">
 
-              <div className="text-justify"  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
+              <div  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
               </div>
               </div>
           </div>
