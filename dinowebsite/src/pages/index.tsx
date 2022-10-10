@@ -73,7 +73,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
             </div>
           </div>
 
-          <div className="h-40 md:h-80 lg:h-[26rem] xl:h-[35rem] 4xl:h-[45rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)] 4xl:bg-[linear-gradient(-5deg,_#f6f2e7_50%,_#191919_50%)]"></div>
+          <div className="h-40 md:h-80 lg:h-[26rem] xl:h-[35rem] 4xl:h-[45rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)] 3xl:bg-[linear-gradient(-5deg,_#f6f2e7_50%,_#191919_50%)] 4xl:bg-[linear-gradient(-3deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
           <div className="bg-dinocream text-dinoblack">
             <div className="mx-20">

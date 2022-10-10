@@ -18,8 +18,9 @@ export type EventData = {
 
 export const getAllEvents = () => {
   const eventNames = fs.readdirSync(eventsDir);
+  const eventNamesFiltered = eventNames.filter(eventName => !eventName.startsWith('.'))
 
-  return eventNames.map((eventName) => {
+  return eventNamesFiltered.map((eventName) => {
     return {
       params: {
         event: eventName,
@@ -41,9 +42,9 @@ export const getEventData = async (name: string | string[]): Promise<EventData> 
 };
 
 export const getAllEventsData = async (): Promise<Array<EventData>> => {
-  const eventNames = fs.readdirSync(eventsDir);
-  let allEventsData = eventNames.map(async (eventName): Promise<EventData> => {
-    return <EventData>await getEventData(eventName);
+  const eventNamesFiltered = eventNames.filter(eventName => !eventName.startsWith('.'))
+  let allEventsData = eventNamesFiltered.map(async (eventName): Promise<EventData> => {
+    return <EventData>await getEventData(eventName.replace(/\.md$/, ""));
   });
 
   return await Promise.all(allEventsData);

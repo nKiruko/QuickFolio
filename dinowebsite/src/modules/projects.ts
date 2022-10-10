@@ -20,13 +20,14 @@ export type ProjectData = {
 
 export const getAllProjects = () => {
   const projectNames = fs.readdirSync(projectsDir);
+  const projectNamesFiltered = projectNames.filter(projectName => !projectName.startsWith('.'));
 
-  return projectNames.map((projectName) => {
+  return projectNamesFiltered.map((projectName) => {
     return {
       params: {
         project: projectName
-      },
-    };
+      }
+    }
   });
 };
 
@@ -44,7 +45,8 @@ export const getProjectData = async (name: String | string[]): Promise<ProjectDa
 
 export const getAllProjectsData = async (): Promise<Array<ProjectData>> => {
   const projectNames = fs.readdirSync(projectsDir);
-  let allProjectsData = projectNames.map(
+  const projectNamesFiltered = projectNames.filter(projectName => !projectName.startsWith('.'));
+  let allProjectsData = projectNamesFiltered.map(
     async (projectName): Promise<ProjectData> => {
       return <ProjectData>(
         await getProjectData(projectName)
