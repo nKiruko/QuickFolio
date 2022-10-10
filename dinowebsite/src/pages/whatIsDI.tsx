@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Coffee from "../components/Coffee";
-import ProjectCount, { ProjectCounterProps } from "../components/ProjectCount";
+import Coffee from "../components/di/Coffee";
+import ProjectCount, { ProjectCounterProps } from "../components/di/ProjectCount";
 import { getAllProjectDataSorted } from "../modules/projects";
 
 export const getStaticProps: GetStaticProps = async (context) => {

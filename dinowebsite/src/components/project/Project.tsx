@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { FunctionComponent } from "react";
-import { ProjectDataProps } from "../pages/projects/[project]";
+import { ProjectDataProps } from "../../pages/projects/[project]";
 
 const Project: FunctionComponent<ProjectDataProps> = ({ projectData }) => {
   const router = useRouter();
