@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import {
   ProjectData,
   getProjectData,
@@ -33,20 +34,31 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
     <div>
       <Head>
         <title>{`Digital Innovation - ${projectData.title}`}</title>
-        <meta name="description" content="Digital Innovation" />
+        <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="overflow-hidden">
-        <div className="bg-dinocream pb-24">
-          <div className="py-10 text-dinoblack flex flex-col justify-center">
-            <div className="container flex items-center justify-center h-52 md:h-96 m-auto mb-12 bg-fixed bg-center bg-contain bg-no-repeat bg-[url('/images/ThomasMore.png')]"></div>
+        <div className="bg-dinocream pb-24 text-dinoblack">
+          <div className=" max-w-7xl mx-auto">
             <div>
-              <h1 className="font-heading sm:text-4xl my-4 mx-20">
+            <h1 className="font-heading text-4xl sm:text-6xl pb-16 text-dinoblack max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10">
                 {projectData.title}
               </h1>
-            </div>
-            <div className="mx-20"  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
-            </div>
+              <div className="mx-5 sm:mx-10 md:mx-20">
+                <Image
+                  src={projectData.image}
+                  alt={projectData.title}
+                  className="object-cover"
+                  width={1280}
+                  height={700}
+                  />
+              </div>
+          </div>
+            <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10 prose-p:text-justify  prose-headings:font-heading prose lg:prose-md prose-a:text-tmblue">
+
+              <div  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
+              </div>
+              </div>
           </div>
         </div>
       </main>
