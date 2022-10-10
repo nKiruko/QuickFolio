@@ -6,9 +6,9 @@ summary: Small Summary of your project
 featured: true 
 ---
 
-**Example**  '**' Text inbetween makes it Bold, Use it for Titles or sub Titles
-_Example_    '_' Text inbetween makes it Cursive, Use it Quotes or others
-[Example](Link) Text has a link behind it, Use it for your own links etc
+- **Example**  '**' Text inbetween makes it Bold, Use it for Titles or sub Titles
+- _Example_    '_' Text inbetween makes it Cursive, Use it Quotes or others
+- [Example](Link) Text has a link behind it, Use it for your own links etc
 
 
 **TITLE**
