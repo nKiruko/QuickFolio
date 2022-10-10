@@ -21,24 +21,37 @@ export const getAllProjects = () => {
   const projectNames = fs.readdirSync(projectsDir);
 
   return projectNames.map((projectName) => {
-    return {
-      params: {
-        project: projectName
-      },
-    };
+    if (!projectName.startsWith('.')) {
+      return {
+        params: {
+          project: projectName
+        },
+      };
+    } else {
+      return {
+        params: {
+          project: ''
+        },
+      };
+    }
   });
 };
 
 export const getProjectData = async (name: String | string[]): Promise<ProjectData> => {
-  const fileContents = fs.readFileSync(path.join(projectsDir, `${name}/README.md`),"utf8");
-  // Use matter to split the metadata from the content in the .md file
-  const matterConversed = matter(fileContents);
-  const htmlContent = await remark().use(html).process(matterConversed.content);
+  if (name.indexOf('.') != 0){
+    console.log(name)
+    const fileContents = fs.readFileSync(path.join(projectsDir, `${name}/README.md`),"utf8");
+    // Use matter to split the metadata from the content in the .md file
+    const matterConversed = matter(fileContents);
+    const htmlContent = await remark().use(html).process(matterConversed.content);
 
-  return <ProjectData>{
-    ...matterConversed.data,
-    content: htmlContent.toString(),
-  };
+    return <ProjectData>{
+      ...matterConversed.data,
+      content: htmlContent.toString(),
+    };
+  }
+
+  return <ProjectData>{};
 };
 
 export const getAllProjectsData = async (): Promise<Array<ProjectData>> => {
