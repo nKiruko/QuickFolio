@@ -1,12 +1,17 @@
 ---
-title: template
-image: https://images.pexels.com/photos/12547195/pexels-photo-12547195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-date: 1609455600
-summary: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!
-featured: true
+title: template (Title of Project)
+image: (Path of your image)
+date: dd-MM-YYYY
+summary: Small Summary of your project
+featured: true 
 ---
 
-# Template
+**Example**  '**' Text inbetween makes it Bold, Use it for Titles or sub Titles
+_Example_    '_' Text inbetween makes it Cursive, Use it Quotes or others
+[Example](Link) Text has a link behind it, Use it for your own links etc
+
+
+**TITLE**
 
 Friday, 01 January 2021 00:00:00.000 +01:00
 
