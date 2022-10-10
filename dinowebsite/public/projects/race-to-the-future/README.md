@@ -1,6 +1,6 @@
 ---
 title: Race To The Future
-image: race-to-the-future.jpg
+image: /projects/race-to-the-future/race-to-the-future.jpg
 date: 13-05-2022
 summary: Race To The Future for Thomas More
 featured: true
