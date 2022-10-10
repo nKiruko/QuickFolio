@@ -10,6 +10,7 @@ interface AllProjectEntries {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const allProjectsData = await getAllProjectDataSorted();
+  console.log(allProjectsData);
 
   return {
     props: {
