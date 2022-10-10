@@ -3,7 +3,7 @@ title: Smart Documentation System
 image: delta-technics.jpg
 date: 24-12-2021
 summary: Smart Documentation System for Delta Technics NV
-featured: true 
+featured: true
 ---
 ## Wat is het smart documentation system?
 
