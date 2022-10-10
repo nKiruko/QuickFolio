@@ -1,44 +1,38 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const [theme, setDark] = useState(false);
 
-  let clicked = 0
-  const coffeeClick = (event: React.MouseEvent<HTMLElement>) => {
-    
-    if (clicked < 3) {
-      console.log(clicked);
-      
-      clicked += 1
+  let coffeeClicked = 0
+  function coffeemode() {  
+     
+    if (coffeeClicked < 3) {
+      coffeeClicked += 1
+    } 
+    else{
+      coffeeClicked = 0
+      setDark(!theme);
+      if (theme) {
+        localStorage.theme = 'dark'
+        document.documentElement.classList.add('dark')
+      } else {
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+      }
     }
-    else {
-      window.location.href = '?coffeemode';
-    }
-    
-  };
+  }
 
   useEffect(() => {
- 
-
-    function coffeemode() {   
-
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const coffeemode = urlParams.has('coffeemode')
-      console.log(coffeemode);
-
-      if (coffeemode) {
-        document.getElementById("coffeemodeFooter")?.classList.add('dark')
-      }
-      else{
-        document.getElementById("coffeemodeFooter")?.classList.remove('dark')
-      }
-
+    if (localStorage.theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
     }
-    coffeemode()
-  }, []);
+  });
 
+  
   return (
     <div id="coffeemodeFooter" className="absolute w-full overflow-hidden z-10">
       <div className="  relative inset-y-0 bottom-0 z-10 ">
@@ -55,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="grow h-14 text-center sm:hidden md:block">
                 <Image
-                  onClick={coffeeClick}
+                  onClick={coffeemode}
                   src="/images/LogoTextTransparant.png"
                   alt="Dino Logo"
                   width={200}
