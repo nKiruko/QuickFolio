@@ -7,6 +7,7 @@ import html from "remark-html";
 const eventsDir = path.join(process.cwd(), "public/events");
 
 export type EventData = {
+  path: string;
   image: string;
   title: string;
   date?: number;

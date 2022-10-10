@@ -62,7 +62,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               {allEventsData.map((event, i) => {
                 if (i < 2) {
                   return (
-                    <Link href={`/events/${event.title}`} key={i}>
+                    <Link href={`/events/${event.path}`} key={i}>
                       <a>
                         <Event eventData={event} left={i == 0 ? true : false} />
                       </a>
