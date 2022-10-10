@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Footer = () => {
-
+  const router = useRouter();
   let clicked = 0
   const coffeeClick = (event: React.MouseEvent<HTMLElement>) => {
     
@@ -42,7 +43,7 @@ const Footer = () => {
   return (
     <div id="coffeemodeFooter" className="absolute w-full overflow-hidden z-10">
       <div className="  relative inset-y-0 bottom-0 z-10 ">
-        <footer className="bg-tmorange dark:bg-coffeegreen text-dinocream m-auto h-auto z-10">
+      <footer className={`dark:bg-coffeegreen text-dinocream m-auto h-auto z-10 ${router.pathname == "/whatIsDI" ? "bg-tmblue" : "bg-tmorange" }`}>
           <div className="flex justify-between p-5 z-40">
             <div className="flex-none w-52">
               <div className="flex flex-col justify-between space-y-2">
