@@ -14,7 +14,7 @@ const NavBar = () => {
 
 
   return (
-    <nav id="coffeemodeNav" className="bg-dinocream">
+    <nav className="bg-dinocream">
       <div className="max-w-screen mx-auto pl-10 sm:px-16 lg:px-28">
         <div className="flex justify-between">
           <div className="flex items-center space-x-1">

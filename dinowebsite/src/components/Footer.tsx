@@ -6,35 +6,31 @@ const Footer = () => {
   const [theme, setDark] = useState(false);
 
   let coffeeClicked = 0
-  function coffeemode() {  
-     
+
+  function coffeeMode() {
     if (coffeeClicked < 3) {
       coffeeClicked += 1
     } 
     else{
       coffeeClicked = 0
       setDark(!theme);
-      if (theme) {
-        localStorage.theme = 'dark'
-        document.documentElement.classList.add('dark')
-      } else {
-        localStorage.theme = 'light'
-        document.documentElement.classList.remove('dark')
-      }
+      localStorage.theme = theme
     }
-  }
 
-  useEffect(() => {
-    if (localStorage.theme === 'dark') {
+    if (localStorage.theme === "true") {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
+  }
+
+  useEffect(() => {
+    coffeeMode()
   });
 
   
   return (
-    <div id="coffeemodeFooter" className="absolute w-full overflow-hidden z-10">
+    <div className="absolute w-full overflow-hidden z-10">
       <div className="  relative inset-y-0 bottom-0 z-10 ">
         <footer className="bg-tmorange dark:bg-coffeegreen text-dinocream m-auto h-auto z-10">
           <div className="flex justify-between p-5 z-40">
@@ -49,7 +45,7 @@ const Footer = () => {
             </div>
             <div className="grow h-14 text-center sm:hidden md:block">
                 <Image
-                  onClick={coffeemode}
+                  onClick={coffeeMode}
                   src="/images/LogoTextTransparant.png"
                   alt="Dino Logo"
                   width={200}
