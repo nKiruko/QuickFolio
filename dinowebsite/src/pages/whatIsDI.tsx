@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Coffee from "../components/Coffee";
-import ProjectCount, { ProjectCounterProps } from "../components/ProjectCount";
+import Coffee from "../components/di/Coffee";
+import ProjectCount, { ProjectCounterProps } from "../components/di/ProjectCount";
 import { getAllProjectDataSorted } from "../modules/projects";
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -19,7 +19,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
     <div>
       <Head>
         <title>Digital Innovation - What is DI</title>
-        <meta name="description" content="Digital Innovation" />
+        <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
       <main className="bg-dinocream">
@@ -29,21 +29,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
           </h1>
           <h2 className="font-heading pt-9 pb-3 text-2xl">What is DI ?</h2>
           <p className="font-sans text-md sm:text-lg text-justify">
-            Do you have a very broad interest in IT? And can you work well
-            independently? Then Digital Innovation is for you. Instead of the
-            traditional way of learning behind school desks, you will work in
-            projects in collaboration with companies. By working with real
-            customers you often come into contact with real-life problems that
-            often need creative solutions. But you will be guided by a partner
-            company, by a real IT professional. So if you have problems, you
-            always have a safety net. During your last year you will complete
-            your project work and you will go on an internship. This can be at
-            home or abroad. Did you graduate? Good news! IT is and remains a
-            bottleneck profession. So you can get started right away. Depending
-            on where the emphasis was within your projects, you can get started
-            as: software engineer, network specialist, data engineer, .... The
-            sky is the limit! And are you still interested in continuing your
-            studies? Then you can go to a master through a transition year.
+          Do you have a very broad interest in IT, can you work independently and do you like learning through projects? Then Digital Innovation might be the choice for you. In this specialisation we don’t do things the normal way using desks and teachers. Instead, we work on projects that companies ask us to work out. The advantage of this is that we encounter real-life problems that need a creative solution. For a lot of these projects, we are supported by partner companies or segment experts who provide us with some sort of “advanced tech support”. When you do encounter problems, you will have a safety net. During your final year you will have an internship just like all the other students with the same opportunities for internationalisation. After your graduation a job won’t be hard to find because IT profiles are heavily sought after. The jobs you will be able to apply for will rely heavily on which projects you worked on, some examples include software engineer, network specialist, data engineer. If you wish to keep studying, you can still opt for a master’s program to do this you will have to go through a transitional year.
           </p>
         </div>
         <div className="mt-28 md:mt-40 lg:mt-52 xl:mt-60 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
@@ -58,19 +44,19 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               <div className="relative">
                 <div className="h-96">
                   <Image
-                    src="/images/People3.png"
+                    src="/images/di/People3.png"
                     alt="People"
                     className="object-contain animate-[bounce3_1s_ease-in-out_infinite] z-0"
                     layout="fill"
                   />
                   <Image
-                    src="/images/People2.png"
+                    src="/images/di/People2.png"
                     alt="People"
                     className="object-contain animate-[bounce2_1s_ease-in-out_infinite] z-0"
                     layout="fill"
                   />
                   <Image
-                    src="/images/People1.png"
+                    src="/images/di/People1.png"
                     alt="People"
                     className="object-contain animate-bounce z-10"
                     layout="fill"

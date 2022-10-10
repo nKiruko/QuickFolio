@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FunctionComponent, useState } from "react";
-import { EventDataProps } from "../pages/events/[event]";
+import { FunctionComponent } from "react";
+import { EventDataProps } from "../../pages/events/[event]";
 
 const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
   return (
