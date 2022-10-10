@@ -2,26 +2,45 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Icon } from "@iconify/react";
 import Inquiry from "../components/Inquiry";
+import { InquiryData } from "../modules/inquiry";
 
-export interface InquiryData {
-    allTestData: GetStaticProps[];
-  }
+export interface AllInquiryEntries {
+    allInquiryData: InquiryData[];
+}
   
   export const getStaticProps: GetStaticProps = async (context) => {
-    const allTestData = [
-        {"firstname": "joe", "email": "joe@hotmail.com", "message": "hello"},
-        {"firstname": "rat", "email": "rat@hotmail.com", "message": "rat"},
-        {"firstname": "banaan", "email": "banaan@hotmail.com", "message": "banaan"},
-    ];
+    const inquiryEntry1 : InquiryData = {
+        firstname: "John",
+        lastname: "Doe",
+        email: "john.doe@example.com",
+        message: "Hello, I am John Doe and I am interested in your project.",
+    };
+ 
+    const inquiryEntry2 : InquiryData = {
+        firstname: "John",
+        lastname: "Doe",
+        email: "john.doe@example.com",
+        message: "Hello, I am John Doe and I am interested in your project.",
+    };
+
+    const inquiryEntry3 : InquiryData = {
+        firstname: "John",
+        lastname: "Doe",
+        email: "john.doe@example.com",
+        message: "Hello, I am John Doe and I am interested in your project.",
+    };
+
+
+    const allInquiryData = [inquiryEntry1, inquiryEntry2, inquiryEntry3];
   
     return {
       props: {
-        allTestData,
+        allInquiryData,
       },
     };
   };
   
-const inquiryPortal: NextPage<InquiryData> = ({ allTestData }) => {
+const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
     return (
         <div>
             <Head>
@@ -34,7 +53,7 @@ const inquiryPortal: NextPage<InquiryData> = ({ allTestData }) => {
                     <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
                         Question portal
                     </h1>
-                    {allTestData.map((inquiry, i) => {
+                    {allInquiryData.map((inquiry, i) => {
                         return (
                             <Inquiry testData={inquiry} key={i}/>
                         );
