@@ -53,7 +53,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               }).map((project, i) => {
                 if (project.featured) {
                   return (
-                    <Link href={`/projects/${project.title}`} key={i}>
+                    <Link href={`/projects/${project.path}`} key={i}>
                       <a>
                         <Project projectData={project} />
                       </a>
@@ -75,7 +75,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               }).map((project, i) => {
                 if (!project.featured) {
                   return (
-                    <Link href={`/projects/${project.title}`} key={i}>
+                    <Link href={`/projects/${project.path}`} key={i}>
                       <a>
                         <Project projectData={project} />
                       </a>

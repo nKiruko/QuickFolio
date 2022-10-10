@@ -1,15 +1,16 @@
 ---
 title: template (Title of Project)
-image: (Path of your image)
+path:  template (your folder name) 
+image: /projects/yourfolder/yourimage.png (Path of your image)
 date: dd-MM-YYYY
 summary: Small Summary of your project
-featured: true 
+featured: false 
 ---
 
 
 **Example**  '**' Text inbetween makes it Bold
 _Example_    '_' Text inbetween makes it Cursive, Use it Quotes or others
-[Example](Link) Text has a link behind it, Use it for your own links etc
+<a href="" target="_blank"  rel="noopener noreferrer">Example</a>, Use it for your own links etc
 "#" use for h1
 "##" use for h2
 
