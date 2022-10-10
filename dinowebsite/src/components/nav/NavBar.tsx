@@ -2,7 +2,7 @@ import Link from "next/link";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const NavBar = () => {
 
@@ -12,28 +12,9 @@ const NavBar = () => {
     setMobileNav(!mobileNav);
   }
 
-  useEffect(() => {
- 
-
-    function coffeemode() {
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const coffeemode = urlParams.has('coffeemode')
-      console.log(coffeemode);
-
-      if (coffeemode) {
-        document.getElementById("coffeemodeNav")?.classList.add('dark')
-      }
-      else{
-        document.getElementById("coffeemodeNav")?.classList.remove('dark')
-      }
-
-    }
-    coffeemode()
-  }, []);
 
   return (
-    <nav id="coffeemodeNav" className="bg-dinocream">
+    <nav className="bg-dinocream">
       <div className="max-w-screen mx-auto pl-10 sm:px-16 lg:px-28">
         <div className="flex justify-between">
           <div className="flex items-center space-x-1">

@@ -8,6 +8,7 @@ const projectsDir = path.join(process.cwd(), "public/projects");
 
 export type ProjectData = {
   filter: any;
+  path: string;
   image: string;
   title: string;
   date?: number;
@@ -34,7 +35,7 @@ export const getProjectData = async (name: String | string[]): Promise<ProjectDa
   const fileContents = fs.readFileSync(path.join(projectsDir, `${name}/README.md`),"utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
-  const htmlContent = await remark().use(html).process(matterConversed.content);
+  const htmlContent = await remark().use(html, { sanitize: false }).process(matterConversed.content);
 
   return <ProjectData>{
     ...matterConversed.data,
