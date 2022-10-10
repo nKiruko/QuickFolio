@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-const eventsDir = path.join(process.cwd(), "events");
+const eventsDir = path.join(process.cwd(), "public/events");
 
 export type EventData = {
   image: string;
@@ -21,22 +21,16 @@ export const getAllEvents = () => {
   return eventNames.map((eventName) => {
     return {
       params: {
-        event: eventName.replace(/\.md$/, ""),
+        event: eventName,
       },
     };
   });
 };
 
-export const getEventData = async (
-  name: string | string[]
-): Promise<EventData> => {
-  const fileContents = fs.readFileSync(
-    path.join(eventsDir, `${name}.md`),
-    "utf8"
-  );
+export const getEventData = async (name: string | string[]): Promise<EventData> => {
+  const fileContents = fs.readFileSync(path.join(eventsDir, `${name}/README.md`),"utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
-
   const htmlContent = await remark().use(html).process(matterConversed.content);
 
   return <EventData>{
@@ -48,7 +42,7 @@ export const getEventData = async (
 export const getAllEventsData = async (): Promise<Array<EventData>> => {
   const eventNames = fs.readdirSync(eventsDir);
   let allEventsData = eventNames.map(async (eventName): Promise<EventData> => {
-    return <EventData>await getEventData(eventName.replace(/\.md$/, ""));
+    return <EventData>await getEventData(eventName);
   });
 
   return await Promise.all(allEventsData);
