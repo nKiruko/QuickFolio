@@ -8,9 +8,7 @@ export default function Layout({ children }: any) {
   return (
     <>
       {router.pathname !== "/404" ? <NavBar /> : null}
-
-      <main className="overflow-hidden h-full relative">{children}</main>
-
+      <main className="overflow-hidden relative bg-dinocream">{children}</main>
       {router.pathname !== "/404" ? <Footer /> : null}
     </>
   );

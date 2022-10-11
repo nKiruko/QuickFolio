@@ -22,7 +22,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-      <main className="bg-dinocream">
+      <main className="text-dinoblack">
         <div className="mx-20 3xl:pb-24">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
             About Digital Innovation

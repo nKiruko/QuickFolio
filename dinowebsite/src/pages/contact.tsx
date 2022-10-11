@@ -12,7 +12,7 @@ const Contact: NextPage = () => {
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-      <main className="bg-dinocream 3xl:h-screen">
+      <main className="text-dinoblack min-h-screen">
         <div className="mx-20">
           <h1 className="text-4xl font-heading">
             Questions or proposals? Fill in the form below!
