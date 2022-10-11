@@ -1,0 +1,17 @@
+# Top-level configuration
+name = "di-dev"
+main = "src/index.ts"
+compatibility_date = "2022-10-11"
+
+kv_namespaces = [
+  { binding = "INQUIRIES", id = "<KV_ID>" }
+]
+
+
+
+[env.prod]
+name = "di-prod"
+kv_namespaces = [
+  { binding = "INQUIRIES", id = "<KV_ID>" }
+]
+
