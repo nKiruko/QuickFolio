@@ -1,51 +1,73 @@
-import {InquiryData} from '../../src/modules/inquiry';
+// import {InquiryData} from '../../src/modules/inquiry';
 
-export interface Env {
+export interface PagesEnv {
   INQUIRIES: KVNamespace;
 }
 
+enum FormDataItem {
+  FIRST_NAME = "firstname",
+  LAST_NAME = "lastname",
+  EMAIL = "email",
+  MESSAGE = "message",
+  FILE = "file",
+}
 
-export const onRequestPost: PagesFunction<Env> = async ( {request, env}) => {
+export const onRequestPost: PagesFunction<PagesEnv> = async ({
+  request,
+  env,
+}) => {
   try {
-    const { headers } = request;
-    const contentType = headers.get('content-type') || '';
+    // Get the "Content-Type" of the request.
+    if (!request.headers.get("Content-Type").includes("multipart/form-data")) {
+      throw new Error("Content-Type must be multipart/form-data");
+    }
 
-    if(!contentType.includes('form')) throw new Error('Content-type must be form');
-
+    // Parse the request data.
     const formData = await request.formData();
 
-    console.log(formData);
+    // console.log(formData);
 
-    let requiredFields = ["firstname","lastname","email","message"];
+    // Check required fields.
+    let requiredFields = [
+      FormDataItem.FIRST_NAME,
+      FormDataItem.LAST_NAME,
+      FormDataItem.EMAIL,
+      FormDataItem.MESSAGE,
+    ];
 
-    let pushed = {};
-    for (const property of requiredFields) {
-      if(!formData.get(property))  throw new Error(`${property} is required`);
-      pushed[property] = formData.get(property);
+    for (const requiredField of requiredFields) {
+      if (!formData.has(requiredField))
+        throw new Error(`${requiredField} is required`);
     }
-    
-    const inquiries = env.INQUIRIES;
-    console.log(inquiries);
-    // let value = await env.INQUIRIES.get("KEY");
 
-    //dit werkt dus niet?
-    await env.INQUIRIES.put("inquiry", JSON.stringify(pushed));
+    // Create the object to enter into the KV namespace.
+    const data = {
+      firstName: formData.get(FormDataItem.FIRST_NAME),
+      lastName: formData.get(FormDataItem.LAST_NAME),
+      email: formData.get(FormDataItem.EMAIL),
+      message: formData.get(FormDataItem.MESSAGE),
+    };
+
+    // Generate a key based on the epoch.
+    const kvKey = `inquiry-${Date.now()}`;
+
+    // Save the data to the KV namespace.
+    await env.INQUIRIES.put(kvKey, JSON.stringify(data));
+
+    const inquiries = await env.INQUIRIES.list();
+    console.log(inquiries);
+
+    const inquiry = await env.INQUIRIES.get(kvKey);
+    console.log(inquiry);
 
     return new Response(formData.get("file"), {
       headers: { "Content-Type": "application/pdf" },
     });
+  } catch (e) {
+    if (e instanceof Error) {
+      return new Response(e.message);
+    }
 
-    // const body = {};
-    // for (const entry of formData.entries()) {
-    //   body[entry[0]] = entry[1];
-    // }
-
-    // return new Response(JSON.stringify(body));
-    
-  } catch(e) {
-    let u = e as Error;
-    let result = u.message;
-    return new Response(result);
+    return new Response("Internal server error.", { status: 500 });
   }
-
-}
+};

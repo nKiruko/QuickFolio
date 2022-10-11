@@ -7,7 +7,7 @@ const _inquiry = [
     lastname: "Doe",
     email: "johndoe@example.com",
     message: "Hello World",
-    date: 123456789
+    date: 123456789,
   },
   <InquiryData>{
     id: 1,
@@ -15,7 +15,7 @@ const _inquiry = [
     lastname: "Doe",
     email: "johndoe@example.com",
     message: "Hello World",
-    date: 123456789
+    date: 123456789,
   },
 ];
 
@@ -25,6 +25,6 @@ export default class InquiryStore {
   }
 
   async find(id: number) {
-    return _inquiry.find(inquiry => inquiry.id.toString() === id.toString());
+    return _inquiry.find((inquiry) => inquiry.id.toString() === id.toString());
   }
 }
