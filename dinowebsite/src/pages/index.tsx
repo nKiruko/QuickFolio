@@ -38,12 +38,12 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
         <div className="pb-24">
           <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60 3xl:pb-24">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
-              Build stuff, break stuff, but ultimately, learn from the
+              Build stuff, break stuff, but ultimately: Learn from the
               experiences!
             </h1>
             <Link href="/whatIsDI">
               <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
-                Learn More
+                Learn more
               </a>
             </Link>
           </div>
@@ -57,7 +57,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5">
                 Upcoming events
               </h1>
-              <p className="text-justify">Below are our upcoming events please feel free to inquire about these or if they’re public events feel free to join us.</p>
+              <p className="text-justify">Below you will find all the events that will take place in the near future. Feel free to inquire about these events and join us!</p>
 
               {allEventsData.map((event, i) => {
                 if (i < 2) {
