@@ -47,6 +47,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       email: formData.get(FormDataItem.EMAIL),
       message: formData.get(FormDataItem.MESSAGE),
       date: currentTime,
+      file : formData.has(FormDataItem.FILE)
     };
 
     // Generate a key based on the epoch.
@@ -66,8 +67,13 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       env.R2_INQUIRIES.put(r2Key, formData.get(FormDataItem.FILE));
     }
 
+
     // Return with put data
-    return new Response(JSON.stringify(data));
+    return new Response(JSON.stringify(data), {
+      headers: {
+        "content-type": "application/json",
+      }
+    });
   } catch (e) {
     if (e instanceof Error) {
       return new Response(e.message);
