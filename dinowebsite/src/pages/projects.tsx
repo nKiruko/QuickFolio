@@ -26,6 +26,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState("");
+  let projectsFoundCounter = 0;
   return (
     <div>
       <Head>
@@ -77,7 +78,17 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                         </Link>
                       );
                     }
+                    if(project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                      projectsFoundCounter++;
+                      console.log(projectsFoundCounter);
+                      // if (projectsFoundCounter === 0) should show no projects found
+                      if (projectsFoundCounter === 0) 
+                      return(
+                        <p className="text-justify text-xl">No projects found</p>
+                      )
+                    }
                   })
+                  
               )}
             </div>
           </div>
@@ -103,7 +114,17 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                       </Link>
                     );
                   }
+                  if(project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                    projectsFoundCounter++;
+                    console.log(projectsFoundCounter);
+                    // if (projectsFoundCounter === 0) should show no projects found
+                    if (projectsFoundCounter === 0) 
+                    return(
+                      <p className="text-justify text-xl">No projects found</p>
+                    )
+                  }
                 })}
+              {console.log(projectsFoundCounter === 0)} 
             </div>
           </div>
         </div>
@@ -111,5 +132,6 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
     </div>
   );
 };
+
 
 export default Projects;
