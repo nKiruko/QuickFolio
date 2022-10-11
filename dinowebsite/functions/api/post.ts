@@ -1,5 +1,3 @@
-// import {InquiryData} from '../../src/modules/inquiry';
-
 export interface PagesEnv {
   INQUIRIES: KVNamespace;
 }
