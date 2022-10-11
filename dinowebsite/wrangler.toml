@@ -3,6 +3,8 @@ name = "di-dev"
 main = "src/index.ts"
 compatibility_date = "2022-10-11"
 
+compatibility_flags = [ "formdata_parser_supports_files" ]
+
 kv_namespaces = [
   { binding = "INQUIRIES", id = "<KV_ID>", preview_id = "<KV_ID>" },
 ]
