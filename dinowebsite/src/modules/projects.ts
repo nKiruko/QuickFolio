@@ -11,7 +11,8 @@ export type ProjectData = {
   path: string;
   image: string;
   title: string;
-  date?: number;
+  date?: string;
+  rawDate?: number;
   position?: boolean;
   summary: string;
   content?: string;
@@ -37,6 +38,10 @@ export const getProjectData = async (name: String | string[]): Promise<ProjectDa
   const matterConversed = matter(fileContents);
   const htmlContent = await remark().use(html, { sanitize: false }).process(matterConversed.content);
 
+  //split date into year and month and day and create an epoch time of this date
+  let splitDate = matterConversed.data.date.split("-");
+  matterConversed.data.rawDate = new Date(parseInt(splitDate[2]),parseInt(splitDate[1]),parseInt(splitDate[0])).getTime() / 1000
+
   return <ProjectData>{
     ...matterConversed.data,
     content: htmlContent.toString(),
@@ -61,7 +66,7 @@ export const getAllProjectDataSorted = async (): Promise<
   Array<ProjectData>
 > => {
   return (await getAllProjectsData()).sort((a, b) => {
-    if ((a.date || new Date().getTime()) < (b.date || new Date().getTime()))
+    if ((a.rawDate || new Date().getTime()) < (b.rawDate || new Date().getTime()))
       return 1;
     else return -1;
   });
