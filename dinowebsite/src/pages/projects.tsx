@@ -8,6 +8,8 @@ import {
   ProjectData,
 } from "../modules/projects";
 import { useState } from "react";
+import path from "path";
+import { title } from "process";
 
 interface AllProjectEntries {
   allProjectsData: ProjectData[];
@@ -26,7 +28,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState("");
-  let projectsFoundCounter = 0;
+  let notSearch = 0;
+  // empty project according to allProjectsData
   return (
     <div>
       <Head>
@@ -67,6 +70,14 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                     ) {
                       return val;
                     }
+                    else if
+                      (!val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                      notSearch++;
+                      if (notSearch == allProjectsData.length) {
+                        console.log("no projects found");
+                        return <p>Nothing</p>;
+                      }
+                    }
                   })
                   .map((project, i) => {
                     if (project.featured) {
@@ -78,54 +89,53 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                         </Link>
                       );
                     }
-                    if(project.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                      projectsFoundCounter++;
-                      console.log(projectsFoundCounter);
-                      // if (projectsFoundCounter === 0) should show no projects found
-                      if (projectsFoundCounter === 0) 
-                      return(
-                        <p className="text-justify text-xl">No projects found</p>
-                      )
-                    }
                   })
-                  
+
               )}
             </div>
           </div>
           <div className="mx-20">
             <div className="mt-32 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-              {allProjectsData
-                .filter((val) => {
-                  if (searchTerm == "") {
-                    return val;
-                  } else if (
-                    val.title.toLowerCase().includes(searchTerm.toLowerCase())
-                  ) {
-                    return val;
-                  }
-                })
-                .map((project, i) => {
-                  if (!project.featured) {
-                    return (
-                      <Link href={`/projects/${project.path}`} key={i}>
-                        <a>
-                          <Project projectData={project} />
-                        </a>
-                      </Link>
-                    );
-                  }
-                  if(project.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                    projectsFoundCounter++;
-                    console.log(projectsFoundCounter);
-                    // if (projectsFoundCounter === 0) should show no projects found
-                    if (projectsFoundCounter === 0) 
-                    return(
-                      <p className="text-justify text-xl">No projects found</p>
-                    )
-                  }
-                })}
-              {console.log(projectsFoundCounter === 0)} 
+              {
+                allProjectsData
+                  .filter((val) => {
+
+                    if (searchTerm == "") {
+                      return val;
+                    } else if (
+                      val.title.toLowerCase().includes(searchTerm.toLowerCase())
+                    ) {
+                      return val;
+                    }
+                    else if
+                      (!val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                      notSearch++;
+                      if (notSearch == allProjectsData.length) {
+                        console.log("no projects found");
+                        return (
+                          <Link href="">
+                          <a>
+                            <p className="">help</p>
+                          </a>
+                        </Link>
+                        );
+                      }
+                    }
+                  })
+                  .map((project, i) => {
+                    if (!project.featured) {
+                      return (
+                        <Link href={`/projects/${project.path}`} key={i}>
+                          <a>
+                            <Project projectData={project} />
+                          </a>
+                        </Link>
+                      );
+                    }
+                  })}
             </div>
+          </div>
+          <div>
           </div>
         </div>
       </main>
