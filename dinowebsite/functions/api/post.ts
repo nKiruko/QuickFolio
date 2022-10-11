@@ -1,15 +1,11 @@
 import {InquiryData} from '../../src/modules/inquiry';
 
-
 export interface Env {
   INQUIRIES: KVNamespace;
 }
-export interface requestProps {
-  request : Request;
-}
 
 
-export const onRequestPost: PagesFunction<Env> = async ( env,{request}) => {
+export const onRequestPost: PagesFunction<Env> = async ( {request, env}) => {
   try {
     const { headers } = request;
     const contentType = headers.get('content-type') || '';
@@ -28,10 +24,14 @@ export const onRequestPost: PagesFunction<Env> = async ( env,{request}) => {
       pushed[property] = formData.get(property);
     }
     
+    const inquiries = env.INQUIRIES;
+    console.log(inquiries);
+    // let value = await env.INQUIRIES.get("KEY");
 
-    let value = await INQUIRIES.get("KEY");
+    //dit werkt dus niet?
+    await env.INQUIRIES.put("inquiry", JSON.stringify(pushed));
 
-    return new Response(formData.get("pdfke"), {
+    return new Response(formData.get("file"), {
       headers: { "Content-Type": "application/pdf" },
     });
 
