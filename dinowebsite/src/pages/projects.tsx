@@ -6,7 +6,11 @@ import {
   getAllProjectDataSorted,
   ProjectData,
 } from "../modules/projects";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
+import path from "path";
+import { title } from "process";
+
 
 interface AllProjectEntries {
   allProjectsData: ProjectData[];
@@ -25,6 +29,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState("");
   let emptyResults = 0;
+
+  useEffect(() => {
+    console.log(searchTerm);
+    
+    if (searchTerm === "do a barrel roll") {
+      document.documentElement.classList.add('transform', 'rotate-360', 'transition','duration-[5000ms]')
+    }else{
+      document.documentElement.classList.remove('transform', 'rotate-360', 'transition','duration-[5000ms]')
+    }
+  });
+
   return (
     <div>
       <Head>
