@@ -1,11 +1,15 @@
+import {InquiryData} from '../../src/modules/inquiry';
 
 
+export interface Env {
+  INQUIRIES: KVNamespace;
+}
 export interface requestProps {
   request : Request;
 }
 
 
-export const onRequestPost: PagesFunction<requestProps> = async ( {request}) => {
+export const onRequestPost: PagesFunction<Env> = async ( env,{request}) => {
   try {
     const { headers } = request;
     const contentType = headers.get('content-type') || '';
@@ -14,7 +18,18 @@ export const onRequestPost: PagesFunction<requestProps> = async ( {request}) => 
 
     const formData = await request.formData();
 
-    console.log(formData)
+    console.log(formData);
+
+    let requiredFields = ["firstname","lastname","email","message"];
+
+    let pushed = {};
+    for (const property of requiredFields) {
+      if(!formData.get(property))  throw new Error(`${property} is required`);
+      pushed[property] = formData.get(property);
+    }
+    
+
+    let value = await INQUIRIES.get("KEY");
 
     return new Response(formData.get("pdfke"), {
       headers: { "Content-Type": "application/pdf" },

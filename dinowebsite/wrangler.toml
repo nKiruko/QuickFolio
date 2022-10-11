@@ -6,14 +6,11 @@ compatibility_date = "2022-10-11"
 compatibility_flags = [ "formdata_parser_supports_files" ]
 
 kv_namespaces = [
-  { binding = "INQUIRIES", id = "<KV_ID>", preview_id = "<KV_ID>" },
+  { binding = "INQUIRIES", id = "5ccd6318cadd486ab1cf1017785dff13", preview_id = "5ccd6318cadd486ab1cf1017785dff13" },
 ]
-
-
 
 [env.prod]
 name = "di-prod"
 kv_namespaces = [
   { binding = "INQUIRIES", id = "<KV_ID>", preview_id = "<KV_ID>" },
 ]
-
