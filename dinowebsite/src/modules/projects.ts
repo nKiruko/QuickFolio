@@ -8,6 +8,7 @@ const projectsDir = path.join(process.cwd(), "public/projects");
 
 export type ProjectData = {
   filter: any;
+  path: string;
   image: string;
   title: string;
   date?: number;
@@ -19,13 +20,14 @@ export type ProjectData = {
 
 export const getAllProjects = () => {
   const projectNames = fs.readdirSync(projectsDir);
+  const projectNamesFiltered = projectNames.filter(projectName => !projectName.startsWith('.'));
 
-  return projectNames.map((projectName) => {
+  return projectNamesFiltered.map((projectName) => {
     return {
       params: {
         project: projectName
-      },
-    };
+      }
+    }
   });
 };
 
@@ -33,7 +35,7 @@ export const getProjectData = async (name: String | string[]): Promise<ProjectDa
   const fileContents = fs.readFileSync(path.join(projectsDir, `${name}/README.md`),"utf8");
   // Use matter to split the metadata from the content in the .md file
   const matterConversed = matter(fileContents);
-  const htmlContent = await remark().use(html).process(matterConversed.content);
+  const htmlContent = await remark().use(html, { sanitize: false }).process(matterConversed.content);
 
   return <ProjectData>{
     ...matterConversed.data,
@@ -43,7 +45,8 @@ export const getProjectData = async (name: String | string[]): Promise<ProjectDa
 
 export const getAllProjectsData = async (): Promise<Array<ProjectData>> => {
   const projectNames = fs.readdirSync(projectsDir);
-  let allProjectsData = projectNames.map(
+  const projectNamesFiltered = projectNames.filter(projectName => !projectName.startsWith('.'));
+  let allProjectsData = projectNamesFiltered.map(
     async (projectName): Promise<ProjectData> => {
       return <ProjectData>(
         await getProjectData(projectName)

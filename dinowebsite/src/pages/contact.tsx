@@ -9,10 +9,10 @@ const Contact: NextPage = () => {
     <div>
       <Head>
         <title>Digital Innovation - Contact</title>
-        <meta name="description" content="Digital Innovation" />
+        <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-      <main className="bg-dinocream">
+      <main className="bg-dinocream 3xl:h-screen">
         <div className="mx-20">
           <h1 className="text-4xl font-heading">
             Questions or proposals? Fill in the form below!
@@ -25,17 +25,17 @@ const Contact: NextPage = () => {
             <h2 className="font-heading text-4xl mb-10">Coaches</h2>
             <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Jochen Mariën"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Kathleen Renders"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
               <Coach
-                image="/images/jochen.png"
+                image="/images/contact/jochen.png"
                 name="Bram Heyns"
                 text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, accusamus."
               />
