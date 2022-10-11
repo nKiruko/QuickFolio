@@ -15,7 +15,7 @@ export default function Form() {
   };
 
   return (
-    <form action="" className="my-5 lg:w-4/6">
+    <form action="/api/post" method="POST" encType="multipart/form-data" target="_blank" className="my-5 lg:w-4/6">
       <div className="flex">
         <span className="mr-3">Question</span>
         <label
@@ -75,7 +75,7 @@ export default function Form() {
         className="flex gap-3 items-center mb-3 cursor-pointer"
         onClick={() => openFiles()}
       >
-        <input type="file" ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
+        <input name="file" type="file" ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
         <div className="p-2 rounded bg-gray-300 text-gray-500">
           <Icon icon="ant-design:plus-outlined" className="text-2xl " />
         </div>
