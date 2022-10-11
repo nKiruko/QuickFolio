@@ -4,7 +4,7 @@ main = "src/index.ts"
 compatibility_date = "2022-10-11"
 
 kv_namespaces = [
-  { binding = "INQUIRIES", id = "<KV_ID>" }
+  { binding = "INQUIRIES", id = "<KV_ID>", preview_id = "<KV_ID>" },
 ]
 
 
@@ -12,6 +12,6 @@ kv_namespaces = [
 [env.prod]
 name = "di-prod"
 kv_namespaces = [
-  { binding = "INQUIRIES", id = "<KV_ID>" }
+  { binding = "INQUIRIES", id = "<KV_ID>", preview_id = "<KV_ID>" },
 ]
 
