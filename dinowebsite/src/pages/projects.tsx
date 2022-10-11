@@ -8,6 +8,8 @@ import {
   ProjectData,
 } from "../modules/projects";
 import { useState } from "react";
+import path from "path";
+import { title } from "process";
 
 interface AllProjectEntries {
   allProjectsData: ProjectData[];
@@ -26,6 +28,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState("");
+  let emptyResults = 0;
   return (
     <div>
       <Head>
@@ -59,13 +62,14 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               ) : (
                 allProjectsData
                   .filter((val) => {
-                    if (searchTerm == "") {
+                    if (searchTerm === "") {
                       return val;
                     } else if (
                       val.title.toLowerCase().includes(searchTerm.toLowerCase())
                     ) {
                       return val;
                     }
+                    emptyResults++;
                   })
                   .map((project, i) => {
                     if (project.featured) {
@@ -80,18 +84,22 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                   })
               )}
             </div>
+            {emptyResults === allProjectsData.length && (
+              <p className="text-justify text-xl">No projects found</p>
+            )}
           </div>
           <div className="mx-20">
             <div className="mt-32 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
               {allProjectsData
                 .filter((val) => {
-                  if (searchTerm == "") {
+                  if (searchTerm === "") {
                     return val;
                   } else if (
                     val.title.toLowerCase().includes(searchTerm.toLowerCase())
                   ) {
                     return val;
                   }
+                  emptyResults++;
                 })
                 .map((project, i) => {
                   if (!project.featured) {
@@ -105,7 +113,11 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                   }
                 })}
             </div>
+            {emptyResults === allProjectsData.length && (
+              <p className="text-justify text-xl">No projects found</p>
+            )}
           </div>
+          <div></div>
         </div>
       </main>
     </div>
