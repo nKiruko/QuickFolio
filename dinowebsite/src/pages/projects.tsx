@@ -28,8 +28,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   const [searchTerm, setSeachTerm] = useState("");
-  let notSearch = 0;
-  // empty project according to allProjectsData
+  let emptyResults = 0;
   return (
     <div>
       <Head>
@@ -63,21 +62,14 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               ) : (
                 allProjectsData
                   .filter((val) => {
-                    if (searchTerm == "") {
+                    if (searchTerm === "") {
                       return val;
                     } else if (
                       val.title.toLowerCase().includes(searchTerm.toLowerCase())
                     ) {
                       return val;
                     }
-                    else if
-                      (!val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                      notSearch++;
-                      if (notSearch == allProjectsData.length) {
-                        console.log("no projects found");
-                        return <p>Nothing</p>;
-                      }
-                    }
+                    emptyResults++;
                   })
                   .map((project, i) => {
                     if (project.featured) {
@@ -90,58 +82,46 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
                       );
                     }
                   })
-
               )}
             </div>
+            {emptyResults === allProjectsData.length && (
+              <p className="text-justify text-xl">No projects found</p>
+            )}
           </div>
           <div className="mx-20">
             <div className="mt-32 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-              {
-                allProjectsData
-                  .filter((val) => {
-
-                    if (searchTerm == "") {
-                      return val;
-                    } else if (
-                      val.title.toLowerCase().includes(searchTerm.toLowerCase())
-                    ) {
-                      return val;
-                    }
-                    else if
-                      (!val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                      notSearch++;
-                      if (notSearch == allProjectsData.length) {
-                        console.log("no projects found");
-                        return (
-                          <Link href="">
-                          <a>
-                            <p className="">help</p>
-                          </a>
-                        </Link>
-                        );
-                      }
-                    }
-                  })
-                  .map((project, i) => {
-                    if (!project.featured) {
-                      return (
-                        <Link href={`/projects/${project.path}`} key={i}>
-                          <a>
-                            <Project projectData={project} />
-                          </a>
-                        </Link>
-                      );
-                    }
-                  })}
+              {allProjectsData
+                .filter((val) => {
+                  if (searchTerm === "") {
+                    return val;
+                  } else if (
+                    val.title.toLowerCase().includes(searchTerm.toLowerCase())
+                  ) {
+                    return val;
+                  }
+                  emptyResults++;
+                })
+                .map((project, i) => {
+                  if (!project.featured) {
+                    return (
+                      <Link href={`/projects/${project.path}`} key={i}>
+                        <a>
+                          <Project projectData={project} />
+                        </a>
+                      </Link>
+                    );
+                  }
+                })}
             </div>
+            {emptyResults === allProjectsData.length && (
+              <p className="text-justify text-xl">No projects found</p>
+            )}
           </div>
-          <div>
-          </div>
+          <div></div>
         </div>
       </main>
     </div>
   );
 };
-
 
 export default Projects;
