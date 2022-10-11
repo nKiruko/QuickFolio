@@ -34,8 +34,8 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
 
-      <main>
-        <div className="bg-dinocream pb-28 ">
+      <main className="text-dinoblack ">
+        <div className="pb-24">
           <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60 3xl:pb-24">
             <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
               Build stuff, break stuff, but ultimately, learn from the
@@ -75,7 +75,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
 
           <div className="h-40 md:h-80 lg:h-[26rem] xl:h-[35rem] 4xl:h-[45rem] bg-[linear-gradient(-9deg,_#f6f2e7_50%,_#191919_50%)] 3xl:bg-[linear-gradient(-5deg,_#f6f2e7_50%,_#191919_50%)] 4xl:bg-[linear-gradient(-3deg,_#f6f2e7_50%,_#191919_50%)]"></div>
 
-          <div className="bg-dinocream text-dinoblack">
+          <div>
             <div className="mx-20">
               <h1 className="font-heading text-4xl sm:text-5xl lg:pt-5 pb-5">
                 Featured projects
