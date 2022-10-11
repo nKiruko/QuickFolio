@@ -5,7 +5,7 @@ import { EventDataProps } from "../../pages/events/[event]";
 const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
   return (
     <div className="mt-16 flex flex-col lg:flex-row  hover:cursor-pointer ">
-      <div className="relative h-52 sm:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[32rem] 3xl:h-[40rem] lg:w-1/2">
+      <div className="relative h-52 sm:h-60 md:h-72 lg:h-[19rem] xl:h-96 lg:w-1/2">
         <div
           className={`lg:basis-auto ${
             left ? "lg:order-first" : "lg:order-last"
@@ -14,8 +14,10 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
           <Image
             src={eventData.image}
             alt={eventData.title}
-            className="rounded-[25px] object-cover"
+            className="rounded-[25px]"
             layout="fill"
+            objectFit="cover"
+            objectPosition="center"
           />
         </div>
       </div>

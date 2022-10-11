@@ -22,7 +22,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/LogoTextTransparant.png" />
       </Head>
-      <main className="bg-dinocream">
+      <main className="text-dinoblack">
         <div className="mx-20 3xl:pb-24">
           <h1 className="font-heading text-4xl sm:text-5xl pt-24 sm:pt-32 pb-5 ">
             About Digital Innovation
@@ -33,7 +33,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
           </p>
         </div>
         <div className="mt-28 md:mt-40 lg:mt-52 xl:mt-60 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
-          <div className="bg-tmorange dark:bg-coffeegreen h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 4xl:-rotate-3 scale-125 shadow-glow"></div>
+          <div className="bg-tmorange dark:bg-coffeegreen h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 4xl:-rotate-3 5xl:-rotate-2 scale-125 shadow-glow"></div>
         </div>
         <div className="bg-dinoblack text-dinocream pb-16 4xl:pb-32 4xl:h-screen">
           <div className="">

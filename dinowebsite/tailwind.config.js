@@ -19,6 +19,7 @@ module.exports = {
       },
       rotate: {
         9: "9deg",
+        360: "360deg",
       },
       fontFamily: {
         sans: ["Roboto", defaultTheme.fontFamily.sans],
@@ -64,6 +65,7 @@ module.exports = {
       screens: {
         '3xl': '2565px',
         '4xl': '3450px',
+        '5xl': '10000px',
         // => @media (min-width: 1536px) { ... }
       },
     },
