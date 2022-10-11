@@ -4,12 +4,13 @@ import Link from "next/link";
 import Project from "../components/project/Project";
 import {
   getAllProjectDataSorted,
-  getAllProjects,
   ProjectData,
 } from "../modules/projects";
+
 import { useEffect, useState } from "react";
 import path from "path";
 import { title } from "process";
+
 
 interface AllProjectEntries {
   allProjectsData: ProjectData[];
@@ -17,7 +18,6 @@ interface AllProjectEntries {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const allProjectsData = await getAllProjectDataSorted();
-  console.log(allProjectsData);
 
   return {
     props: {
