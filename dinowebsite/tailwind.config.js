@@ -19,6 +19,7 @@ module.exports = {
       },
       rotate: {
         9: "9deg",
+        360: "360deg",
       },
       fontFamily: {
         sans: ["Roboto", defaultTheme.fontFamily.sans],
