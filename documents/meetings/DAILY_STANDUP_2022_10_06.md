@@ -1,7 +1,7 @@
 # Daily Standup 6 oktober 2022 @ 20u11
 
 Meeting time: 4 minutes  
-Story point done: 5  
+Story points done: 5  
 Aanwezigen: Bryan, Syan, Nick en Marnik (vanwege Hellow Yellow 🎉)  
 
 ## Verloop
