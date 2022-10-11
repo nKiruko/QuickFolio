@@ -1,8 +1,9 @@
 export interface PagesEnv {
   INQUIRIES: KVNamespace;
+  R2_INQUIRIES: R2Bucket;
 }
 
-enum FormDataItem {
+export enum FormDataItem {
   FIRST_NAME = "firstname",
   LAST_NAME = "lastname",
   EMAIL = "email",
@@ -23,7 +24,8 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
     // Parse the request data.
     const formData = await request.formData();
 
-    // console.log(formData);
+    // Store current time 
+    const currentTime = Date.now();
 
     // Check required fields.
     let requiredFields = [
@@ -44,23 +46,28 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       lastName: formData.get(FormDataItem.LAST_NAME),
       email: formData.get(FormDataItem.EMAIL),
       message: formData.get(FormDataItem.MESSAGE),
+      date: currentTime,
     };
 
     // Generate a key based on the epoch.
-    const kvKey = `inquiry-${Date.now()}`;
+    const kvKey = `inquiry-${currentTime}`;
 
     // Save the data to the KV namespace.
     await env.INQUIRIES.put(kvKey, JSON.stringify(data));
 
-    const inquiries = await env.INQUIRIES.list();
-    console.log(inquiries);
+    // const inquiries = await env.INQUIRIES.list();
+    // console.log(inquiries);
 
-    const inquiry = await env.INQUIRIES.get(kvKey);
-    console.log(inquiry);
+    // const inquiry = await env.INQUIRIES.get(kvKey);
+    // console.log(inquiry);
 
-    return new Response(formData.get("file"), {
-      headers: { "Content-Type": "application/pdf" },
-    });
+    if(formData.has(FormDataItem.FILE)) {
+      const r2Key = `file-${currentTime}`;
+      env.R2_INQUIRIES.put(r2Key, formData.get(FormDataItem.FILE));
+    }
+
+    // Return with put data
+    return new Response(JSON.stringify(data));
   } catch (e) {
     if (e instanceof Error) {
       return new Response(e.message);
