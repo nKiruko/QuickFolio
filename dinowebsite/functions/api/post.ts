@@ -40,7 +40,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
         throw new Error(`${requiredField} is required`);
     }
 
-    let fileExist = (formData.get(FormDataItem.FILE) as Blob)?.size > 0;
+    let fileExist = formData.has(FormDataItem.FILE) && formData.get(FormDataItem.FILE);
 
     // Create the object to enter into the KV namespace.
     const data = {
