@@ -85,6 +85,11 @@ export default function Form() {
           <Icon icon="ant-design:plus-outlined" className="text-2xl " />
         </div>
         <p>{file}</p>
+        <Icon icon="entypo:cross" className={`text-2xl hover:text-red-500 ${file === "Add files" ? "hidden" : "block"}`} onClick={(e) => {
+          e.stopPropagation();
+          setFile("Add files");
+          (inputFileRef.current as never as HTMLInputElement).value = "";
+        }} />
       </div>
       <button
         type="submit"
