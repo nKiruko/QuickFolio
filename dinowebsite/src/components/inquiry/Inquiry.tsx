@@ -53,6 +53,15 @@ const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
             <button className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mr-5 mb-5" onClick={deleteInquiry}>
                 Delete
             </button>
+            {
+                inquiryData.file ? (
+                    <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
+                        <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mb-5">
+                            Open file
+                        </a>
+                    </Link>
+                ) : null
+            }   
             </div>
         </div>
     </div>
