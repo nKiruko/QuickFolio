@@ -69,7 +69,7 @@ export default function Form() {
         name="message"
         placeholder="Message.."
         required
-        className="valid:border-green-500 invalid:border-red-500 outline-tmorange w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
+        className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
       />
       <div
         className="flex gap-3 items-center mb-3 cursor-pointer"
