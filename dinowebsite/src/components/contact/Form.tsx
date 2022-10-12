@@ -15,7 +15,7 @@ export default function Form() {
   };
 
   return (
-    <form action="https://testing-form.r08789151589.workers.dev/post" method="post" className="my-5 lg:w-4/6">
+    <form action="/api/post" method="POST" encType="multipart/form-data" target="_blank" className="my-5 lg:w-4/6">
       <div className="flex">
         <span className="mr-3">Question</span>
         <label
