@@ -40,7 +40,17 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
         throw new Error(`${requiredField} is required`);
     }
 
-    let fileExist = (formData.get(FormDataItem.FILE) as Blob)?.size > 0;
+    let fileExist = formData.has(FormDataItem.FILE);
+
+    if(fileExist) {
+      const r2Key = `file-${currentTime}`;
+      let file = formData.get(FormDataItem.FILE);
+      if(file) {
+        await env.R2_INQUIRIES.put(r2Key, file);
+      }
+      fileExist = fileExist && file ? true : false;
+      
+    }
 
     // Create the object to enter into the KV namespace.
     const data = {
@@ -63,11 +73,6 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
     // const inquiry = await env.INQUIRIES.get(kvKey);
     // console.log(inquiry);
-
-    if(fileExist) {
-      const r2Key = `file-${currentTime}`;
-      await env.R2_INQUIRIES.put(r2Key, formData.get(FormDataItem.FILE));
-    }
 
 
     // Return with put data
