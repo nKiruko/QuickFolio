@@ -6,4 +6,3 @@ export type InquiryData = {
   message: string;
   date? : number;
   file?: boolean;
-}
