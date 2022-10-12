@@ -36,17 +36,30 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
 
       <main className="text-dinoblack min-h-screen">
         <div className="pb-24">
-          <div className="w-1/2 md:w-3/5 lg:w-3/6 xl:w-2/6 ml-20 lg:ml-60 3xl:pb-24">
-            <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
-              Build stuff, break stuff, but ultimately: Learn from the
-              experiences!
-            </h1>
-            <Link href="/whatIsDI">
-              <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
-                Learn more
-              </a>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="w-2/3 md:w-4/5 lg:w-5/6 xl:w-6/6 ml-20 lg:ml-36 3xl:pb-24">
+              <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
+                Build stuff, break stuff, but ultimately: Learn from the
+                experiences!
+              </h1>
+              <Link href="/whatIsDI">
+                <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
+                  Learn more
+                </a>
+              </Link>
+            </div>
+            <div className="w-2/3 md:w-4/5 lg:w-5/6 xl:w-6/6 ml-20 lg:ml-36 3xl:pb-24">
+              <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
+                We are always looking for project proposals
+              </h1>
+              <Link href="/contact">
+                <a className="md:ml-36 lg:ml-64 xl:ml-96 font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
+                  Click here
+                </a>
+              </Link>
+            </div>
           </div>
+
 
           <div className="mt-32 md:mt-52 lg:mt-64 xl:mt-96 bg-[linear-gradient(9deg,_#191919_50%,_#f6f2e7_50%)]">
             <div className="bg-tmblue dark:bg-coffeecream h-20 md:h-32 lg:h-40 xl:h-60 2xl:h-80 rotate-9 4xl:rotate-3 5xl:rotate-2 scale-125 shadow-glow"></div>
