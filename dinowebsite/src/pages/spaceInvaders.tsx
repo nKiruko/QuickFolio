@@ -941,7 +941,7 @@ focus();
 
 
   return (
-<div className="p-0 m-0 text-center bg-gradient-to-bl from-dinoblack  via-coffeegreen  to-dinoblack">
+<div className="p-0 m-0 text-center bg-gradient-to-bl from-dinoblack  via-coffeegreen  to-dinoblack pl-10">
           <Head>
               <title>SpaceInvaders</title>
               
@@ -956,7 +956,7 @@ focus();
           <div className="reflect1 absolute top-0 h-full bg-[linear-gradient(130deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 62%, rgba(78,78,78,0.1) 64%, rgba(56,56,56,0.2) 100%)]"></div>
           <div id="instructs" className="text-[#E7CA78] bg-transparent text-3xl text-center absolute bottom-0 m-0 p-1 ">[1] Coin [S] Play / Cont [Left][Right] Move [Up] Shoot</div>
           <Link href="/">
-          <Icon icon="emojione-monotone:cross-mark-button" className="absolute text-[#E7CA78] text-[4rem] top-1 left-1 cursor-pointer"></Icon>
+          <Icon icon="emojione-monotone:cross-mark-button" className="absolute text-[#E7CA78] text-[3rem] top-1 left-1 cursor-pointer"></Icon>
           </Link>
           
       </div>
