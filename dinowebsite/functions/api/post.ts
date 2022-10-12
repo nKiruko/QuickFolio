@@ -44,12 +44,13 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
     if(fileExist) {
       const r2Key = `file-${currentTime}`;
-      let file = formData.get(FormDataItem.FILE) as File;
+      const file = formData.get(FormDataItem.FILE);
+
       if(file) {
         await env.R2_INQUIRIES.put(r2Key, file);
       }
-      fileExist = fileExist && file ? true : false;
 
+      fileExist = fileExist && file ? true : false;
     }
 
     // Create the object to enter into the KV namespace.
@@ -59,7 +60,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       email: formData.get(FormDataItem.EMAIL),
       message: formData.get(FormDataItem.MESSAGE),
       date: currentTime,
-      file : fileExist
+      file: fileExist
     };
 
     // Generate a key based on the epoch.
