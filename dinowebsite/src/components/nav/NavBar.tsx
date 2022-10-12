@@ -34,7 +34,7 @@ const NavBar = () => {
             <NavItem name="DI" href="/whatIsDI" />
             <NavItem name="Projects" href="/projects" />
             <NavItem name="Contact" href="/contact" />
-            <Link href="/" passHref>
+            <Link href="/inquiryPortal" passHref>
               <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange dark:hover:border-coffeegreen">
                 Login
               </a>
@@ -53,7 +53,7 @@ const NavBar = () => {
           <NavItem name="DI" href="/whatIsDI" mobile={true} />
           <NavItem name="Projects" href="/projects" mobile={true} />
           <NavItem name="Contact" href="/contact" mobile={true} />
-          <NavItem name="Login" href="/" mobile={true} />
+          <NavItem name="Login" href="/inquiryPortal" mobile={true} />
         </div>
       </div>
     </nav>

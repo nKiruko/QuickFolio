@@ -14,6 +14,11 @@ export default function Form() {
     setOption(e.target.checked);
   };
 
+  const [file, setFile] = useState("Add files");
+  function getFileName(fileName: any) {
+    setFile(fileName.target.files[0].name);
+  }
+
   return (
     <form action="/api/post" method="POST" encType="multipart/form-data" target="_blank" className="my-5 lg:w-4/6">
       <div className="flex">
@@ -75,11 +80,16 @@ export default function Form() {
         className="flex gap-3 items-center mb-3 cursor-pointer"
         onClick={() => openFiles()}
       >
-        <input name="file" type="file" ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
+        <input id="fileupload" name="file" type="file" onChange={(e) => {getFileName(e)}} ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
         <div className="p-2 rounded bg-gray-300 text-gray-500">
           <Icon icon="ant-design:plus-outlined" className="text-2xl " />
         </div>
-        <p>Add files</p>
+        <p>{file}</p>
+        <Icon icon="entypo:cross" className={`text-2xl hover:text-red-500 ${file === "Add files" ? "hidden" : "block"}`} onClick={(e) => {
+          e.stopPropagation();
+          setFile("Add files");
+          (inputFileRef.current as never as HTMLInputElement).value = "";
+        }} />
       </div>
       <button
         type="submit"
