@@ -20,7 +20,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
       <Head>
         <title>Digital Innovation - What is DI</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/LogoTextTransparant.png" />
+        <link rel="icon" href="images/Favicon_di.png" />
       </Head>
       <main className="text-dinoblack">
         <div className="mx-20 3xl:pb-24">

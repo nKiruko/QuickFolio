@@ -31,7 +31,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
       <Head>
         <title>Digital Innovation - Home</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/LogoTextTransparant.png" />
+        <link rel="icon" href="images/Favicon_di.png" />
       </Head>
 
       <main className="text-dinoblack min-h-screen">
