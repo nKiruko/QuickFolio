@@ -33,10 +33,10 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
           Search no further: Digital Innovation is the choice for you! In this specialization we do not follow the usual methods of education.
           Instead, we work on projects that companies ask us to work out. The advantage of this is that we encounter real-life problems that need a creative solution. 
           For a lot of these projects, we are supported by partner companies or segment experts who provide us with some sort of advanced tech support. 
-          When you do encounter problems, you'll always have a safety net. During your final year you will have an internship just like all the other students with the same opportunities for internationalization. 
+          When you do encounter problems, you&apos;ll always have a safety net. During your final year you will have an internship just like all the other students with the same opportunities for internationalization. 
           After your graduation you will be fully prepared for the job market and all the opportunities IT offers you. 
-          The jobs you'll encounter will rely heavily on the knowledge you gathered from projects you worked on. Some of the more common job descriptions are software engineer, network specialist, data engineer,... 
-          Still not tired of studying after 3 years? Then you can always start a master's program after a transition year. But most of all remember: Whatever you do, just do IT!
+          The jobs you&apos;ll encounter will rely heavily on the knowledge you gathered from projects you worked on. Some of the more common job descriptions are software engineer, network specialist, data engineer,... 
+          Still not tired of studying after 3 years? Then you can always start a master&apos;s program after a transition year. But most of all remember: Whatever you do, just do IT!
           </p>
         </div>
         <div className="mt-28 md:mt-40 lg:mt-52 xl:mt-60 bg-[linear-gradient(-9deg,_#191919_50%,_#f6f2e7_50%)]">
