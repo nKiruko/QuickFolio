@@ -48,14 +48,14 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
           name="description"
           content="Digital Innovation Thomas More, What is Digital Innovation"
         />
-        <link rel="icon" href="images/LogoTextTransparant.png" />
+        <link rel="icon" href="images/Favicon_di.png" />
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="pb-64">
           <div className="mx-20">
             <div className="flex flex-col lg:flex-row justify-between pt-24 sm:pt-32 pb-5 ">
               <h1 className="font-heading text-4xl sm:text-5xl">
-                Recent projects
+                Recent Projects
               </h1>
               <input
                 type="text"

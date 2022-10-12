@@ -1,46 +1,8 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
-import { Icon } from "@iconify/react";
-import { InquiryData } from "../modules/inquiry";
-import Inquiry from "../components/inquiry/Inquiry";
+import InquiryEntries from "../components/inquiry/InquiryEntries";
 
-export interface AllInquiryEntries {
-    allInquiryData: InquiryData[];
-}
-  
-  export const getStaticProps: GetStaticProps = async (context) => {
-    const inquiryEntry1 : InquiryData = {
-        firstname: "John",
-        lastname: "Doe",
-        email: "john.doe@example.com",
-        message: "Hello, I am John Doe and I am interested in your project.",
-    };
- 
-    const inquiryEntry2 : InquiryData = {
-        firstname: "John",
-        lastname: "Doe",
-        email: "john.doe@example.com",
-        message: "Hello, I am John Doe and I am interested in your project.",
-    };
-
-    const inquiryEntry3 : InquiryData = {
-        firstname: "John",
-        lastname: "Doe",
-        email: "john.doe@example.com",
-        message: "Hello, I am John Doe and I am interested in your project.",
-    };
-
-
-    const allInquiryData = [inquiryEntry1, inquiryEntry2, inquiryEntry3];
-  
-    return {
-      props: {
-        allInquiryData,
-      },
-    };
-  };
-  
-const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
+const inquiryPortal: NextPage = () => {
     return (
         <div>
             <Head>
@@ -53,11 +15,7 @@ const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
                     <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
                         Inquiry portal
                     </h1>
-                    {allInquiryData.map((inquiry, i) => {
-                        return (
-                            <Inquiry inquiryData={inquiry} key={i}/>
-                        );
-                    })}
+                    <InquiryEntries/>
                 </div>
             </main>
         </div>

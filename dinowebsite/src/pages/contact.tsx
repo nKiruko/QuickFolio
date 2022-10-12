@@ -10,7 +10,7 @@ const Contact: NextPage = () => {
       <Head>
         <title>Digital Innovation - Contact</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/LogoTextTransparant.png" />
+        <link rel="icon" href="images/Favicon_di.png" />
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="mx-20">
@@ -27,17 +27,17 @@ const Contact: NextPage = () => {
               <Coach
                 image="/images/contact/Jochen.jpg"
                 name="Jochen Mariën"
-                text="Head Coach and Expertise in Programmeren, IoT, Windows Server, data science, AI"
+                text="Head coach with expertise in programming, IoT, Windows Server, data science & AI"
               />
               <Coach
                 image="/images/contact/Kathleen.jpg"
                 name="Kathleen Renders"
-                text="Expert requirements analysis, BI, business processes, ERP "
+                text="Expert requirements analysis, BI, business processes & ERP "
               />
               <Coach
                 image="/images/contact/Bram.png"
                 name="Bram Heyns"
-                text="Enthusiastic about AI, security, devops"
+                text="Enthusiastic about AI, security & devops"
               />
             </div>
           </div>
