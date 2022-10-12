@@ -34,7 +34,7 @@ const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
             </p>
             <p className="pb-5">{inquiryData.message}</p>
             <Link href="mailto:someone@yoursite.com">
-                <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mb-5">
+                <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange dark:hover:border-coffeecream float-right mb-5">
                     Reply
                 </a>
             </Link>

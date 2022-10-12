@@ -53,7 +53,7 @@ const Project: NextPage<ProjectDataProps> = ({ projectData }) => {
                   />
               </div>
           </div>
-            <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10 prose-p:text-justify  prose-headings:font-heading prose lg:prose-md prose-a:text-tmblue">
+            <div className="max-w-[15rem] sm:max-w-sm md:max-w-lg xl:max-w-3xl mx-auto py-10 prose-p:text-justify  prose-headings:font-heading prose lg:prose-md prose-a:text-tmblue dark:prose-a:text-coffeecream">
               <div  dangerouslySetInnerHTML={{__html: `${projectData.content}`}}>
               </div>
               </div>
