@@ -9,6 +9,7 @@ export enum FormDataItem {
   EMAIL = "email",
   MESSAGE = "message",
   FILE = "file",
+  COMPANY = "companyname",
 }
 
 export const onRequestPost: PagesFunction<PagesEnv> = async ({
@@ -59,6 +60,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       lastName: formData.get(FormDataItem.LAST_NAME),
       email: formData.get(FormDataItem.EMAIL),
       message: formData.get(FormDataItem.MESSAGE),
+      company: formData.get(FormDataItem.COMPANY),
       date: currentTime,
       file: fileExist
     };
@@ -77,11 +79,13 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
 
     // Return with put data
-    return new Response(JSON.stringify(data), {
-      headers: {
-        "content-type": "application/json",
-      }
-    });
+    // return new Response(JSON.stringify(data), {
+    //   headers: {
+    //     "content-type": "application/json",
+    //   }
+  // });
+    return Response.redirect("https://digitalinnovation.be/success", 303);
+
   } catch (e) {
     if (e instanceof Error) {
       return new Response(e.message);
