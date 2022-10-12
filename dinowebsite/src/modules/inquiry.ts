@@ -5,5 +5,5 @@ export type InquiryData = {
   email: string;
   message: string;
   date? : number;
-  fale?: boolean;
-}
+  file?: boolean;
+};
