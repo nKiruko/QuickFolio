@@ -43,14 +43,14 @@ export default function Form() {
           name="firstname"
           placeholder="First name"
           required
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
         />
         <input
           type="text"
           name="lastname"
           placeholder="Last name"
           required
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
         />
       </div>
       <input
@@ -58,7 +58,7 @@ export default function Form() {
         name="email"
         placeholder="Email"
         required
-        className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 mb-3"
+        className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream w-full rounded bg-dinogrey px-2 py-1 mb-3"
       />
       
       <div className={`${option ? "block" : "hidden"} flex flex-col lg:flex-row gap-3`}>
@@ -66,7 +66,7 @@ export default function Form() {
           type="text"
           name="companyname"
           placeholder="Company name"
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
         />
         <p  className=" w-full lg:w-2/4"></p>
       </div>
@@ -74,7 +74,7 @@ export default function Form() {
         name="message"
         placeholder="Message.."
         required
-        className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
+        className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
       />
       <div
         className="flex gap-3 items-center mb-3 cursor-pointer"
@@ -93,7 +93,7 @@ export default function Form() {
       </div>
       <button
         type="submit"
-        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeecream"
+        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeegreen"
       >
         Send Message
       </button>

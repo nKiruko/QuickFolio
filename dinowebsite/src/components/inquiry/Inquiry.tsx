@@ -33,17 +33,27 @@ const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
             <div className="absolute top-3 right-3 text-white transition-transform duration-400 rotate-0 peer-checked:rotate-180">
                 <Icon className="w-6 h-6" icon="material-symbols:arrow-drop-down-circle-outline" />
             </div>
+        <div className="bg-dinogrey bg-opacity-50 overflow-hidden max-h-0 peer-checked:max-h-full">
+            <div className="p-4">
+            <p className="font-semibold md:hidden">
+                Email&#58; {inquiryData.email}
+            </p>
+            <p className="font-semibold">
+                Message&#58;
+            </p>
+            <p className="pb-5">{inquiryData.message}</p>
 
-            <div className="bg-dinogrey bg-opacity-50 overflow-hidden max-h-0 peer-checked:max-h-full">
-                <div className="p-4">
-                    <p className="font-semibold md:hidden">
-                        Email&#58; {inquiryData.email}
-                    </p>
-                    <p className="font-semibold">
-                        Message&#58;
-                    </p>
-                    <p className="pb-5">{inquiryData.message}</p>
-                    <Link href={`mailto:"${inquiryData.email}"`}>
+            <Link href={`mailto:"${inquiryData.email}"`}>
+                <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange dark:hover:border-coffeecream float-right mb-5">
+                    Reply
+                </a>
+            </Link>
+            <button className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mr-5 mb-5" onClick={deleteInquiry}>
+                Delete
+            </button>
+            {
+                inquiryData.file ? (
+                    <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
                         <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mb-5">
                             Reply
                         </a>
