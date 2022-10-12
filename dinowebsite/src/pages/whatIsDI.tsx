@@ -32,7 +32,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
           Do you have a very broad interest in IT? Are you able to work both individually and in team? Do you like learning through projects? 
           Search no further: Digital Innovation is the choice for you! In this specialization we do not follow the usual methods of education.
           Instead, we work on projects that companies ask us to work out. The advantage of this is that we encounter real-life problems that need a creative solution. 
-          For a lot of these projects, we are supported by partner companies or segment experts who provide us with some sort of “advanced tech support”. 
+          For a lot of these projects, we are supported by partner companies or segment experts who provide us with some sort of advanced tech support. 
           When you do encounter problems, you'll always have a safety net. During your final year you will have an internship just like all the other students with the same opportunities for internationalization. 
           After your graduation you will be fully prepared for the job market and all the opportunities IT offers you. 
           The jobs you'll encounter will rely heavily on the knowledge you gathered from projects you worked on. Some of the more common job descriptions are software engineer, network specialist, data engineer,... 
