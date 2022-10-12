@@ -10,7 +10,8 @@ export type EventData = {
   path: string;
   image: string;
   title: string;
-  date?: number;
+  date?: string;
+  rawDate?: number;
   position?: boolean;
   summary: string;
   content: string;
@@ -35,6 +36,10 @@ export const getEventData = async (name: string | string[]): Promise<EventData> 
   const matterConversed = matter(fileContents);
   const htmlContent = await remark().use(html).process(matterConversed.content);
 
+   //split date into year and month and day and create an epoch time of this date
+   let splitDate = matterConversed.data.date.split("-");
+   matterConversed.data.rawDate = new Date(parseInt(splitDate[2]),parseInt(splitDate[1]),parseInt(splitDate[0])).getTime() / 1000
+
   return <EventData>{
     ...matterConversed.data,
     content: htmlContent.toString(),
@@ -53,7 +58,7 @@ export const getAllEventsData = async (): Promise<Array<EventData>> => {
 
 export const getAllEventDataSorted = async (): Promise<Array<EventData>> => {
   return (await getAllEventsData()).sort((a, b) => {
-    if ((a.date || new Date().getTime()) < (b.date || new Date().getTime()))
+    if ((a.rawDate || new Date().getTime()) < (b.rawDate || new Date().getTime()))
       return 1;
     else return -1;
   });
