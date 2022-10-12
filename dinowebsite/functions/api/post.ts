@@ -77,11 +77,13 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
 
     // Return with put data
-    return new Response(JSON.stringify(data), {
-      headers: {
-        "content-type": "application/json",
-      }
-    });
+    // return new Response(JSON.stringify(data), {
+    //   headers: {
+    //     "content-type": "application/json",
+    //   }
+  // });
+    return Response.redirect("https://digitalinnovation.be/success", 303);
+
   } catch (e) {
     if (e instanceof Error) {
       return new Response(e.message);
