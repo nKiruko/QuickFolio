@@ -82,7 +82,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
             <div className="grid-container grid grid-cols-12 gap-7 xl:gap-10 lg:gap-8">
               <div className="col-span-12 md:col-span-5 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture1.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -90,7 +90,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-7 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture2.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -98,7 +98,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-7 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture3.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -107,7 +107,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
 
               <div className="col-span-12 md:col-span-5 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture4.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -115,7 +115,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture5.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -123,7 +123,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture6.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -132,7 +132,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
 
               <div className="col-span-12 md:col-span-7 lg:col-span-3 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture7.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -140,7 +140,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-5 lg:col-span-4 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture8.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
@@ -148,7 +148,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
               </div>
               <div className="col-span-12 md:col-span-12 lg:col-span-5 relative xl:h-56 lg:h-48 h-48">
                 <Image
-                  src={"/images/ThomasMore.png"}
+                  src={"/images/gallery/picture9.webp"}
                   alt="Thomas More"
                   className="object-cover"
                   layout="fill"
