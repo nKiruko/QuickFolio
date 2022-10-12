@@ -2,7 +2,19 @@ import Link from "next/link";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import {  useState } from "react";
+
+let spaceInvadersClicked = 0
+
+function spaceInvaders() {
+  if (spaceInvadersClicked < 3) {
+    spaceInvadersClicked += 1
+  } 
+  else{
+    spaceInvadersClicked = 0
+    window.location.href = '/spaceInvaders';
+  }
+}
 
 const NavBar = () => {
 
@@ -25,6 +37,7 @@ const NavBar = () => {
                   alt="Dino Logo"
                   width={100}
                   height={100}
+                  onClick={spaceInvaders}
                 />
               </a>
             </Link>
