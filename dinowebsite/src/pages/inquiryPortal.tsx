@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Icon } from "@iconify/react";
 import { InquiryData } from "../modules/inquiry";
 import Inquiry from "../components/inquiry/Inquiry";
+import InquiryEntries from "../components/inquiry/InquiryEntries";
 
 export interface AllInquiryEntries {
     allInquiryData: InquiryData[];
@@ -41,6 +42,7 @@ export interface AllInquiryEntries {
   };
   
 const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
+
     return (
         <div>
             <Head>
@@ -53,11 +55,7 @@ const inquiryPortal: NextPage<AllInquiryEntries> = ({ allInquiryData }) => {
                     <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
                         Inquiry portal
                     </h1>
-                    {allInquiryData.map((inquiry, i) => {
-                        return (
-                            <Inquiry inquiryData={inquiry} key={i}/>
-                        );
-                    })}
+                    <InquiryEntries/>
                 </div>
             </main>
         </div>
