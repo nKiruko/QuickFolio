@@ -48,12 +48,12 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 </a>
               </Link>
             </div>
-            <div className="w-2/3 md:w-4/5 lg:w-5/6 xl:w-6/6 ml-20 lg:ml-36 3xl:pb-24">
+            <div className="w-2/3 md:w-4/5 lg:w-4/6 xl:w-6/6 ml-20 lg:ml-36 3xl:pb-24">
               <h1 className="font-heading text-3xl sm:text-4xl pt-52 pb-5 text-dinoblack">
                 We are always looking for project proposals
               </h1>
               <Link href="/contact">
-                <a className="md:ml-36 lg:ml-64 xl:ml-96 font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
+                <a className="md:ml-36 lg:ml-52 xl:ml-72 font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
                   Click here
                 </a>
               </Link>
