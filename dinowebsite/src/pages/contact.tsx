@@ -10,7 +10,7 @@ const Contact: NextPage = () => {
       <Head>
         <title>Digital Innovation - Contact</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/LogoTextTransparant.png" />
+        <link rel="icon" href="images/Favicon_di.png" />
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="mx-20">
