@@ -27,17 +27,17 @@ const Contact: NextPage = () => {
               <Coach
                 image="/images/contact/Jochen.jpg"
                 name="Jochen Mariën"
-                text="Head coach with expertise in programming, IoT, Windows Server, data science & AI"
+                text="Head coach with expertise in Programming, IoT, Windows Server, Data science & AI"
               />
               <Coach
                 image="/images/contact/Kathleen.jpg"
                 name="Kathleen Renders"
-                text="Expert requirements analysis, BI, business processes & ERP "
+                text="Expert Requirements analysis, BI, Business processes & ERP "
               />
               <Coach
                 image="/images/contact/Bram.png"
                 name="Bram Heyns"
-                text="Enthusiastic about AI, security & devops"
+                text="Enthusiastic about AI, Security & Devops"
               />
             </div>
           </div>
