@@ -29,6 +29,7 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
         <h1 className="text-left font-heading text-3xl sm:text-4xl pb-5">
           {eventData.title}
         </h1>
+        <div className="font-sans xl:w-11/12 md:w-5/6 text-xs opacity-75 text-justify italic text-tmblue dark:text-coffeegreen">{eventData.date}</div>
         <p
           id="smalltext"
           className="font-sans text-sm sm:text-md pb-5 text-justify block md:hidden"
