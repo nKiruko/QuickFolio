@@ -1,9 +1,9 @@
 # Top-level configuration
 name = "di-dev"
 main = "src/index.ts"
-compatibility_date = "2022-10-11"
 
 compatibility_flags = [ "formdata_parser_supports_files" ]
+compatibility_date = "2022-10-12"
 
 kv_namespaces = [
   { binding = "INQUIRIES", id = "KV_ID", preview_id = "KV_ID" },

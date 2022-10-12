@@ -44,31 +44,22 @@ const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
                     <p className="pb-5">{inquiryData.message}</p>
 
                     <Link href={`mailto:"${inquiryData.email}"`}>
-                        <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange dark:hover:border-coffeecream float-right mb-5">
-                            Reply
+                        <a className="float-right mx-2 mb-5 hover:text-tmorange dark:hover:text-coffeecream text-4xl">
+                            <Icon icon="bi:reply"></Icon>
                         </a>
                     </Link>
-                    <button className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mr-5 mb-5" onClick={deleteInquiry}>
-                        Delete
-                    </button>
-
-                    <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
-                        <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mb-5">
-                            Reply
-                        </a>
-                    </Link>
-                    <button className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mr-5 mb-5" onClick={deleteInquiry}>
-                        Delete
+                    <button className="float-right mx-2 mb-5 hover:text-tmorange dark:hover:text-coffeecream text-4xl" onClick={deleteInquiry}>
+                        <Icon icon="fluent:delete-16-regular"></Icon>
                     </button>
                     {
-                        inquiryData.file ? (
-                            <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
-                                <a className="rounded-full border-2 border-dinoblack px-5 hover:border-tmorange float-right mr-5 mb-5">
-                                    Open file
-                                </a>
-                            </Link>
-                        ) : null
-                    }
+                      inquiryData.file ? (
+                        <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
+                          <a className="float-right mx-2 mb-5 hover:text-tmorange dark:hover:text-coffeecream text-4xl">
+                              <Icon icon="ant-design:folder-open-outlined"></Icon>
+                           </a>
+                         </Link>
+                      ) : null
+                   }
                 </div>
             </div>
         </div>
