@@ -1,14 +1,12 @@
 ---
 title: event2
-path: event1
+path: event2
 image: /events/event2/images/event2.png
-date: 1609455600
+date: 14-10-2022
 summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolorum harum aspernatur voluptates, ipsam mollitia laudantium? Amet fugiat perferendis, animi atque error maiores enim a cum magnam voluptatem. Repellat, vero!"
 ---
 
 # Event 2
-
-Friday, 01 January 2021 00:00:00.000 +01:00
 
 ## Meo magis aviti vulneris denique vertice pro
 
