@@ -1,8 +1,5 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
-import { Icon } from "@iconify/react";
-import { InquiryData } from "../modules/inquiry";
-import Inquiry from "../components/inquiry/Inquiry";
 import InquiryEntries from "../components/inquiry/InquiryEntries";
 
 const inquiryPortal: NextPage = () => {

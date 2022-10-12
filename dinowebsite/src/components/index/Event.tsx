@@ -22,7 +22,7 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
         </div>
       </div>
       <div
-        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeegreen ${
+        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeecream ${
           left ? "lg:order-last lg:pl-10" : "lg:order-first lg:pr-10"
         }`}
       >
