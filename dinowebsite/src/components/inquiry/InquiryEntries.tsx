@@ -1,13 +1,10 @@
-import { Icon } from "@iconify/react";
-import { NextPage } from "next";
-import Link from "next/link";
-import { FunctionComponent, Key } from "react";
+import { Key } from "react";
 import { InquiryData } from "../../modules/inquiry";
 import { useState, useEffect } from "react";
 import Inquiry from "./Inquiry";
 
 interface Props {
-    inquiryFetchedData : InquiryData[];
+  inquiryFetchedData : InquiryData[];
 }
 
 const InquiryEntries = () => {

@@ -1,13 +1,11 @@
 import { Icon } from "@iconify/react";
-import { NextPage } from "next";
 import Link from "next/link";
-import { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent } from "react";
 import { InquiryData } from "../../modules/inquiry";
 
 interface InquiryProps {
     inquiryData: InquiryData;
 }
-
 
 const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
     const deleteInquiry = async () => {
