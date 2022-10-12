@@ -60,7 +60,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
               <input
                 type="text"
                 placeholder="Search.."
-                className=" valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey  px-2 py-1  mt-5 lg:mt-0 sm:w-1/2 lg:w-2/5 xl:w-1/4 2xl:mr-16"
+                className=" valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey  px-2 py-1  mt-5 lg:mt-0 sm:w-1/2 lg:w-2/5 xl:w-1/4 2xl:mr-16"
                 onChange={(event) => {
                   setSeachTerm(event.target.value);
                 }}
