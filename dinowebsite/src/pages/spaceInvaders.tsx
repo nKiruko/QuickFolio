@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 
-export default function Custom404() {
+export default function SpaceInvaders() {
     useEffect(() => {
         /* Code to make it fit in Code pen */
 // Canvas is rendered to the HTML canvas at the bottom of the game code with some 
@@ -110,8 +110,8 @@ focus();
         c!.putImageData(d,0,0);
         return can;
     }
-    const color = 0xFFFFCC88; // 32Bit
-    const bulletColor = "#88CCFF";
+    const color = 0xff78cae7; // 32Bit
+    const bulletColor = "#E7CA78";
     const insertCoinImg = createBinImage(color, [41, 6, "1d2,6eee1929,9a,88a422ad,9a,4ce422ad,96,28c422ab,1d2,cea41929"]);
     const numbers = createBinImage(color, [37, 5, "1d,77377777,15,11444155,15,22567177,15,41715251,1d,77167477"]);
     const spriteImg = createBinImage(color, [ 26, 34,"91486,1006336,240449,10a3369,400546,2115a46,248599,802a89,4010,36dada0,921249,1bb1ac6,fe3fe6,fe1fc9,6c0d80,441046,3e01f0,410208,9484a4,808404,3ffffff,379b73b,1b34b36,ff87fc,7ff028,fff810,1fffc10,3fffe7c,3fffefe,3ffffff,3ffffff,3ffffff,3f07fff,3c01e00"]);
@@ -939,19 +939,19 @@ focus();
 
 
   return (
-<div>
+<div className="p-0 m-0 text-center bg-gradient-to-bl from-dinoblack  via-coffeegreen  to-dinoblack">
           <Head>
               <title>SpaceInvaders</title>
               
           </Head>
           
-          <div className="grad"></div>
+          <div className="grad absolute top-0 h-full p-0 m-0 bg-blend-screen"></div>
           
 
-          <canvas id="canvas"></canvas>
-          <div className="reflect"></div>
-          <div className="reflect1"></div>
-          <div id="instructs">[1] Coin [S] Play / Cont [Left][Right] Move [Up] Shoot</div>
+          <canvas id="canvas" className="bg-[linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,79,67,1) 50%, rgba(0,0,0,1) 100%)] opacity-0 top-0 "></canvas>
+          <div className="reflect absolute top-0 h-full bg-[linear-gradient(137deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 62%, rgba(78,178,178,0.1) 64%, rgba(56,20,0,0.2) 100%)] bg-blend-lighten mix-blend-lighten"></div>
+          <div className="reflect1 absolute top-0 h-full bg-[linear-gradient(130deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 62%, rgba(78,78,78,0.1) 64%, rgba(56,56,56,0.2) 100%)]"></div>
+          <div id="instructs" className="text-coffeegreen bg-black text-3xl text-center">[1] Coin [S] Play / Cont [Left][Right] Move [Up] Shoot</div>
       </div>
   );
 }
