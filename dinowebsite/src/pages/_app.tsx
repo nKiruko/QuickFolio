@@ -9,7 +9,7 @@ export default function MyApp({ Component, pageProps }: any) {
   return (
     <Layout >
       <Component {...pageProps} />
-      {router.pathname !== "/404" ? <Footerlines /> : null}
+      {router.pathname !== ("/404" && "/spaceInvaders") ? <Footerlines /> : null}
     </Layout>
   );
 }
