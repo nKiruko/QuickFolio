@@ -110,7 +110,7 @@ focus();
         c!.putImageData(d,0,0);
         return can;
     }
-    const color = 0xff78cae7; // 32Bit
+    const color = 0xff8fcad2; // 32Bit
     const bulletColor = "#E7CA78";
     const insertCoinImg = createBinImage(color, [41, 6, "1d2,6eee1929,9a,88a422ad,9a,4ce422ad,96,28c422ab,1d2,cea41929"]);
     const numbers = createBinImage(color, [37, 5, "1d,77377777,15,11444155,15,22567177,15,41715251,1d,77167477"]);
