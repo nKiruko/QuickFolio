@@ -64,7 +64,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
     if(formData.has(FormDataItem.FILE)) {
       const r2Key = `file-${currentTime}`;
-      env.R2_INQUIRIES.put(r2Key, formData.get(FormDataItem.FILE));
+      await env.R2_INQUIRIES.put(r2Key, formData.get(FormDataItem.FILE));
     }
 
 
