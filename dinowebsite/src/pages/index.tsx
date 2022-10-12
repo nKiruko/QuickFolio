@@ -53,7 +53,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                 We are always looking for project proposals
               </h1>
               <Link href="/contact">
-                <a className="md:ml-36 lg:ml-52 xl:ml-72 2xl:ml-80 font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
+                <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
                   Click here
                 </a>
               </Link>
