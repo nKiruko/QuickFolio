@@ -7,7 +7,7 @@ import {  useState } from "react";
 let spaceInvadersClicked = 0
 
 function spaceInvaders() {
-  if (spaceInvadersClicked < 3) {
+  if (spaceInvadersClicked < 10) {
     spaceInvadersClicked += 1
   } 
   else{
