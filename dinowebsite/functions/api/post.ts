@@ -47,8 +47,8 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       const r2Key = `file-${currentTime}`;
       const file = formData.get(FormDataItem.FILE);
 
-      if(file) {
-        await env.R2_INQUIRIES.put(r2Key, file);
+      if(file && file instanceof File) {
+        await env.R2_INQUIRIES.put(r2Key, await file.arrayBuffer());
       }
 
       fileExist = !!(fileExist && file);

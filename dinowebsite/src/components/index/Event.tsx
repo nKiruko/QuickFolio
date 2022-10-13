@@ -22,14 +22,14 @@ const Event: FunctionComponent<EventDataProps> = ({ eventData, left }) => {
         </div>
       </div>
       <div
-        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeecream ${
+        className={`lg:basis-3/4 md:w-5/6 mt-5 first-line:hover:underline first-line:hover:underline-offset-8 first-line:hover:decoration-tmorange dark:first-line:hover:decoration-coffeegreen ${
           left ? "lg:order-last lg:pl-10" : "lg:order-first lg:pr-10"
         }`}
       >
         <h1 className="text-left font-heading text-3xl sm:text-4xl pb-5">
           {eventData.title}
         </h1>
-        <div className="font-sans xl:w-11/12 md:w-5/6 text-xs opacity-75 text-justify italic text-tmblue dark:text-coffeegreen">{eventData.date}</div>
+        <div className="font-sans xl:w-11/12 md:w-5/6 text-xs opacity-75 text-justify italic text-tmblue dark:text-coffeecream">{eventData.date}</div>
         <p
           id="smalltext"
           className="font-sans text-sm sm:text-md pb-5 text-justify block md:hidden"

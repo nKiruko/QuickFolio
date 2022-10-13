@@ -1,4 +1,6 @@
+import { Icon } from "@iconify/react";
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function SpaceInvaders() {
@@ -939,19 +941,24 @@ focus();
 
 
   return (
-<div className="p-0 m-0 text-center bg-gradient-to-bl from-dinoblack  via-coffeegreen  to-dinoblack">
+<div className="p-0 m-0 text-center bg-gradient-to-bl from-dinoblack  via-coffeegreen  to-dinoblack pl-10">
           <Head>
               <title>SpaceInvaders</title>
               
           </Head>
           
+           
           <div className="grad absolute top-0 h-full p-0 m-0 bg-blend-screen"></div>
           
 
           <canvas id="canvas" className="bg-[linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,79,67,1) 50%, rgba(0,0,0,1) 100%)] opacity-0 top-0 "></canvas>
           <div className="reflect absolute top-0 h-full bg-[linear-gradient(137deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 62%, rgba(78,178,178,0.1) 64%, rgba(56,20,0,0.2) 100%)] bg-blend-lighten mix-blend-lighten"></div>
           <div className="reflect1 absolute top-0 h-full bg-[linear-gradient(130deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 62%, rgba(78,78,78,0.1) 64%, rgba(56,56,56,0.2) 100%)]"></div>
-          <div id="instructs" className="text-coffeegreen bg-black text-3xl text-center">[1] Coin [S] Play / Cont [Left][Right] Move [Up] Shoot</div>
+          <div id="instructs" className="text-[#E7CA78] bg-transparent text-3xl text-center absolute bottom-0 m-0 p-1 ">[1] Coin [S] Play / Cont [Left][Right] Move [Up] Shoot</div>
+          <Link href="/">
+          <Icon icon="emojione-monotone:cross-mark-button" className="absolute text-[#E7CA78] text-[3rem] top-1 left-1 cursor-pointer"></Icon>
+          </Link>
+          
       </div>
   );
 }
