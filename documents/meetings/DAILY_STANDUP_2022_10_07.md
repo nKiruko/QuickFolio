@@ -1,7 +1,7 @@
 # Daily Standup 7 oktober 2022 @ 10u16
 
 Meeting time: 5 minutes  
-Story point done: 0  
+Story points done: 0  
 Aanwezigen: Sens, Syan, Nick, Marnik, Jordi en Siebe  
 
 ## Verloop
