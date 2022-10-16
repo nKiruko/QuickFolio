@@ -51,7 +51,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
         await env.R2_INQUIRIES.put(r2Key, await file.arrayBuffer());
       }
 
-      fileExist = fileExist && file ? true : false;
+      fileExist = !!(fileExist && file);
     }
 
     // Create the object to enter into the KV namespace.
@@ -71,19 +71,6 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
     // Save the data to the KV namespace.
     await env.INQUIRIES.put(kvKey, JSON.stringify(data));
 
-    // const inquiries = await env.INQUIRIES.list();
-    // console.log(inquiries);
-
-    // const inquiry = await env.INQUIRIES.get(kvKey);
-    // console.log(inquiry);
-
-
-    // Return with put data
-    // return new Response(JSON.stringify(data), {
-    //   headers: {
-    //     "content-type": "application/json",
-    //   }
-  // });
     return Response.redirect("https://digitalinnovation.be/success", 303);
 
   } catch (e) {
