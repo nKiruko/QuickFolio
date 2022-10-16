@@ -2,7 +2,19 @@ import Link from "next/link";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import { useState } from "react";
+import {  useState } from "react";
+
+let spaceInvadersClicked = 0
+
+function spaceInvaders() {
+  if (spaceInvadersClicked < 10) {
+    spaceInvadersClicked += 1
+  } 
+  else{
+    spaceInvadersClicked = 0
+    window.location.href = '/spaceInvaders';
+  }
+}
 
 const NavBar = () => {
 
@@ -25,6 +37,7 @@ const NavBar = () => {
                   alt="Dino Logo"
                   width={100}
                   height={100}
+                  onClick={spaceInvaders}
                 />
               </a>
             </Link>
@@ -34,7 +47,7 @@ const NavBar = () => {
             <NavItem name="DI" href="/whatIsDI" />
             <NavItem name="Projects" href="/projects" />
             <NavItem name="Contact" href="/contact" />
-            <Link href="/" passHref>
+            <Link href="/inquiryPortal" passHref>
               <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange dark:hover:border-coffeegreen">
                 Login
               </a>
@@ -53,7 +66,7 @@ const NavBar = () => {
           <NavItem name="DI" href="/whatIsDI" mobile={true} />
           <NavItem name="Projects" href="/projects" mobile={true} />
           <NavItem name="Contact" href="/contact" mobile={true} />
-          <NavItem name="Login" href="/" mobile={true} />
+          <NavItem name="Login" href="/inquiryPortal" mobile={true} />
         </div>
       </div>
     </nav>

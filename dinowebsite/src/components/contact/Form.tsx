@@ -14,8 +14,13 @@ export default function Form() {
     setOption(e.target.checked);
   };
 
+  const [file, setFile] = useState("Add files");
+  function getFileName(fileName: any) {
+    setFile(fileName.target.files[0].name);
+  }
+
   return (
-    <form action="" className="my-5 lg:w-4/6">
+    <form action="/api/post" method="POST" encType="multipart/form-data" target="_blank" className="my-5 lg:w-4/6">
       <div className="flex">
         <span className="mr-3">Question</span>
         <label
@@ -38,14 +43,14 @@ export default function Form() {
           name="firstname"
           placeholder="First name"
           required
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
         />
         <input
           type="text"
           name="lastname"
           placeholder="Last name"
           required
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full lg:w-2/4"
         />
       </div>
       <input
@@ -53,7 +58,7 @@ export default function Form() {
         name="email"
         placeholder="Email"
         required
-        className="valid:border-green-500 invalid:border-red-500 outline-tmblue w-full rounded bg-dinogrey px-2 py-1 mb-3"
+        className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream w-full rounded bg-dinogrey px-2 py-1 mb-3"
       />
       
       <div className={`${option ? "block" : "hidden"} flex flex-col lg:flex-row gap-3`}>
@@ -61,7 +66,7 @@ export default function Form() {
           type="text"
           name="companyname"
           placeholder="Company name"
-          className="valid:border-green-500 invalid:border-red-500 outline-tmblue rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
+          className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream rounded bg-dinogrey px-2 py-1 w-full mt-3 lg:w-2/4"
         />
         <p  className=" w-full lg:w-2/4"></p>
       </div>
@@ -69,21 +74,26 @@ export default function Form() {
         name="message"
         placeholder="Message.."
         required
-        className="valid:border-green-500 invalid:border-red-500 outline-tmorange w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
+        className="valid:border-green-500 invalid:border-red-500 outline-tmblue dark:outline-coffeecream w-full rounded bg-dinogrey px-2 py-1 mb-3 lg:mt-3"
       />
       <div
         className="flex gap-3 items-center mb-3 cursor-pointer"
         onClick={() => openFiles()}
       >
-        <input type="file" ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
+        <input id="fileupload" name="file" type="file" onChange={(e) => {getFileName(e)}} ref={inputFileRef} className="hidden" accept=".doc, .docx, .txt, .pdf, .xlsx, .ppt" />
         <div className="p-2 rounded bg-gray-300 text-gray-500">
           <Icon icon="ant-design:plus-outlined" className="text-2xl " />
         </div>
-        <p>Add files</p>
+        <p>{file}</p>
+        <Icon icon="entypo:cross" className={`text-2xl hover:text-red-500 ${file === "Add files" ? "hidden" : "block"}`} onClick={(e) => {
+          e.stopPropagation();
+          setFile("Add files");
+          (inputFileRef.current as never as HTMLInputElement).value = "";
+        }} />
       </div>
       <button
         type="submit"
-        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeecream"
+        className="bg-dinoblack text-dinocream px-24 py-1 rounded-md border-2 border-tmblue dark:border-coffeegreen"
       >
         Send Message
       </button>

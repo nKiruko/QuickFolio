@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <div className="absolute w-full overflow-hidden z-10">
       <div className="relative inset-y-0 bottom-0 z-10 "> 
-        <footer className={`dark:bg-coffeegreen text-dinocream m-auto h-auto z-10 ${router.pathname == "/whatIsDI" ? "bg-tmblue" : "bg-tmorange" }`}>
+        <footer className={`bg-tmorange dark:bg-coffeegreen text-dinocream m-auto h-auto z-10 `}>
 
           <div className="flex justify-between p-5 z-40">
             <div className="flex-none w-52">
