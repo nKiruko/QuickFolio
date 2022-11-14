@@ -10,7 +10,7 @@ interface InquiryProps {
 const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
     const deleteInquiry = async () => {
         try {
-            const res = await fetch(`/api/delete/inquiry-${inquiryData.date}`);
+            const res = await fetch(`/api/admin/delete/inquiry-${inquiryData.date}`);
 
             if (res.status === 200) {
                 document.getElementById(`inquiry-${inquiryData.date}`)?.remove();
@@ -53,7 +53,7 @@ const Inquiry: FunctionComponent<InquiryProps> = ({ inquiryData }) => {
                     </button>
                     {
                       inquiryData.file ? (
-                        <Link href={`/api/getFile/file-${inquiryData.date}`} target="_blank">
+                        <Link href={`/api/admin/getFile/file-${inquiryData.date}`} target="_blank">
                           <a className="float-right mx-2 mb-5 hover:text-tmorange dark:hover:text-coffeecream text-4xl">
                               <Icon icon="ant-design:folder-open-outlined"></Icon>
                            </a>

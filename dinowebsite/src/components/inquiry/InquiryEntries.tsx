@@ -13,7 +13,7 @@ const InquiryEntries = () => {
     useEffect(() => {
       async function getInquiries() {
         let response = await fetch(
-          "/api/get"
+          "/api/admin/get"
         );
         let data = await response.json();
 

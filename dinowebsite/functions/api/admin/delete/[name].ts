@@ -1,4 +1,4 @@
-import { PagesEnv } from "../post";
+import { PagesEnv } from "../../post";
 
 export const onRequest: PagesFunction<PagesEnv> = async ({
   request,
