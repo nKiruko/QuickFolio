@@ -36,14 +36,14 @@ const Footer = () => {
       <div className="relative inset-y-0 bottom-0 z-10 "> 
         <footer className={`bg-tmorange dark:bg-coffeegreen text-dinocream m-auto h-auto z-10 `}>
 
-          <div className="flex justify-between p-5 z-40">
-            <div className="flex-none w-52">
+          <div className="flex justify-between p-5 z-40 ">
+            <div className="flex-none w-72 ml-5">
               <div className="flex flex-col justify-between space-y-2">
-                <h1 className="text-5xl font-heading">Contact</h1>
-                <p>Digital Innovation</p>
-                <p>IT Factory</p>
-                <p>Thomas More - Campus Geel</p>
-                <p>Kleinhoefstraat 4, 2440 Geel</p>
+                <h1 className="text-2xl font-heading">Thomas More - Campus Geel</h1>
+                <a href="mailto:info.geel@thomasmore.be">info.geel@thomasmore.be</a>
+                <a href="tel:+3214562310">+32 14 56 23 10</a>
+                <a href="https://www.thomasmore.be/gebruiksvoorwaarden-en-privacy">Gebruiksvoorwaarden en privacy</a>
+                <a href="https://www.thomasmore.be/cookiebeleid-thomas-more">Cookiebeleid</a>
               </div>
             </div>
             <div className="grow h-14 text-center sm:hidden md:block">
@@ -55,7 +55,7 @@ const Footer = () => {
                   height={200}
                 />
             </div>
-            <div className="flex-none w-52">
+            <div className="flex-none w-72 ">
               <div className="flex flex-col justify-between space-y-2 items-center">
                 <a href="https://www.instagram.com/thomasmore.be/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:instagram-fill"></Icon></a>
                 <a href="https://www.facebook.com/ThomasMoreBE/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:facebook-fill"/></a>
