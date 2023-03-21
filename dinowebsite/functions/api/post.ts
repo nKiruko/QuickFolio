@@ -1,7 +1,17 @@
 export interface PagesEnv {
   INQUIRIES: KVNamespace;
   R2_INQUIRIES: R2Bucket;
+  SECRET_KEY: string;
 }
+
+type siteVerifyResponse = {
+  success: boolean;
+  challenge_ts: string;
+  hostname: string;
+  "error-codes": Array<string>;
+  action: string;
+  cdata: string;
+};
 
 export enum FormDataItem {
   FIRST_NAME = "firstname",
@@ -10,6 +20,7 @@ export enum FormDataItem {
   MESSAGE = "message",
   FILE = "file",
   COMPANY = "companyname",
+  TOKEN = "cf-turnstile-response",
 }
 
 export const onRequestPost: PagesFunction<PagesEnv> = async ({
@@ -25,7 +36,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
     // Parse the request data.
     const formData = await request.formData();
 
-    // Store current time 
+    // Store current time
     const currentTime = Date.now();
 
     // Check required fields.
@@ -34,6 +45,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       FormDataItem.LAST_NAME,
       FormDataItem.EMAIL,
       FormDataItem.MESSAGE,
+      FormDataItem.TOKEN,
     ];
 
     for (const requiredField of requiredFields) {
@@ -43,16 +55,34 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
 
     let fileExist = formData.has(FormDataItem.FILE);
 
-    if(fileExist) {
+    if (fileExist) {
       const r2Key = `file-${currentTime}`;
       const file = formData.get(FormDataItem.FILE);
 
-      if(file && file instanceof File) {
+      if (file && file instanceof File) {
         await env.R2_INQUIRIES.put(r2Key, await file.arrayBuffer());
       }
 
       fileExist = !!(fileExist && file);
     }
+
+    // check Turnstile captcha
+    const ip = request.headers.get("CF-Connecting-IP");
+    let formPostData = new FormData();
+    formPostData.append("secret", env.SECRET_KEY);
+    formPostData.append("response", formData.get(FormDataItem.TOKEN) as string);
+    formPostData.append("remoteip", ip);
+
+    const url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+    await fetch(url, {
+      body: formData,
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((outcome: siteVerifyResponse) => {
+        if (!outcome.success)
+          throw new Error("Blocked request, invalid captcha.");
+      });
 
     // Create the object to enter into the KV namespace.
     const data = {
@@ -62,7 +92,7 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       message: formData.get(FormDataItem.MESSAGE),
       company: formData.get(FormDataItem.COMPANY),
       date: currentTime,
-      file: fileExist
+      file: fileExist,
     };
 
     // Generate a key based on the epoch.
@@ -72,7 +102,6 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
     await env.INQUIRIES.put(kvKey, JSON.stringify(data));
 
     return Response.redirect("https://digitalinnovation.be/success", 303);
-
   } catch (e) {
     if (e instanceof Error) {
       return new Response(e.message);
