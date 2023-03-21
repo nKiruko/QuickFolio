@@ -81,7 +81,9 @@ export const onRequestPost: PagesFunction<PagesEnv> = async ({
       .then((response) => response.json())
       .then((outcome: siteVerifyResponse) => {
         if (!outcome.success)
-          throw new Error("Blocked request, invalid captcha.");
+          throw new Error(
+            `Blocked request, invalid captcha.\n"${JSON.stringify(outcome)}`
+          );
       });
 
     // Create the object to enter into the KV namespace.
