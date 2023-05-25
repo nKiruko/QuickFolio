@@ -30,7 +30,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - Home</title>
+        <title>Portfolio - Home</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
       </Head>
 

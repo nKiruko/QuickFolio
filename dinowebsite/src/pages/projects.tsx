@@ -43,7 +43,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - Projects</title>
+        <title>Portfolio - Projects</title>
         <meta
           name="description"
           content="Digital Innovation Thomas More, What is Digital Innovation"

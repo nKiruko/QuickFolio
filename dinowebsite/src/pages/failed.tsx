@@ -5,7 +5,7 @@ const failed: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - Failed</title>
+        <title>Portfolio - Failed</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/logo.png" />
       </Head>

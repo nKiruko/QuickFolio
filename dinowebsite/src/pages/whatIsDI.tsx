@@ -21,7 +21,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - What is DI</title>
+        <title>Portfolio - What is DI</title>
         <meta
           name="description"
           content="Digital Innovation Thomas More, What is Digital Innovation"

@@ -5,7 +5,7 @@ const success: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - Success</title>
+        <title>Portfolio - Success</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/logo.png" />
       </Head>

@@ -10,7 +10,7 @@ const Contact: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Digital Innovation - Contact</title>
+        <title>Portfolio - Contact</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
         <link rel="icon" href="images/logo.png" />
       </Head>
