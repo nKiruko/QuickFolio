@@ -3,6 +3,7 @@ import Head from "next/head";
 import Coach from "../components/contact/Coach";
 import ContactInfo from "../components/contact/ContactInfo";
 import Form from "../components/contact/Form";
+import Image from "next/image";
 
 const Contact: NextPage = () => {
   return (
@@ -14,31 +15,21 @@ const Contact: NextPage = () => {
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="mx-20">
-          <h1 className="text-4xl font-heading">
-            Questions or proposals? Fill in the form below!
-          </h1>
-          <div className="flex flex-col lg:flex-row">
-            <Form />
-            <ContactInfo />
-          </div>
-          <div className="py-24">
-            <h2 className="font-heading text-4xl mb-10">Coaches</h2>
-            <div className="flex flex-wrap flex-col gap-y-10 lg:flex-row justify-center">
-              <Coach
-                image="/images/contact/Jochen.jpg"
-                name="Jochen Mariën"
-                text="Head coach with expertise in Programming, IoT, Windows Server, Data science & AI"
-              />
-              <Coach
-                image="/images/contact/Kathleen.jpg"
-                name="Kathleen Renders"
-                text="Expert Requirements analysis, BI, Business processes & ERP "
-              />
-              <Coach
-                image="/images/contact/Bram.png"
-                name="Bram Heyns"
-                text="Enthusiastic about AI, Security & Devops"
-              />
+          <div className="">
+            <h2 className="font-heading text-4xl mb-10">Contact</h2>
+            <div className="bg-dinoblack w-full h-96 mx-auto grid grid-cols-2 rounded-2xl">
+              <div className="relative">
+                <Image
+                  src={"images/logo.svg"}
+                  alt="dino"
+                  layout="fill"
+                  className=""
+                />
+              </div>
+              <div className="my-auto">
+                <p className="text-white pb-10">Siebe Camerman</p>
+                <p className="text-white">R0889616@student.thomasmore.be</p>
+              </div>
             </div>
           </div>
         </div>
