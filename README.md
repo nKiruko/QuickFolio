@@ -1,36 +1,22 @@
-# 2223-Startproject-DinoWebsite
+# QuickPortfolio
 
-For the Digital Innovation projects we need a website that serves both a promotional function as well as a database of all DI projects
+Forked DI website to use it as a Portfolio because communication is not ideal in DI.
 
 ## Pages
 
 - Homepage
   - Featured projects
-  - Upcoming events
+  - About me
   - Huidige project
-- Wat is DI
-  - Wat is DI?
-  - Gallery: showcase van het lokaal (printer, zetelhoek, standing desks/workspaces, koffie-koelkast-microgolf
+- About me
+  - About me
 - Projecten
 - Contact page
-  - (upload project voorstel)
+  - contact
 - Upload a project
   - Title
   - Description
   - Photo / video / YouTube link / poster / Git link
-
-
-## Team
-
-- Marnik
-- Nick
-- Siebe
-- Bryan
-- Michiel
-- Hube
-- Sens
-- Jordi
-- Syan
 
 ## How to add a project?
 
