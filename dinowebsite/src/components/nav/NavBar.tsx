@@ -33,7 +33,7 @@ const NavBar = () => {
             <Link href="/">
               <a className="lg:ml-24 py-6 px-11 bg-dinoblack shadow-glow">
                 <Image
-                  src="/images/logo.svg"
+                  src="/images/logo.png"
                   alt="Dino Logo"
                   width={100}
                   height={100}

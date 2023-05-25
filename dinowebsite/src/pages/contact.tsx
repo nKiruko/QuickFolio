@@ -12,16 +12,16 @@ const Contact: NextPage = () => {
       <Head>
         <title>Digital Innovation - Contact</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/logo.svg" />
+        <link rel="icon" href="images/logo.png" />
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="mx-20">
           <div className="">
             <h2 className="font-heading text-4xl mb-10">Contact</h2>
             <div className="bg-dinoblack w-full h-96 mx-auto grid grid-cols-2 rounded-2xl">
-              <div className="relative">
+              <div className="relative h-72 w-72 m-auto">
                 <Image
-                  src={"images/logo.svg"}
+                  src={"images/logo.png"}
                   alt="dino"
                   layout="fill"
                   className=""
