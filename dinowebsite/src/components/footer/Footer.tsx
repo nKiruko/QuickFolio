@@ -39,28 +39,22 @@ const Footer = () => {
           <div className="flex justify-between p-5 z-40 ">
             <div className="flex-none w-72 ml-5">
               <div className="flex flex-col justify-between space-y-2">
-                <h1 className="text-2xl font-heading">Thomas More - Campus Geel</h1>
-                <a href="mailto:info.geel@thomasmore.be">info.geel@thomasmore.be</a>
-                <a href="tel:+3214562310">+32 14 56 23 10</a>
-                <a href="https://www.thomasmore.be/gebruiksvoorwaarden-en-privacy">Gebruiksvoorwaarden en privacy</a>
-                <a href="https://www.thomasmore.be/cookiebeleid-thomas-more">Cookiebeleid</a>
+                <a href="https://www.taskade.com/d/vzUnZrHJKX9e1DKj?from=shared" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="icons8:finish-flag"></Icon></a>
+                <a href="https://twitter.com/SiebeCamerman" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:twitter-fill"/></a>
               </div>
             </div>
-            <div className="grow h-14 text-center sm:hidden md:block">
+            <div className="grow h-28 text-center relative sm:hidden md:block">
                 <Image
                   onClick={coffeeMode}
-                  src="/images/LogoTextTransparant.png"
+                  src="/images/logo.svg"
                   alt="Dino Logo"
-                  width={200}
-                  height={200}
+                  layout="fill"
                 />
             </div>
             <div className="flex-none w-72 ">
               <div className="flex flex-col justify-between space-y-2 items-center">
-                <a href="https://www.instagram.com/thomasmore.be/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:instagram-fill"></Icon></a>
-                <a href="https://www.facebook.com/ThomasMoreBE/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:facebook-fill"/></a>
-                <a href="https://www.youtube.com/channel/UCdFD9HUuFn5995MmoVeo0vg" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:youtube-fill"/></a>
-                <a href="https://twitter.com/thomasmorebe" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:twitter-fill"/></a>
+                <a href="https://github.com/SiebeCamerman" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:github-fill"/></a>
+                <a href="https://www.linkedin.com/in/siebecamerman/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10" icon="akar-icons:linkedin-fill"/></a>
               </div>
             </div>
           </div>

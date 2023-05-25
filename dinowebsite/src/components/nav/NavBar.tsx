@@ -33,7 +33,7 @@ const NavBar = () => {
             <Link href="/">
               <a className="lg:ml-24 py-6 px-11 bg-dinoblack shadow-glow">
                 <Image
-                  src="/images/LogoTextTransparant.png"
+                  src="/images/logo.svg"
                   alt="Dino Logo"
                   width={100}
                   height={100}
@@ -44,14 +44,14 @@ const NavBar = () => {
           </div>
           <div className="hidden lg:flex items-center space-x-1 font-heading text-2xl text-dinoblack">
             <NavItem name="Home" href="/" />
-            <NavItem name="DI" href="/whatIsDI" />
+            <NavItem name="About" href="/whatIsDI" />
             <NavItem name="Projects" href="/projects" />
             <NavItem name="Contact" href="/contact" />
-            <Link href="/inquiryPortal" passHref>
+            {/* <Link href="/inquiryPortal" passHref>
               <a className="rounded-full border-2 border-dinoblack px-5  hover:border-tmorange dark:hover:border-coffeegreen">
                 Login
               </a>
-            </Link>
+            </Link> */}
           </div>
           <div className="lg:hidden flex items-center px-3 pr-5">
             <button className="mobile-menu-button" onClick={toggleMobile}>
@@ -63,10 +63,9 @@ const NavBar = () => {
       <div className="py-10">
         <div className={`mobile-menu ${mobileNav ? "" : "hidden"}`}>
           <NavItem name="Home" href="/" mobile={true} />
-          <NavItem name="DI" href="/whatIsDI" mobile={true} />
+          <NavItem name="About" href="/whatIsDI" mobile={true} />
           <NavItem name="Projects" href="/projects" mobile={true} />
           <NavItem name="Contact" href="/contact" mobile={true} />
-          <NavItem name="Login" href="/inquiryPortal" mobile={true} />
         </div>
       </div>
     </nav>
