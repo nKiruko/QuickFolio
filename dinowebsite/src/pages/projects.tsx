@@ -48,7 +48,7 @@ const Projects: NextPage<AllProjectEntries> = ({ allProjectsData }) => {
           name="description"
           content="Digital Innovation Thomas More, What is Digital Innovation"
         />
-        <link rel="icon" href="images/Favicon_di.png" />
+        <link rel="icon" href="images/logo.svg" />
       </Head>
       <main className="text-dinoblack min-h-screen">
         <div className="pb-64">

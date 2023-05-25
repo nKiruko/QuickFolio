@@ -7,7 +7,7 @@ const success: NextPage = () => {
       <Head>
         <title>Digital Innovation - Success</title>
         <meta name="description" content="Digital Innovation Thomas More, What is Digital Innovation" />
-        <link rel="icon" href="images/Favicon_di.png" />
+        <link rel="icon" href="images/logo.svg" />
       </Head>
       <main className="text-dinoblack">
         <div className="mx-20 3xl:pb-24 pb-60">

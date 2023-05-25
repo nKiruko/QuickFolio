@@ -41,7 +41,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
               <h1 className="font-heading text-4xl sm:text-4xl pt-24 pb-5 text-dinoblack">
                 Software Developer
               </h1>
-              <p className="pb-5">Ik ben een gedreven en energieke softwareontwikkelaar met een bedaarde aanpak. Mijn passie voor technologie en oog voor detail stellen mij in staat om creatieve oplossingen te leveren die voldoen aan de behoeften van mijn klanten. Met flexibiliteit, teamgeest en het vermogen om binnen deadlines te leveren, voeg ik waarde toe aan elk project. Ik blijf voortdurend leren en groeien om mijn vaardigheden verder te ontwikkelen.</p>
+              <p className="pb-5 font-bold">Siebe Camerman</p>
               <Link href="/whatIsDI">
                 <a className="font-heading text-lg sm:text-xl rounded-full border-2 border-dinoblack px-5 py-1 hover:border-tmorange dark:hover:border-coffeegreen">
                   Learn more
@@ -78,7 +78,7 @@ const Home: NextPage<PageData> = ({ allProjectsData, allEventsData }) => {
                           alt="Siebe"
                         />
                 </div>
-                <div className="my-auto"><p className="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam sed veniam accusamus libero cum ullam doloremque asperiores ducimus, consequuntur saepe voluptatibus ipsum dicta quasi sequi laudantium eum, dolore, accusantium porro?</p>
+                <div className="my-auto"><p className="text-justify">Ik ben een gedreven en energieke softwareontwikkelaar met een bedaarde aanpak. Mijn passie voor technologie en oog voor detail stellen mij in staat om creatieve oplossingen te leveren die voldoen aan de behoeften van mijn klanten. Met flexibiliteit, teamgeest en het vermogen om binnen deadlines te leveren, voeg ik waarde toe aan elk project. Ik blijf voortdurend leren en groeien om mijn vaardigheden verder te ontwikkelen.</p>
                 </div>
                 {/* {allEventsData.map((event, i) => {
                   if (i < 2) {
