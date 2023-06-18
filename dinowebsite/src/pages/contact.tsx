@@ -30,11 +30,12 @@ const Contact: NextPage = () => {
               <div className="my-auto">
                 <p className="text-white pb-7">Nick Bulen</p>
                 <p className="text-white pb-16">R0883338@student.thomasmore.be</p>
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-5">
                   <a href="https://github.com/nKiruko" target="_blank" rel="noreferrer"><Icon className="w-10 h-10 text-white" icon="akar-icons:github-fill"/></a>
                   <a href="https://www.linkedin.com/in/nick-bulen-8613ab252/" target="_blank" rel="noreferrer"><Icon className="w-10 h-10 text-white" icon="akar-icons:linkedin-fill"/></a>
                   <a href="https://www.taskade.com/d/kt2SCkJLsVb7Z6HF?from=shared" target="_blank" rel="noreferrer"><Icon className="w-10 h-10 text-white" icon="icons8:finish-flag"></Icon></a>
                   <a href="https://twitter.com/NickBulen" target="_blank" rel="noreferrer"><Icon className="w-10 h-10 text-white" icon="akar-icons:twitter-fill"/></a>
+                  <a href="./images/CV-Nick-Bulen-ENG.pdf" target="_blank" rel="noreferrer"><Icon className="w-10 h-10 text-white" icon="academicons:cv-square"/></a>
                 </div>
               </div>
             </div>

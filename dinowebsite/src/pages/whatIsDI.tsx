@@ -38,7 +38,7 @@ const whatIsDI: NextPage<ProjectCounterProps> = ({ projectAmountNumber }) => {
           </p>
         </div>
         <div className="mt-28 md:mt-40 lg:mt-52 xl:mt-60 bg-[linear-gradient(-9deg,_#191919_50%,_#e8e3d0_50%)]">
-          <div className="bg-tmorange dark:bg-coffeegreen h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 4xl:-rotate-3 5xl:-rotate-2 scale-125 shadow-glow"></div>
+          <div className="bg-tmorange bg-[linear-gradient(120deg,_#f4b34d_20%,_#ca7d37_22%,_#bf6f32_30%,_#ae562b_32%,_#851d1c_40%,_#851d1c_60%,_#9c3e25_68%,_#bf6f32_70%,_#d48a3d_78%,_#f4b34d_80%)] h-20 md:h-32 lg:h-40 xl:h-60 -rotate-9 4xl:-rotate-3 5xl:-rotate-2 scale-125 shadow-glow"></div>
         </div>
         <div className="bg-dinoblack text-dinocream pb-24 4xl:pb-36 4xl:h-screen">
           <h1 className="pt-52 text-center font-heading text-4xl">Experience</h1>
